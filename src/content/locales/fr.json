@@ -177,7 +177,7 @@
     "failed": "Une erreur est survenue et votre message n'a pas été envoyé. Veuillez réessayer ou nous écrire à {email}.",
     "success": {
       "sent": "Merci ! Nous avons bien reçu votre message et vous répondrons sous 48 h.",
-      "mailto": "Votre messagerie devrait s'ouvrir avec votre message prêt. Il ne vous reste qu'à l'envoyer : nous vous répondrons sous 48 h."
+      "mailto": "Votre messagerie devrait s'ouvrir avec votre message prêt. Il ne vous reste qu'à l'envoyer : nous vous répondrons sous 48 h. Si rien ne s'ouvre, écrivez-nous directement à {email}."
     },
     "errors": {
       "required": "Ce champ est obligatoire.",

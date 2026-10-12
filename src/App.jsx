@@ -6,10 +6,11 @@ import Method from './components/Method.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import CallToAction from './components/CallToAction.jsx';
 import Footer from './components/Footer.jsx';
+import { FormModalProvider } from './forms/FormModalContext.jsx';
 
 export default function App() {
   return (
-    <>
+    <FormModalProvider>
       <Nav />
       <main>
         <Hero />
@@ -20,6 +21,6 @@ export default function App() {
         <CallToAction />
       </main>
       <Footer />
-    </>
+    </FormModalProvider>
   );
 }

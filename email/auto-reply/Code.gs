@@ -17,12 +17,12 @@
  *
  * To send from contact@ (recommended), add contact@hellosellora.com under Gmail >
  * Settings > Accounts > Send mail as. Without it, replies come from lindsey@ with the
- * name "Sellora" and reply-to contact@.
+ * name "Hello Sellora" and reply-to contact@.
  */
 
 const CONFIG = {
   replyFrom: 'contact@hellosellora.com',
-  fromName: 'Sellora',
+  fromName: 'Hello Sellora',
   assetsUrl: 'https://hellosellora.com/email/',
   label: 'Sellora/Auto-replied',
   searchQuery: 'subject:("New audit request" OR "New message from") newer_than:3d',
@@ -35,7 +35,7 @@ const CONFIG = {
 const TEXT = {
   fr: {
     audit: {
-      subject: 'Nous avons bien reçu votre demande d’audit · Sellora',
+      subject: 'Nous avons bien reçu votre demande d’audit · Hello Sellora',
       eyebrow: 'Demande d’audit reçue',
       intro: 'Votre demande d’audit gratuit pour {company} est bien arrivée. Nous l’étudions avec attention et revenons vers vous sous 48 h.',
       introNoCompany: 'Votre demande d’audit gratuit est bien arrivée. Nous l’étudions avec attention et revenons vers vous sous 48 h.',
@@ -47,7 +47,7 @@ const TEXT = {
       ],
     },
     contact: {
-      subject: 'Nous avons bien reçu votre message · Sellora',
+      subject: 'Nous avons bien reçu votre message · Hello Sellora',
       eyebrow: 'Message reçu',
       intro: 'Votre message est bien arrivé. Nous vous répondons sous 48 h.',
       quoteTitle: 'Votre message',
@@ -57,12 +57,12 @@ const TEXT = {
     colon: ' :',
     closing: 'D’ici là, il vous suffit de répondre à cet e-mail pour ajouter une information.',
     signoff: 'À très vite,',
-    team: 'L’équipe Sellora',
+    team: 'L’équipe Hello Sellora',
     tagline: 'Lancer, développer et scaler votre marque en Europe.',
   },
   en: {
     audit: {
-      subject: 'We’ve received your audit request · Sellora',
+      subject: 'We’ve received your audit request · Hello Sellora',
       eyebrow: 'Audit request received',
       intro: 'Your free audit request for {company} has reached us. We’re reviewing it carefully and will get back to you within 48 hours.',
       introNoCompany: 'Your free audit request has reached us. We’re reviewing it carefully and will get back to you within 48 hours.',
@@ -74,7 +74,7 @@ const TEXT = {
       ],
     },
     contact: {
-      subject: 'We’ve received your message · Sellora',
+      subject: 'We’ve received your message · Hello Sellora',
       eyebrow: 'Message received',
       intro: 'Your message has reached us. We’ll reply within 48 hours.',
       quoteTitle: 'Your message',
@@ -84,12 +84,12 @@ const TEXT = {
     colon: ':',
     closing: 'In the meantime, just reply to this email if you’d like to add anything.',
     signoff: 'Speak soon,',
-    team: 'The Sellora team',
+    team: 'The Hello Sellora team',
     tagline: 'Launch, grow, and scale across Europe.',
   },
   sv: {
     audit: {
-      subject: 'Vi har tagit emot din förfrågan om analys · Sellora',
+      subject: 'Vi har tagit emot din förfrågan om analys · Hello Sellora',
       eyebrow: 'Förfrågan mottagen',
       intro: 'Din förfrågan om en gratis analys för {company} har kommit fram. Vi går igenom den noggrant och återkommer inom 48 timmar.',
       introNoCompany: 'Din förfrågan om en gratis analys har kommit fram. Vi går igenom den noggrant och återkommer inom 48 timmar.',
@@ -101,7 +101,7 @@ const TEXT = {
       ],
     },
     contact: {
-      subject: 'Vi har tagit emot ditt meddelande · Sellora',
+      subject: 'Vi har tagit emot ditt meddelande · Hello Sellora',
       eyebrow: 'Meddelande mottaget',
       intro: 'Ditt meddelande har kommit fram. Vi svarar inom 48 timmar.',
       quoteTitle: 'Ditt meddelande',
@@ -111,12 +111,12 @@ const TEXT = {
     colon: ':',
     closing: 'Under tiden kan du svara på det här mejlet om du vill lägga till något.',
     signoff: 'Hörs snart,',
-    team: 'Sellora-teamet',
+    team: 'Hello Sellora-teamet',
     tagline: 'Lansera, väx och skala upp i hela Europa.',
   },
   es: {
     audit: {
-      subject: 'Hemos recibido tu solicitud de auditoría · Sellora',
+      subject: 'Hemos recibido tu solicitud de auditoría · Hello Sellora',
       eyebrow: 'Solicitud de auditoría recibida',
       intro: 'Tu solicitud de auditoría gratuita para {company} nos ha llegado. La estamos revisando con atención y te responderemos en 48 horas.',
       introNoCompany: 'Tu solicitud de auditoría gratuita nos ha llegado. La estamos revisando con atención y te responderemos en 48 horas.',
@@ -128,7 +128,7 @@ const TEXT = {
       ],
     },
     contact: {
-      subject: 'Hemos recibido tu mensaje · Sellora',
+      subject: 'Hemos recibido tu mensaje · Hello Sellora',
       eyebrow: 'Mensaje recibido',
       intro: 'Tu mensaje nos ha llegado. Te responderemos en 48 horas.',
       quoteTitle: 'Tu mensaje',
@@ -138,7 +138,7 @@ const TEXT = {
     colon: ':',
     closing: 'Mientras tanto, puedes responder a este correo si quieres añadir algo.',
     signoff: 'Hasta pronto,',
-    team: 'El equipo de Sellora',
+    team: 'El equipo de Hello Sellora',
     tagline: 'Lanza, crece y escala en toda Europa.',
   },
 };
@@ -224,7 +224,7 @@ function buildReply(kind, lang, data, assets) {
         '<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#FFFFFF;border:1px solid ' + line + ';border-radius:16px;overflow:hidden;">' +
           // Navy header with the logo, then a gold rule
           '<tr><td style="background:' + navy + ';padding:26px 40px;">' +
-            '<img src="' + img('sellora-logo-dark.png') + '" width="169" height="48" alt="Sellora" style="display:block;border:0;width:169px;height:48px;">' +
+            '<img src="' + img('sellora-logo-dark.png') + '" width="169" height="48" alt="Hello Sellora" style="display:block;border:0;width:169px;height:48px;">' +
           '</td></tr>' +
           '<tr><td style="background:' + gold + ';height:3px;line-height:3px;font-size:0;">&nbsp;</td></tr>' +
           // Eyebrow, heading, intro

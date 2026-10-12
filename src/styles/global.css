@@ -9,14 +9,22 @@
 }
 
 :root {
-  --navy: #0B1929;
-  --navy-mid: #1A2E45;
-  --navy-light: #243B55;
-  --gold: #E8A020;
-  --gold-light: #F5C86A;
-  --cream: #F8F4EE;
-  --white: #FFFFFF;
-  --text-muted: #8FA3B8;
+  /* Color tokens: change these to re-theme the whole site */
+  --bg: #0B1929;            /* page background */
+  --surface: #1A2E45;       /* cards, panels, raised areas */
+  --surface-2: #243B55;     /* nested boxes, hovers */
+  --text: #FFFFFF;          /* headings and main text */
+  --text-muted: #8FA3B8;    /* secondary text */
+  --accent: #E8A020;        /* buttons, dots, highlights */
+  --accent-hover: #F5C86A;  /* button hover */
+  --accent-text: #E8A020;   /* accent used as text (italic words, numbers, eyebrows) */
+  --on-accent: #0B1929;     /* text on accent buttons */
+  --border: var(--border);
+  --border-strong: var(--border-strong);
+  --border-hover: rgba(255, 255, 255, 0.4);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-lg: var(--shadow-lg);
+
   --serif: 'Instrument Serif', Georgia, serif;
   --sans: 'DM Sans', system-ui, sans-serif;
 }
@@ -27,8 +35,8 @@ html {
 
 body {
   font-family: var(--sans);
-  background: var(--navy);
-  color: var(--white);
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
   font-size: 16px;
 }
@@ -42,10 +50,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 4rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  background: var(--navy);
+  background: var(--bg);
   z-index: 100;
 }
 
@@ -53,12 +61,12 @@ nav {
   font-family: var(--serif);
   font-size: 1.35rem;
   letter-spacing: 0.02em;
-  color: var(--white);
+  color: var(--text);
   text-decoration: none;
 }
 
 .logo span {
-  color: var(--gold);
+  color: var(--accent-text);
   font-style: italic;
 }
 
@@ -79,12 +87,12 @@ nav > ul a {
 }
 
 nav > ul a:hover {
-  color: var(--white);
+  color: var(--text);
 }
 
 .nav-cta {
-  background: var(--gold) !important;
-  color: var(--navy) !important;
+  background: var(--accent) !important;
+  color: var(--on-accent) !important;
   padding: 0.55rem 1.4rem;
   border-radius: 100px;
   font-weight: 500 !important;
@@ -93,8 +101,8 @@ nav > ul a:hover {
 }
 
 .nav-cta:hover {
-  background: var(--gold-light) !important;
-  color: var(--navy) !important;
+  background: var(--accent-hover) !important;
+  color: var(--on-accent) !important;
 }
 
 /* ===========================
@@ -115,9 +123,9 @@ nav > ul a:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(232, 160, 32, 0.12);
-  border: 1px solid rgba(232, 160, 32, 0.25);
-  color: var(--gold-light);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  color: var(--accent-text);
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -131,7 +139,7 @@ nav > ul a:hover {
   content: '';
   width: 6px;
   height: 6px;
-  background: var(--gold);
+  background: var(--accent);
   border-radius: 50%;
   display: inline-block;
 }
@@ -147,7 +155,7 @@ nav > ul a:hover {
 
 .hero h1 em {
   font-style: italic;
-  color: var(--gold);
+  color: var(--accent-text);
 }
 
 .hero-sub {
@@ -170,8 +178,8 @@ nav > ul a:hover {
    =========================== */
 
 .btn-primary {
-  background: var(--gold);
-  color: var(--navy);
+  background: var(--accent);
+  color: var(--on-accent);
   padding: 0.9rem 2.2rem;
   border-radius: 100px;
   text-decoration: none;
@@ -182,7 +190,7 @@ nav > ul a:hover {
 }
 
 .btn-primary:hover {
-  background: var(--gold-light);
+  background: var(--accent-hover);
   transform: translateY(-1px);
 }
 
@@ -197,7 +205,7 @@ nav > ul a:hover {
 }
 
 .btn-ghost:hover {
-  color: var(--white);
+  color: var(--text);
 }
 
 .btn-ghost::after {
@@ -206,8 +214,8 @@ nav > ul a:hover {
 
 .btn-secondary {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--white);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
   padding: 0.9rem 2.2rem;
   border-radius: 100px;
   text-decoration: none;
@@ -217,7 +225,7 @@ nav > ul a:hover {
 }
 
 .btn-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: var(--border-hover);
 }
 
 /* ===========================
@@ -225,8 +233,8 @@ nav > ul a:hover {
    =========================== */
 
 .hero-panel {
-  background: var(--navy-mid);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 20px;
   padding: 2.5rem;
 }
@@ -247,7 +255,7 @@ nav > ul a:hover {
 
 .stat-box {
   flex: 1;
-  background: var(--navy-light);
+  background: var(--surface-2);
   border-radius: 12px;
   padding: 1.2rem;
 }
@@ -255,7 +263,7 @@ nav > ul a:hover {
 .stat-num {
   font-family: var(--serif);
   font-size: 2.2rem;
-  color: var(--gold);
+  color: var(--accent-text);
   line-height: 1;
   margin-bottom: 0.3rem;
 }
@@ -268,7 +276,7 @@ nav > ul a:hover {
 
 .panel-divider {
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid var(--border);
   margin: 1.5rem 0;
 }
 
@@ -282,8 +290,8 @@ nav > ul a:hover {
 .step-num {
   width: 26px;
   height: 26px;
-  background: rgba(232, 160, 32, 0.15);
-  color: var(--gold);
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent-text);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -311,8 +319,8 @@ nav > ul a:hover {
    =========================== */
 
 .logos-strip {
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   padding: 1.8rem 4rem;
   display: flex;
   align-items: center;
@@ -338,8 +346,8 @@ nav > ul a:hover {
 }
 
 .logo-pill {
-  background: var(--navy-mid);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.82rem;
   padding: 0.45rem 1rem;
@@ -365,7 +373,7 @@ nav > ul a:hover {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--gold);
+  color: var(--accent-text);
   margin-bottom: 1rem;
   font-weight: 500;
 }
@@ -380,7 +388,7 @@ nav > ul a:hover {
 
 .section-title em {
   font-style: italic;
-  color: var(--gold);
+  color: var(--accent-text);
 }
 
 /* ===========================
@@ -394,22 +402,22 @@ nav > ul a:hover {
 }
 
 .service-card {
-  background: var(--navy-mid);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 2rem;
   transition: border-color 0.2s, transform 0.2s;
 }
 
 .service-card:hover {
-  border-color: rgba(232, 160, 32, 0.3);
+  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
   transform: translateY(-3px);
 }
 
 .service-icon {
   width: 44px;
   height: 44px;
-  background: rgba(232, 160, 32, 0.1);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -435,9 +443,9 @@ nav > ul a:hover {
    =========================== */
 
 .how-section {
-  background: var(--navy-mid);
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .how-grid {
@@ -454,7 +462,7 @@ nav > ul a:hover {
   left: 10%;
   right: 10%;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(232, 160, 32, 0.3), transparent);
+  background: linear-gradient(to right, transparent, color-mix(in srgb, var(--accent) 30%, transparent), transparent);
 }
 
 .how-step {
@@ -465,9 +473,9 @@ nav > ul a:hover {
 .how-num {
   width: 56px;
   height: 56px;
-  background: var(--navy);
-  border: 2px solid rgba(232, 160, 32, 0.4);
-  color: var(--gold);
+  background: var(--bg);
+  border: 2px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  color: var(--accent-text);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -505,7 +513,7 @@ nav > ul a:hover {
 .quote-mark {
   font-family: var(--serif);
   font-size: 6rem;
-  color: var(--gold);
+  color: var(--accent-text);
   opacity: 0.2;
   line-height: 0.5;
   margin-bottom: 1.5rem;
@@ -518,7 +526,7 @@ nav > ul a:hover {
   font-style: italic;
   line-height: 1.5;
   margin-bottom: 2rem;
-  color: var(--white);
+  color: var(--text);
 }
 
 .quote-author {
@@ -527,7 +535,7 @@ nav > ul a:hover {
 }
 
 .quote-author strong {
-  color: var(--white);
+  color: var(--text);
   font-weight: 500;
   display: block;
   margin-bottom: 0.15rem;
@@ -539,8 +547,8 @@ nav > ul a:hover {
 
 .cta-section {
   margin: 0 4rem 6rem;
-  background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
-  border: 1px solid rgba(232, 160, 32, 0.2);
+  background: linear-gradient(135deg, var(--surface-2), var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
   border-radius: 24px;
   padding: 4.5rem;
   text-align: center;
@@ -555,7 +563,7 @@ nav > ul a:hover {
   right: -60px;
   width: 240px;
   height: 240px;
-  background: radial-gradient(circle, rgba(232, 160, 32, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 10%, transparent) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -569,7 +577,7 @@ nav > ul a:hover {
 
 .cta-section h2 em {
   font-style: italic;
-  color: var(--gold);
+  color: var(--accent-text);
 }
 
 .cta-section p {
@@ -592,7 +600,7 @@ nav > ul a:hover {
    =========================== */
 
 footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid var(--border);
   padding: 2rem 4rem;
   display: flex;
   justify-content: space-between;
@@ -726,9 +734,9 @@ footer p {
 }
 
 .lang-btn {
-  background: var(--navy-mid);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--white);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
   font-family: var(--sans);
   font-size: 0.85rem;
   font-weight: 400;
@@ -743,8 +751,8 @@ footer p {
 }
 
 .lang-btn:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  background: var(--navy-light);
+  border-color: var(--border-hover);
+  background: var(--surface-2);
 }
 
 .lang-arrow {
@@ -762,13 +770,13 @@ footer p {
   position: absolute;
   top: calc(100% + 0.5rem);
   right: 0;
-  background: var(--navy-mid);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
   list-style: none;
   overflow: hidden;
   min-width: 140px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-lg);
   z-index: 200;
 }
 
@@ -788,8 +796,8 @@ footer p {
 }
 
 .lang-menu li:hover {
-  background: var(--navy-light);
-  color: var(--white);
+  background: var(--surface-2);
+  color: var(--text);
 }
 
 @media (max-width: 600px) {
@@ -827,7 +835,7 @@ nav {
 }
 
 nav.scrolled {
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 .section--compact {
@@ -858,7 +866,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--white);
+  color: var(--text);
 }
 
 .fade-in {

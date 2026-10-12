@@ -1,6 +1,6 @@
 # Sellora
 
-Landing page for Sellora, a French Amazon agency helping French brands launch and grow on Amazon.fr.
+Landing page for Sellora (https://hellosellora.com), a French Amazon agency helping French brands launch and grow on Amazon.fr.
 
 Built with React and Vite.
 
@@ -70,13 +70,13 @@ Until then, the live site shows Sellora's own promise in the same quote style (t
 
 - [x] Rebrand to Sellora
 - [x] Convert to React
-- [ ] Confirm the real contact email (currently `contact@sellora.fr`)
+- [ ] Create contact@hellosellora.com in Google Workspace (the site already uses it)
 - [ ] Replace placeholder stats (+147%, -38%) with real client results
 - [x] Testimonials carousel (placeholders show locally only)
 - [ ] Add real client testimonials and delete the placeholders
 - [x] Replace emoji icons with Phosphor duotone icons
 - [x] Add logo, favicon, app icons and link preview image
-- [ ] Update the og:url and og:image addresses in index.html once the custom domain is live
+- [x] Point link previews (og:url, og:image) at hellosellora.com
 - [ ] Connect the CTA buttons to a contact form (e.g. Tally, Typeform, or Calendly)
 - [x] Deploy to GitHub Pages (auto deploys on every push to main)
-- [ ] Connect the custom domain
+- [ ] Connect hellosellora.com (DNS records at the registrar + GitHub Pages custom domain + HTTPS)

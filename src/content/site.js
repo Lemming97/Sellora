@@ -12,7 +12,7 @@ import {
 
 export const site = {
   name: 'Sellora',
-  email: 'contact@sellora.fr',
+  email: 'contact@hellosellora.com',
   defaultLanguage: 'fr',
   // Where the audit and contact forms POST their data as JSON (e.g. a Formspree form URL).
   // Leave empty to open the visitor's email app with the message prefilled instead.

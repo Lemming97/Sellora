@@ -836,16 +836,6 @@ body:has(.modal[open]) {
 }
 
 
-.quote-mark {
-  font-family: var(--serif);
-  font-size: 6rem;
-  color: var(--accent-text);
-  opacity: 0.2;
-  line-height: 0.5;
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
 .quote-text {
   font-family: var(--serif);
   font-size: 1.6rem;

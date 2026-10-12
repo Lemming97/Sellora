@@ -29,6 +29,7 @@
   --navy: #0B1929;
   --navy-mid: #1A2E45;
   --navy-light: #243B55;
+  --navy-gradient: linear-gradient(135deg, #284878 0%, var(--navy-mid) 55%, var(--navy) 100%);
 
   --serif: 'Instrument Serif', Georgia, serif;
   --sans: 'DM Sans', system-ui, sans-serif;
@@ -465,7 +466,7 @@ nav > ul a:hover {
    =========================== */
 
 .how-section {
-  background: var(--surface);
+  background: var(--navy-gradient);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -569,7 +570,7 @@ nav > ul a:hover {
 
 .cta-section {
   margin: 0 4rem 6rem;
-  background: linear-gradient(135deg, var(--surface-2), var(--surface));
+  background: var(--navy-gradient);
   border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
   border-radius: 24px;
   padding: 4.5rem;

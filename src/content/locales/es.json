@@ -196,7 +196,16 @@
     },
     "accessNote": "Para el análisis de publicidad y operaciones, te pediremos acceso de lectura a tu cuenta de Amazon.",
     "receiveTitle": "Qué recibes",
-    "receiveText": "Un informe escrito detallado con recomendaciones claras y priorizadas.",
+    "receiveText": "Un informe escrito detallado que incluye:",
+    "receiveItems": [
+      "un resumen de las principales conclusiones",
+      "mejoras rápidas que puedes aplicar de inmediato",
+      "un plan de acción priorizado según impacto y esfuerzo",
+      "una comparativa con tus principales competidores",
+      "una lista de oportunidades de palabras clave",
+      "una versión reescrita de tu ficha más vendida",
+      "una hoja de ruta para los próximos 90 días"
+    ],
     "stepsTitle": "Cómo funciona",
     "steps": [
       "Solicita una auditoría y cuéntanos sobre tu marca.",

@@ -196,7 +196,16 @@
     },
     "accessNote": "For the advertising and operations review, we'll ask for read access to your Amazon account.",
     "receiveTitle": "What you receive",
-    "receiveText": "A detailed written report with clear, prioritized recommendations.",
+    "receiveText": "A detailed written report, including:",
+    "receiveItems": [
+      "a summary of the main findings",
+      "quick wins you can apply right away",
+      "a prioritized action plan, ranked by impact and effort",
+      "a benchmark against your main competitors",
+      "a list of keyword opportunities",
+      "a rewritten version of your best-selling listing",
+      "a roadmap for your next 90 days"
+    ],
     "stepsTitle": "How it works",
     "steps": [
       "Request an audit and tell us about your brand.",

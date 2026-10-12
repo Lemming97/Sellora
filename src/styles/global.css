@@ -958,7 +958,7 @@ body:has(.modal[open]) {
 
 .audit-details {
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
   margin-top: 3rem;
 }
@@ -978,6 +978,33 @@ body:has(.modal[open]) {
 .audit-card p {
   color: var(--text-muted);
   line-height: 1.65;
+}
+
+.audit-receive {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.audit-receive li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* Small gold dot instead of a bullet character */
+.audit-receive li::before {
+  content: '';
+  position: absolute;
+  left: 0.2rem;
+  top: 0.6em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 .audit-steps {

@@ -196,7 +196,16 @@
     },
     "accessNote": "För granskningen av annonsering och drift ber vi om läsbehörighet till ditt Amazon-konto.",
     "receiveTitle": "Det här får du",
-    "receiveText": "En detaljerad skriftlig rapport med tydliga, prioriterade rekommendationer.",
+    "receiveText": "En detaljerad skriftlig rapport som innehåller:",
+    "receiveItems": [
+      "en sammanfattning av de viktigaste slutsatserna",
+      "snabba förbättringar du kan göra direkt",
+      "en prioriterad handlingsplan, rangordnad efter effekt och insats",
+      "en jämförelse med dina främsta konkurrenter",
+      "en lista med sökordsmöjligheter",
+      "en omskriven version av din mest sålda produktlista",
+      "en färdplan för de kommande 90 dagarna"
+    ],
     "stepsTitle": "Så går det till",
     "steps": [
       "Beställ en analys och berätta om ditt varumärke.",

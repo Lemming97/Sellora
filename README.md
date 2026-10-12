@@ -92,7 +92,7 @@ All visible text lives in `src/content/locales/<lang>.json`, so you rarely need 
 
 **Colors:** all colors are tokens at the top of `src/styles/global.css` (`:root`). The page is cream with navy text and gold accents; the method section and the call to action use the navy tokens (`.theme-dark`).
 
-**Logo:** the logo files are in `src/assets/brand/`. The nav and footer show the seal plus the "Sellora" wordmark, and only the seal on very narrow phones.
+**Logo:** the logo files are in `src/assets/brand/`. The logo reads "Hello Sellora": a gold italic "Hello" centred above "Sellora". The nav and footer show the seal plus that wordmark, and only the seal on very narrow phones.
 
 ## Brand
 

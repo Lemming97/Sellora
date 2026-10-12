@@ -19,7 +19,8 @@ npm run preview # serve the production build locally
 
 ```
 sellora/
-├── index.html                  # HTML shell (fonts, meta tags)
+├── index.html                  # HTML shell (fonts, icons, link preview tags)
+├── public/                     # Favicons, app icons, og-image.png (link preview)
 ├── vite.config.js
 └── src/
     ├── main.jsx                # Entry point
@@ -37,6 +38,7 @@ sellora/
     │   ├── site.js             # Shared data: email, languages, stats, service icons
     │   └── locales/            # All page text, one file per language
     │       └── fr.json, en.json, sv.json, es.json
+    ├── assets/brand/           # Logo SVGs (light, dark, seal)
     ├── i18n/LanguageContext.jsx  # Current language, saved in localStorage
     ├── hooks/useInView.js      # Scroll fade-in
     └── styles/global.css
@@ -70,7 +72,8 @@ All text lives in `src/content/locales/<lang>.json`, so you rarely need to touch
 - [ ] Replace placeholder stats (+147%, -38%) with real client results
 - [ ] Replace the testimonial with a real client quote
 - [x] Replace emoji icons with Phosphor duotone icons
-- [ ] Add a logo and favicon
+- [x] Add logo, favicon, app icons and link preview image
+- [ ] Update the og:url and og:image addresses in index.html once the custom domain is live
 - [ ] Connect the CTA buttons to a contact form (e.g. Tally, Typeform, or Calendly)
 - [x] Deploy to GitHub Pages (auto deploys on every push to main)
 - [ ] Connect the custom domain

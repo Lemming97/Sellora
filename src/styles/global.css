@@ -83,16 +83,24 @@ nav {
 }
 
 .logo {
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  letter-spacing: 0.02em;
-  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
   text-decoration: none;
 }
 
-.logo span {
-  color: var(--accent-text);
-  font-style: italic;
+.logo img {
+  display: block;
+  height: 36px;
+  width: auto;
+}
+
+.logo .logo-mark {
+  display: none;
+}
+
+footer .logo img {
+  height: 30px;
 }
 
 nav > ul {
@@ -1100,5 +1108,17 @@ footer a:hover {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* Very narrow phones: show only the round seal in the nav */
+@media (max-width: 400px) {
+  nav .logo .logo-full {
+    display: none;
+  }
+
+  nav .logo .logo-mark {
+    display: block;
+    height: 34px;
   }
 }

@@ -1225,3 +1225,15 @@ footer a:hover {
     height: 34px;
   }
 }
+
+/* If the testimonials section is ever empty, keep space between the navy
+   method section and the call to action card. */
+.how-section + .cta-section {
+  margin-top: 6rem;
+}
+
+@media (max-width: 900px) {
+  .how-section + .cta-section {
+    margin-top: 4rem;
+  }
+}

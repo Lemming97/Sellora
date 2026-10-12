@@ -8,7 +8,8 @@ const SWIPE_THRESHOLD = 50; // px a visitor must drag before it counts as a swip
 
 // Testimonials marked "placeholder": true only show when running locally (npm run dev).
 // On the live site they are hidden, so visitors never see invented quotes.
-// Add a real testimonial (without "placeholder") to every locale file and it appears live.
+// The entry with "kind": "promise" is Sellora's own promise. It shows live until real
+// client testimonials exist; delete it from every locale file once you have them.
 export function useVisibleTestimonials() {
   const { t } = useLanguage();
   return t.testimonials.filter((item) => import.meta.env.DEV || !item.placeholder);

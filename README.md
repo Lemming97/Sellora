@@ -48,13 +48,13 @@ sellora/
 
 All text lives in `src/content/locales/<lang>.json`, so you rarely need to touch the components.
 
-**Testimonials (carousel):** each locale file has a `testimonials` list. Entries marked `"placeholder": true` only show when you run the site locally (`npm run dev`), with an "Example" badge, and are hidden on the live site so visitors never see invented quotes. While there are no real testimonials, the live site hides the section and the "See our results" link. To add a real one, add an entry without `placeholder` to every locale file:
+**Testimonials (carousel):** each locale file has a `testimonials` list. Entries marked `"placeholder": true` only show when you run the site locally (`npm run dev`), with an "Example" badge, and are hidden on the live site so visitors never see invented quotes. To add a real one, add an entry without `placeholder` to every locale file:
 
 ```json
 { "quote": "…", "author": "Name", "role": "Title, Company (City)" }
 ```
 
-When you have real quotes, delete the placeholder entries.
+Until then, the live site shows Sellora's own promise in the same quote style (the entry with `"kind": "promise"`). When you have real quotes, delete the placeholder entries and the promise entry.
 
 **Add a service card:**
 1. Pick an icon on [phosphoricons.com](https://phosphoricons.com), import it at the top of `src/content/site.js`, and add `{ id: 'my-service', icon: ShoppingCart }` to `services`.

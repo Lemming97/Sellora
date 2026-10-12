@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { CaretDown, Check } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import { languages } from '../content/site.js';
 
@@ -35,7 +36,9 @@ export default function LanguageSwitcher() {
         aria-expanded={open}
         onClick={() => setOpen((o) => !o)}
       >
-        {current.flag} {current.name} <span className="lang-arrow">▾</span>
+        <span className="lang-code" aria-hidden="true">{current.code.toUpperCase()}</span>
+        <span className="lang-name">{current.name}</span>
+        <CaretDown className="lang-arrow" size={12} weight="bold" aria-hidden="true" />
       </button>
       <ul className="lang-menu" role="listbox" aria-label="Language">
         {languages.map((l) => (
@@ -47,7 +50,9 @@ export default function LanguageSwitcher() {
             onClick={() => choose(l.code)}
             onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), choose(l.code))}
           >
-            {l.flag} {l.name}
+            <span className="lang-code" aria-hidden="true">{l.code.toUpperCase()}</span>
+            <span>{l.name}</span>
+            {l.code === lang && <Check className="lang-check" size={14} weight="bold" aria-hidden="true" />}
           </li>
         ))}
       </ul>

@@ -1072,9 +1072,22 @@ footer p {
 }
 
 .lang-arrow {
-  font-size: 0.7rem;
-  opacity: 0.6;
+  opacity: 0.55;
   transition: transform 0.2s;
+}
+
+/* Language code badge (FR, EN, SV, ES), in the same gold tint as the service icon tiles */
+.lang-code {
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  color: var(--accent-text);
+  background: color-mix(in srgb, var(--accent) 13%, transparent);
+  border-radius: 6px;
+  padding: 0.3rem 0.35rem;
+  min-width: 1.6rem;
+  text-align: center;
 }
 
 .lang-switcher.open .lang-arrow {
@@ -1091,7 +1104,8 @@ footer p {
   border-radius: 12px;
   list-style: none;
   overflow: hidden;
-  min-width: 140px;
+  min-width: 190px;
+  padding: 0.35rem;
   box-shadow: var(--shadow-lg);
   z-index: 200;
 }
@@ -1101,19 +1115,31 @@ footer p {
 }
 
 .lang-menu li {
-  padding: 0.65rem 1rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
   font-size: 0.85rem;
   color: var(--text-muted);
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.65rem;
 }
 
-.lang-menu li:hover {
+.lang-menu li:hover,
+.lang-menu li[aria-selected='true'] {
   background: var(--surface-2);
   color: var(--text);
+}
+
+.lang-menu li[aria-selected='true'] .lang-code {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.lang-check {
+  margin-left: auto;
+  color: var(--accent-text);
 }
 
 @media (max-width: 600px) {
@@ -1122,8 +1148,13 @@ footer p {
   }
 
   .lang-btn {
-    padding: 0.4rem 0.7rem;
+    padding: 0.4rem 0.6rem;
     font-size: 0.8rem;
+  }
+
+  /* On phones the button shows just the code badge; the menu keeps full names */
+  .lang-btn .lang-name {
+    display: none;
   }
 }
 

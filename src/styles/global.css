@@ -24,6 +24,7 @@
   --border-hover: rgba(11, 25, 41, 0.35);
   --shadow-sm: 0 4px 24px rgba(15, 25, 40, 0.08);
   --shadow-lg: 0 8px 32px rgba(15, 25, 40, 0.12);
+  --error: #B42318;         /* form validation messages */
 
   /* Navy palette, used by the dark sections below */
   --navy: #0B1929;
@@ -249,6 +250,196 @@ nav > ul a:hover {
 
 .btn-secondary:hover {
   border-color: var(--border-hover);
+}
+
+button.btn-primary,
+button.btn-secondary {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button.btn-primary {
+  border: none;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: progress;
+  transform: none;
+}
+
+/* ===========================
+   MODAL FORMS
+   =========================== */
+
+.modal {
+  width: min(560px, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  margin: auto;
+  padding: 0;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal::backdrop {
+  background: rgba(11, 25, 41, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+body:has(.modal[open]) {
+  overflow: hidden;
+}
+
+.modal-body {
+  position: relative;
+  padding: 2.5rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.modal-close:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.modal h2 {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  padding-right: 2rem;
+}
+
+.modal-intro {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 1.8rem;
+}
+
+.modal-done p {
+  color: var(--text-muted);
+  margin: 1rem 0 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.form-field {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field-half {
+  grid-column: span 1;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.form-required {
+  color: var(--accent-text);
+}
+
+.form-optional {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.form-field input,
+.form-field textarea {
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 7rem;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.form-field [aria-invalid="true"] {
+  border-color: var(--error);
+}
+
+.form-field [aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--error) 20%, transparent);
+}
+
+.form-field-error,
+.form-error {
+  color: var(--error);
+  font-size: 0.8rem;
+}
+
+.form-error {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+}
+
+.form-required-note {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  margin-top: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.8rem;
+}
+
+@media (max-width: 600px) {
+  .modal-body {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-field-half {
+    grid-column: 1 / -1;
+  }
+
+  .form-actions > * {
+    flex: 1;
+    text-align: center;
+  }
 }
 
 /* ===========================

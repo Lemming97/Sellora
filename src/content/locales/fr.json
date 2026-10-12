@@ -130,6 +130,43 @@
     "primary": "Demander mon audit gratuit",
     "secondary": "Nous contacter"
   },
+  "forms": {
+    "close": "Fermer",
+    "cancel": "Annuler",
+    "sending": "Envoi…",
+    "optional": "facultatif",
+    "requiredNote": "* Champs obligatoires",
+    "failed": "Une erreur est survenue et votre message n'a pas été envoyé. Veuillez réessayer ou nous écrire à {email}.",
+    "success": {
+      "sent": "Merci ! Nous avons bien reçu votre message et vous répondrons sous 48 h.",
+      "mailto": "Votre messagerie devrait s'ouvrir avec votre message prêt. Il ne vous reste qu'à l'envoyer : nous vous répondrons sous 48 h."
+    },
+    "errors": {
+      "required": "Ce champ est obligatoire.",
+      "email": "Saisissez une adresse e-mail valide, par exemple nom@entreprise.fr.",
+      "tooShort": "Veuillez écrire au moins {min} caractères.",
+      "url": "Saisissez une adresse de site valide, par exemple acme.fr."
+    },
+    "fields": {
+      "company": "Nom de l'entreprise",
+      "website": "Site web de l'entreprise",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "E-mail",
+      "subject": "Objet",
+      "message": "Message"
+    },
+    "audit": {
+      "title": "Demandez votre audit gratuit",
+      "intro": "Parlez-nous de votre marque : nous vous enverrons une analyse complète de votre potentiel Amazon sous 48 h.",
+      "submit": "Demander mon audit"
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "intro": "Une question ? Écrivez-nous, nous vous répondrons sous 48 h.",
+      "submit": "Envoyer le message"
+    }
+  },
   "footer": {
     "tagline": "Agence Amazon française.",
     "location": "Paris, France"

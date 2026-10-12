@@ -130,6 +130,43 @@
     "primary": "Solicitar mi auditoría gratuita",
     "secondary": "Contactarnos"
   },
+  "forms": {
+    "close": "Cerrar",
+    "cancel": "Cancelar",
+    "sending": "Enviando…",
+    "optional": "opcional",
+    "requiredNote": "* Campos obligatorios",
+    "failed": "Algo salió mal y tu mensaje no se envió. Inténtalo de nuevo o escríbenos a {email}.",
+    "success": {
+      "sent": "¡Gracias! Hemos recibido tu mensaje y te responderemos en 48 horas.",
+      "mailto": "Tu aplicación de correo debería abrirse con el mensaje listo. Solo tienes que enviarlo y te responderemos en 48 horas."
+    },
+    "errors": {
+      "required": "Este campo es obligatorio.",
+      "email": "Introduce un correo electrónico válido, como nombre@empresa.com.",
+      "tooShort": "Escribe al menos {min} caracteres.",
+      "url": "Introduce una dirección web válida, como acme.com."
+    },
+    "fields": {
+      "company": "Nombre de la empresa",
+      "website": "Sitio web de la empresa",
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje"
+    },
+    "audit": {
+      "title": "Solicita tu auditoría gratuita",
+      "intro": "Cuéntanos sobre tu marca y te enviaremos un análisis completo de tu potencial en Amazon en 48 horas.",
+      "submit": "Solicitar mi auditoría"
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "intro": "¿Tienes alguna pregunta? Envíanos un mensaje y te responderemos en 48 horas.",
+      "submit": "Enviar mensaje"
+    }
+  },
   "footer": {
     "tagline": "Agencia Amazon francesa.",
     "location": "París, Francia"

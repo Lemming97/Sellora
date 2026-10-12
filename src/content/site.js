@@ -24,10 +24,10 @@ export const site = {
 };
 
 export const languages = [
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'fr', name: 'Français' },
+  { code: 'en', name: 'English' },
+  { code: 'sv', name: 'Svenska' },
+  { code: 'es', name: 'Español' },
 ];
 
 // Headline results shown in the hero panel. Labels: panel.stats.<id>

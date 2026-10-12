@@ -301,11 +301,13 @@ function processNewSubmissions() {
     const kind = fromSubject.kind;
     const langRaw = (fromSubject.lang || fields['Page language'] || '').trim().toLowerCase().slice(0, 2);
     const lang = TEXT[langRaw] ? langRaw : CONFIG.defaultLanguage;
-    const firstName = fields['First name'] || fromSubject.firstName;
-    const company = fields['Company'] || fromSubject.company;
-    if (!firstName || !langRaw) {
-      // Leaves a trace in Apps Script > Executions so the format can be checked.
-      Logger.log('Could not read every detail. Subject: ' + message.getSubject() + ' | Body start: ' + body.slice(0, 400));
+    // The subject is set by the website in a fixed format, so it is trusted first.
+    const firstName = fromSubject.firstName || fields['First name'];
+    const company = fromSubject.company || fields['Company'];
+    // Leaves a trace in Apps Script > Executions, so the email format can be checked.
+    Logger.log('Replying to ' + visitor + ' | ' + JSON.stringify({ kind: kind, lang: lang, firstName: firstName, company: company, message: (fields['Message'] || '').slice(0, 80) }));
+    if (!fromSubject.firstName || !fromSubject.lang) {
+      Logger.log('Subject not in the expected format: ' + message.getSubject() + ' | Body start: ' + body.slice(0, 400));
     }
     const reply = buildReply(kind, lang, {
       firstName: firstName,

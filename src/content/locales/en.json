@@ -7,7 +7,7 @@
     "services": "Services",
     "approach": "Our approach",
     "contact": "Contact",
-    "cta": "Free audit"
+    "cta": "Request an audit"
   },
   "hero": {
     "eyebrow": "Amazon Agency · Europe",
@@ -17,7 +17,7 @@
       "after": "Amazon"
     },
     "sub": "We help brands launch, optimise and scale their Amazon presence across Europe, without getting lost in the complexity of the platform.",
-    "primaryCta": "Get a free audit",
+    "primaryCta": "Request an audit",
     "secondaryCta": "See our results"
   },
   "panel": {
@@ -30,7 +30,7 @@
     "steps": [
       {
         "title": "Brand audit",
-        "sub": "Free analysis of your Amazon potential"
+        "sub": "In-depth analysis of your Amazon potential"
       },
       {
         "title": "Tailored strategy",
@@ -164,8 +164,8 @@
       "em": "best salesperson",
       "after": "?"
     },
-    "sub": "Get a free brand audit — no commitment, within 48 hours.",
-    "primary": "Request my free audit",
+    "sub": "Request a brand audit and get a clear picture of your Amazon potential.",
+    "primary": "Request my audit",
     "secondary": "Contact us"
   },
   "forms": {
@@ -176,8 +176,8 @@
     "requiredNote": "* Required fields",
     "failed": "Something went wrong and your message wasn't sent. Please try again, or email us at {email}.",
     "success": {
-      "sent": "Thank you! We've received your message and will get back to you within 48 hours.",
-      "mailto": "Your email app should now open with your message ready. Just press send and we'll reply within 48 hours. If nothing opens, email us directly at {email}."
+      "sent": "Thank you! We've received your message and will get back to you shortly.",
+      "mailto": "Your email app should now open with your message ready. Just press send and we'll reply shortly. If nothing opens, email us directly at {email}."
     },
     "errors": {
       "required": "This field is required.",
@@ -195,8 +195,8 @@
       "message": "Message"
     },
     "audit": {
-      "title": "Request your free audit",
-      "intro": "Tell us about your brand and we'll send you a full analysis of your Amazon potential within 48 hours.",
+      "title": "Request your audit",
+      "intro": "Tell us about your brand and we'll get back to you to discuss your goals and what your audit will cover.",
       "submit": "Request my audit"
     },
     "contact": {

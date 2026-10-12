@@ -37,13 +37,13 @@ const TEXT = {
     audit: {
       subject: 'Nous avons bien reçu votre demande d’audit · Hello Sellora',
       eyebrow: 'Demande d’audit reçue',
-      intro: 'Votre demande d’audit gratuit pour {company} est bien arrivée. Nous l’étudions avec attention et revenons vers vous sous 48 h.',
-      introNoCompany: 'Votre demande d’audit gratuit est bien arrivée. Nous l’étudions avec attention et revenons vers vous sous 48 h.',
+      intro: 'Votre demande d’audit pour {company} est bien arrivée. Nous l’étudions avec attention et revenons vers vous très rapidement.',
+      introNoCompany: 'Votre demande d’audit est bien arrivée. Nous l’étudions avec attention et revenons vers vous très rapidement.',
       stepsTitle: 'La suite',
       steps: [
-        ['Nous analysons votre marque', 'Votre catalogue, vos concurrents et votre potentiel sur Amazon.'],
-        ['Nous préparons votre audit', 'Des recommandations concrètes, adaptées à votre secteur.'],
-        ['Nous en parlons ensemble', 'Un échange pour passer en revue les résultats et vos prochaines étapes.'],
+        ['Nous étudions votre demande', 'Votre marque, votre catalogue et vos objectifs sur Amazon.'],
+        ['Nous vous contactons', 'Un échange pour comprendre vos besoins et définir le périmètre de l’audit.'],
+        ['Nous vous envoyons une proposition', 'Le contenu, le calendrier et le tarif de votre audit.'],
       ],
     },
     contact: {
@@ -64,13 +64,13 @@ const TEXT = {
     audit: {
       subject: 'We’ve received your audit request · Hello Sellora',
       eyebrow: 'Audit request received',
-      intro: 'Your free audit request for {company} has reached us. We’re reviewing it carefully and will get back to you within 48 hours.',
-      introNoCompany: 'Your free audit request has reached us. We’re reviewing it carefully and will get back to you within 48 hours.',
+      intro: 'Your audit request for {company} has reached us. We’re reviewing it carefully and will be in touch shortly.',
+      introNoCompany: 'Your audit request has reached us. We’re reviewing it carefully and will be in touch shortly.',
       stepsTitle: 'What happens next',
       steps: [
-        ['We analyse your brand', 'Your catalogue, your competitors and your potential on Amazon.'],
-        ['We prepare your audit', 'Concrete recommendations tailored to your sector.'],
-        ['We talk it through', 'A conversation to go over the findings and your next steps.'],
+        ['We review your request', 'Your brand, your catalogue and your goals on Amazon.'],
+        ['We get in touch', 'A conversation to understand your needs and agree on the scope of the audit.'],
+        ['We send you a proposal', 'What the audit covers, the timeline and the price.'],
       ],
     },
     contact: {
@@ -91,13 +91,13 @@ const TEXT = {
     audit: {
       subject: 'Vi har tagit emot din förfrågan om analys · Hello Sellora',
       eyebrow: 'Förfrågan mottagen',
-      intro: 'Din förfrågan om en gratis analys för {company} har kommit fram. Vi går igenom den noggrant och återkommer inom 48 timmar.',
-      introNoCompany: 'Din förfrågan om en gratis analys har kommit fram. Vi går igenom den noggrant och återkommer inom 48 timmar.',
+      intro: 'Din förfrågan om en analys för {company} har kommit fram. Vi går igenom den noggrant och återkommer snart.',
+      introNoCompany: 'Din förfrågan om en analys har kommit fram. Vi går igenom den noggrant och återkommer snart.',
       stepsTitle: 'Så går det till',
       steps: [
-        ['Vi analyserar ditt varumärke', 'Ditt sortiment, dina konkurrenter och din potential på Amazon.'],
-        ['Vi tar fram din analys', 'Konkreta rekommendationer anpassade efter din bransch.'],
-        ['Vi går igenom den tillsammans', 'Ett samtal om resultaten och dina nästa steg.'],
+        ['Vi går igenom din förfrågan', 'Ditt varumärke, ditt sortiment och dina mål på Amazon.'],
+        ['Vi hör av oss', 'Ett samtal för att förstå dina behov och komma överens om analysens omfattning.'],
+        ['Vi skickar ett förslag', 'Vad analysen omfattar, tidsplan och pris.'],
       ],
     },
     contact: {
@@ -118,13 +118,13 @@ const TEXT = {
     audit: {
       subject: 'Hemos recibido tu solicitud de auditoría · Hello Sellora',
       eyebrow: 'Solicitud de auditoría recibida',
-      intro: 'Tu solicitud de auditoría gratuita para {company} nos ha llegado. La estamos revisando con atención y te responderemos en 48 horas.',
-      introNoCompany: 'Tu solicitud de auditoría gratuita nos ha llegado. La estamos revisando con atención y te responderemos en 48 horas.',
+      intro: 'Tu solicitud de auditoría para {company} nos ha llegado. La estamos revisando con atención y te responderemos muy pronto.',
+      introNoCompany: 'Tu solicitud de auditoría nos ha llegado. La estamos revisando con atención y te responderemos muy pronto.',
       stepsTitle: 'Próximos pasos',
       steps: [
-        ['Analizamos tu marca', 'Tu catálogo, tu competencia y tu potencial en Amazon.'],
-        ['Preparamos tu auditoría', 'Recomendaciones concretas adaptadas a tu sector.'],
-        ['Lo revisamos juntos', 'Una conversación para repasar los resultados y tus próximos pasos.'],
+        ['Revisamos tu solicitud', 'Tu marca, tu catálogo y tus objetivos en Amazon.'],
+        ['Te contactamos', 'Una conversación para entender tus necesidades y definir el alcance de la auditoría.'],
+        ['Te enviamos una propuesta', 'Qué incluye la auditoría, el calendario y el precio.'],
       ],
     },
     contact: {

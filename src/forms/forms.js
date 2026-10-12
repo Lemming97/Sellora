@@ -65,7 +65,7 @@ export async function sendForm({ kind, subject, fields, values, labels, lang, bo
         from_name: 'Sellora website',
         replyto: data.email,
         botcheck: Boolean(botcheck),
-        Form: kind === 'audit' ? 'Free audit request' : 'Contact form',
+        Form: kind === 'audit' ? 'Audit request' : 'Contact form',
         'Page language': lang,
         ...readable,
       }),

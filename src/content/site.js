@@ -11,7 +11,7 @@ import {
 // Translated text lives in ./locales/<lang>.json, keyed by the same ids.
 
 export const site = {
-  name: 'Sellora',
+  name: 'Hello Sellora',
   email: 'contact@hellosellora.com',
   defaultLanguage: 'fr',
   // How the audit and contact forms are delivered, in order of preference:

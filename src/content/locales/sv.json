@@ -177,7 +177,7 @@
     "failed": "Något gick fel och ditt meddelande skickades inte. Försök igen eller mejla oss på {email}.",
     "success": {
       "sent": "Tack! Vi har tagit emot ditt meddelande och svarar inom 48 timmar.",
-      "mailto": "Ditt e-postprogram bör nu öppnas med meddelandet klart. Tryck bara på skicka så svarar vi inom 48 timmar. Om inget öppnas, mejla oss direkt på {email}."
+      "mailto": "Ditt e-postprogram bör nu öppnas med meddelandet klart. Tryck bara på skicka så svarar vi inom 48 timmar."
     },
     "errors": {
       "required": "Det här fältet är obligatoriskt.",

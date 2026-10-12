@@ -177,7 +177,7 @@
     "failed": "Algo salió mal y tu mensaje no se envió. Inténtalo de nuevo o escríbenos a {email}.",
     "success": {
       "sent": "¡Gracias! Hemos recibido tu mensaje y te responderemos en 48 horas.",
-      "mailto": "Tu aplicación de correo debería abrirse con el mensaje listo. Solo tienes que enviarlo y te responderemos en 48 horas. Si no se abre nada, escríbenos directamente a {email}."
+      "mailto": "Tu aplicación de correo debería abrirse con el mensaje listo. Solo tienes que enviarlo y te responderemos en 48 horas."
     },
     "errors": {
       "required": "Este campo es obligatorio.",

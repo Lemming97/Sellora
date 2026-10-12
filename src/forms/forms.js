@@ -26,55 +26,16 @@ export function validateField(field, value, messages) {
   return '';
 }
 
-// English field names used in the emails you receive, whatever language the visitor used.
-const INBOX_LABELS = {
-  company: 'Company',
-  website: 'Website',
-  firstName: 'First name',
-  lastName: 'Last name',
-  email: 'Email',
-  subject: 'Subject',
-  message: 'Message',
-};
-
-// Sends a form. Resolves to 'sent' (delivered by a form service) or 'mailto' (visitor's
-// email app opened). Rejects if the form service returns an error.
-// `kind` is 'audit' or 'contact'; `lang` is the page language; `botcheck` is the honeypot.
-export async function sendForm({ kind, subject, fields, values, labels, lang, botcheck }) {
+// Sends a form to site.formEndpoint, or falls back to the visitor's email app.
+// Resolves to 'sent' or 'mailto'; rejects if the endpoint returns an error.
+export async function sendForm({ subject, fields, values, labels }) {
   const data = Object.fromEntries(fields.map((f) => [f.id, values[f.id].trim()]));
-  const who = [data.firstName, data.lastName].filter(Boolean).join(' ');
-  const inboxSubject = kind === 'audit'
-    ? `New audit request: ${data.company || who}`
-    : `New message from ${who}${data.subject ? `: ${data.subject}` : ''}`;
-
-  if (site.web3formsKey) {
-    const readable = Object.fromEntries(
-      fields.filter((f) => data[f.id]).map((f) => [INBOX_LABELS[f.id] || f.id, data[f.id]])
-    );
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({
-        access_key: site.web3formsKey,
-        subject: inboxSubject,
-        from_name: 'Sellora website',
-        replyto: data.email,
-        botcheck: Boolean(botcheck),
-        Form: kind === 'audit' ? 'Free audit request' : 'Contact form',
-        'Page language': lang,
-        ...readable,
-      }),
-    });
-    const result = await response.json().catch(() => ({}));
-    if (!response.ok || result.success === false) throw new Error(result.message || `Form service returned ${response.status}`);
-    return 'sent';
-  }
 
   if (site.formEndpoint) {
     const response = await fetch(site.formEndpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ _subject: inboxSubject, _replyto: data.email, ...data }),
+      body: JSON.stringify({ _subject: subject, ...data }),
     });
     if (!response.ok) throw new Error(`Form endpoint returned ${response.status}`);
     return 'sent';

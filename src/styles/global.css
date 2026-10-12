@@ -1227,15 +1227,3 @@ footer a:hover {
     margin-top: 4rem;
   }
 }
-
-/* Spam trap in the forms: hidden from people, visible to simple bots */
-.form-honeypot {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  opacity: 0;
-  pointer-events: none;
-}

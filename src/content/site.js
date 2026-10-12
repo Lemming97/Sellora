@@ -14,12 +14,8 @@ export const site = {
   name: 'Sellora',
   email: 'contact@hellosellora.com',
   defaultLanguage: 'fr',
-  // How the audit and contact forms are delivered, in order of preference:
-  // 1. web3formsKey: the access key from https://web3forms.com (created for contact@hellosellora.com).
-  //    Submissions are emailed straight to contact@. The key is designed to be public.
-  // 2. formEndpoint: any service that accepts a JSON POST (e.g. a Formspree form URL).
-  // 3. Neither set: the visitor's email app opens with the message prefilled.
-  web3formsKey: '',
+  // Where the audit and contact forms POST their data as JSON (e.g. a Formspree form URL).
+  // Leave empty to open the visitor's email app with the message prefilled instead.
   formEndpoint: '',
 };
 

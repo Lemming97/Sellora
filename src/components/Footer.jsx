@@ -1,6 +1,7 @@
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import { useFormModal } from '../forms/FormModalContext.jsx';
 import { site } from '../content/site.js';
+import { LinkedinLogo } from '@phosphor-icons/react';
 import Logo from './Logo.jsx';
 
 export default function Footer() {
@@ -20,10 +21,16 @@ export default function Footer() {
     <footer>
       <Logo />
       <p>© {year} {site.name}. {t.footer.tagline}</p>
-      <p>
-        {t.footer.location} ·{' '}
-        <a href={`mailto:${site.email}`} onClick={handleEmailClick} aria-haspopup="dialog">{site.email}</a>
-      </p>
+      <div className="footer-contact">
+        <p>
+          {t.footer.location} ·{' '}
+          <a href={`mailto:${site.email}`} onClick={handleEmailClick} aria-haspopup="dialog">{site.email}</a>
+        </p>
+        <a className="footer-social" href={site.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${site.name} on LinkedIn`}>
+          <LinkedinLogo size={18} weight="duotone" aria-hidden="true" />
+          <span>LinkedIn</span>
+        </a>
+      </div>
     </footer>
   );
 }

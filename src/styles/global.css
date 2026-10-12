@@ -316,6 +316,7 @@ nav > ul a:hover {
   padding: 1.8rem 4rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   overflow: hidden;
 }
@@ -333,6 +334,7 @@ nav > ul a:hover {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .logo-pill {
@@ -640,7 +642,7 @@ footer p {
   .logos-strip {
     padding: 1.5rem 2rem;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
   }
 

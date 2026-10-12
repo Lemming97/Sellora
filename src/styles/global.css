@@ -10,23 +10,45 @@
 
 :root {
   /* Color tokens: change these to re-theme the whole site */
-  --bg: #0B1929;            /* page background */
-  --surface: #1A2E45;       /* cards, panels, raised areas */
-  --surface-2: #243B55;     /* nested boxes, hovers */
-  --text: #FFFFFF;          /* headings and main text */
-  --text-muted: #8FA3B8;    /* secondary text */
-  --accent: #E8A020;        /* buttons, dots, highlights */
+  --bg: #FAF8F4;            /* page background (warm cream) */
+  --surface: #FFFFFF;       /* cards, panels, raised areas */
+  --surface-2: #F2EEE6;     /* nested boxes, hovers */
+  --text: #0B1929;          /* headings and main text (navy) */
+  --text-muted: #55657A;    /* secondary text */
+  --accent: #E8A020;        /* buttons, dots, highlights (gold) */
   --accent-hover: #F5C86A;  /* button hover */
-  --accent-text: #E8A020;   /* accent used as text (italic words, numbers, eyebrows) */
-  --on-accent: #0B1929;     /* text on accent buttons */
-  --border: var(--border);
-  --border-strong: var(--border-strong);
-  --border-hover: rgba(255, 255, 255, 0.4);
-  --shadow-sm: var(--shadow-sm);
-  --shadow-lg: var(--shadow-lg);
+  --accent-text: #9A6210;   /* gold used as text on light backgrounds (darker for readability) */
+  --on-accent: #0B1929;     /* text on gold buttons */
+  --border: rgba(11, 25, 41, 0.10);
+  --border-strong: rgba(11, 25, 41, 0.18);
+  --border-hover: rgba(11, 25, 41, 0.35);
+  --shadow-sm: 0 4px 24px rgba(15, 25, 40, 0.08);
+  --shadow-lg: 0 8px 32px rgba(15, 25, 40, 0.12);
+
+  /* Navy palette, used by the dark sections below */
+  --navy: #0B1929;
+  --navy-mid: #1A2E45;
+  --navy-light: #243B55;
 
   --serif: 'Instrument Serif', Georgia, serif;
   --sans: 'DM Sans', system-ui, sans-serif;
+}
+
+/* Dark sections: the method block and the final call to action stay navy.
+   Add the class "theme-dark" to any other section to make it navy too. */
+.how-section,
+.cta-section,
+.theme-dark {
+  --bg: var(--navy);
+  --surface: var(--navy-mid);
+  --surface-2: var(--navy-light);
+  --text: #FFFFFF;
+  --text-muted: #A9BACB;
+  --accent-text: #E8A020;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --border-hover: rgba(255, 255, 255, 0.4);
+  color: var(--text);
 }
 
 html {

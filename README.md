@@ -71,4 +71,5 @@ All text lives in `src/content/locales/<lang>.json`, so you rarely need to touch
 - [ ] Replace the testimonial with a real client quote
 - [ ] Add a logo and favicon
 - [ ] Connect the CTA buttons to a contact form (e.g. Tally, Typeform, or Calendly)
-- [ ] Deploy and connect the custom domain
+- [x] Deploy to GitHub Pages (auto deploys on every push to main)
+- [ ] Connect the custom domain

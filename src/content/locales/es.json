@@ -158,6 +158,53 @@
     "goTo": "Ver testimonio {n}",
     "placeholder": "Ejemplo · solo en local"
   },
+  "audit": {
+    "eyebrow": "Tu auditoría",
+    "title": {
+      "before": "Qué incluye tu",
+      "em": "auditoría de Amazon",
+      "after": ""
+    },
+    "intro": "Antes de recomendar nada, analizamos tu marca tal como la ven Amazon y tus clientes.",
+    "scopeTitle": "¿En qué consiste la auditoría?",
+    "items": {
+      "listings": {
+        "title": "Fichas de producto",
+        "description": "Títulos, bullet points, imágenes y contenido A+, en el idioma de cada marketplace."
+      },
+      "advertising": {
+        "title": "Publicidad",
+        "description": "Estructura de las campañas, gasto, presupuesto desperdiciado y palabras clave perdidas."
+      },
+      "ranking": {
+        "title": "Posicionamiento",
+        "description": "Dónde aparecen tus productos en las búsquedas que importan, y por qué."
+      },
+      "competitors": {
+        "title": "Competencia y precios",
+        "description": "Cómo te comparas en precio, reseñas y visibilidad."
+      },
+      "operations": {
+        "title": "Operaciones",
+        "description": "Niveles de stock, configuración de FBA y riesgo de rotura de stock."
+      },
+      "expansion": {
+        "title": "Expansión",
+        "description": "Qué otros marketplaces europeos vale la pena abrir, y en qué orden."
+      }
+    },
+    "accessNote": "Para el análisis de publicidad y operaciones, te pediremos acceso de lectura a tu cuenta de Amazon.",
+    "receiveTitle": "Qué recibes",
+    "receiveText": "Un informe escrito con recomendaciones claras y priorizadas.",
+    "stepsTitle": "Cómo funciona",
+    "steps": [
+      "Solicita una auditoría y cuéntanos sobre tu marca.",
+      "Revisamos tu solicitud y nos ponemos en contacto para entender tus objetivos y acordar el alcance.",
+      "Te enviamos una propuesta con lo que incluye, el plazo y el precio.",
+      "Te entregamos el informe y lo repasamos contigo en una llamada."
+    ],
+    "pricing": "El precio depende del tamaño de tu catálogo y del número de marketplaces, y se detalla en tu propuesta."
+  },
   "cta": {
     "title": {
       "before": "¿Listo para hacer de Amazon tu",

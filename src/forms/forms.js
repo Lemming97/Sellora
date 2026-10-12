@@ -43,9 +43,14 @@ const INBOX_LABELS = {
 export async function sendForm({ kind, subject, fields, values, labels, lang, botcheck }) {
   const data = Object.fromEntries(fields.map((f) => [f.id, values[f.id].trim()]));
   const who = [data.firstName, data.lastName].filter(Boolean).join(' ');
+  // The subject carries the visitor's name and language in a fixed format, because the
+  // auto-reply script (email/auto-reply/Code.gs) reads them from here. Keep the two in sync.
+  // Audit:   "New audit request: Maison Test · Camille R [EN]"
+  // Contact: "New message from Camille R: Question about pricing [EN]"
+  const langTag = `[${String(lang || 'fr').slice(0, 2).toUpperCase()}]`;
   const inboxSubject = kind === 'audit'
-    ? `New audit request: ${data.company || who}`
-    : `New message from ${who}${data.subject ? `: ${data.subject}` : ''}`;
+    ? `New audit request: ${data.company || who} · ${who} ${langTag}`
+    : `New message from ${who}${data.subject ? `: ${data.subject}` : ''} ${langTag}`;
 
   if (site.web3formsKey) {
     const readable = Object.fromEntries(

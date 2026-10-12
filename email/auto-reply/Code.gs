@@ -293,16 +293,23 @@ function processNewSubmissions() {
     const fromForm = /web3forms/i.test(message.getFrom()) || /Page language/i.test(body);
     if (!fromForm) { thread.addLabel(label); return; }
 
-    const fields = parseFields_(body);
+    const fields = parseFields_(body, message.getBody());
+    const fromSubject = parseSubject_(message.getSubject());
     const visitor = extractEmail_(message.getReplyTo()) || extractEmail_(fields['Email']);
     if (!visitor || /@hellosellora\.com$/i.test(visitor)) { thread.addLabel(label); return; }
 
-    const kind = /^New audit request/i.test(message.getSubject()) ? 'audit' : 'contact';
-    const langRaw = (fields['Page language'] || '').trim().toLowerCase().slice(0, 2);
+    const kind = fromSubject.kind;
+    const langRaw = (fromSubject.lang || fields['Page language'] || '').trim().toLowerCase().slice(0, 2);
     const lang = TEXT[langRaw] ? langRaw : CONFIG.defaultLanguage;
+    const firstName = fields['First name'] || fromSubject.firstName;
+    const company = fields['Company'] || fromSubject.company;
+    if (!firstName || !langRaw) {
+      // Leaves a trace in Apps Script > Executions so the format can be checked.
+      Logger.log('Could not read every detail. Subject: ' + message.getSubject() + ' | Body start: ' + body.slice(0, 400));
+    }
     const reply = buildReply(kind, lang, {
-      firstName: fields['First name'],
-      company: fields['Company'],
+      firstName: firstName,
+      company: company,
       subject: fields['Subject'],
       message: fields['Message'],
     }, CONFIG.assetsUrl);
@@ -349,27 +356,79 @@ function extractEmail_(value) {
 }
 
 /**
- * Reads the field values out of the Web3Forms email. Handles both "Label: value" lines and
- * a label on its own line followed by the value, and keeps multi-line messages together.
+ * Reads kind, first name, company and language from the subject the website sets:
+ *   "New audit request: Maison Test · Camille R [EN]"
+ *   "New message from Camille R: Question about pricing [EN]"
  */
-function parseFields_(body) {
-  const labels = ['Form', 'Page language', 'Company', 'Website', 'First name', 'Last name', 'Email', 'Subject', 'Message'];
+function parseSubject_(subject) {
+  const s = String(subject || '').trim();
+  const out = { kind: /^New audit request/i.test(s) ? 'audit' : 'contact', lang: '', firstName: '', company: '' };
+  const langMatch = s.match(/\[(fr|en|sv|es)\]\s*$/i);
+  if (langMatch) out.lang = langMatch[1].toLowerCase();
+  const core = s.replace(/\s*\[[a-z]{2}\]\s*$/i, '');
+  if (out.kind === 'audit') {
+    const m = core.match(/^New audit request:\s*(.*?)\s*\u00b7\s*(.+)$/i);
+    if (m) { out.company = m[1].trim(); out.firstName = m[2].trim().split(/\s+/)[0]; }
+  } else {
+    const m = core.match(/^New message from\s+(.+?)(?::\s.*)?$/i);
+    if (m) out.firstName = m[1].trim().split(/\s+/)[0];
+  }
+  return out;
+}
+
+const FIELD_LABELS_ = ['Form', 'Page language', 'Company', 'Website', 'First name', 'Last name', 'Email', 'Subject', 'Message'];
+
+function matchLabel_(text) {
+  const t = String(text || '').replace(/\*/g, '').replace(/\s+/g, ' ').trim().replace(/:$/, '').toLowerCase();
+  return FIELD_LABELS_.find(function (l) { return l.toLowerCase() === t; }) || null;
+}
+
+/**
+ * Reads the field values out of the Web3Forms email. Tries the HTML table first
+ * (label cell, value cell), then the plain text, accepting "Label: value",
+ * "Label<tab>value", "Label | value", or the label alone on a line followed by the value.
+ */
+function parseFields_(plain, html) {
   const fields = {};
+
+  // 1. HTML table rows
+  const rows = String(html || '').match(/<tr[\s\S]*?<\/tr>/gi) || [];
+  rows.forEach(function (row) {
+    const cells = (row.match(/<t[dh][\s\S]*?<\/t[dh]>/gi) || []).map(htmlToText_);
+    if (cells.length >= 2) {
+      const label = matchLabel_(cells[0]);
+      if (label && !fields[label]) fields[label] = cells.slice(1).join('\n').trim();
+    }
+  });
+
+  // 2. Plain text
   let current = null;
-  String(body || '').split(/\r?\n/).forEach(function (rawLine) {
+  String(plain || '').split(/\r?\n/).forEach(function (rawLine) {
     const line = rawLine.replace(/\*/g, '').trim();
-    const hit = labels.find(function (l) {
-      return line.toLowerCase() === l.toLowerCase() || line.toLowerCase() === (l + ':').toLowerCase() ||
-        line.toLowerCase().indexOf(l.toLowerCase() + ':') === 0;
-    });
-    if (hit) {
-      current = hit;
-      const rest = line.slice(hit.length).replace(/^\s*:\s*/, '');
-      fields[hit] = rest;
+    const inline = line.match(/^([A-Za-z ]{2,20}?)\s*(?::|\t|\|)\s*(.*)$/);
+    const label = matchLabel_(line) || (inline && matchLabel_(inline[1]));
+    if (label) {
+      current = label;
+      const rest = matchLabel_(line) ? '' : inline[2];
+      if (!fields[label] || fields[label] === '') fields[label] = rest;
+      else current = '__done__';
       return;
     }
-    if (current && line) fields[current] = fields[current] ? fields[current] + '\n' + line : line;
+    if (current && current !== '__done__' && line) {
+      fields[current] = fields[current] ? fields[current] + '\n' + line : line;
+    }
   });
-  Object.keys(fields).forEach(function (k) { fields[k] = fields[k].trim(); });
+
+  Object.keys(fields).forEach(function (k) { fields[k] = String(fields[k] || '').trim(); });
   return fields;
+}
+
+function htmlToText_(html) {
+  return String(html || '')
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/(p|div)>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#39;|&#039;/g, "'")
+    .replace(/[ \t]+\n/g, '\n').trim();
 }

@@ -207,10 +207,22 @@
     ],
     "stepsTitle": "How it works",
     "steps": [
-      "Request an audit and tell us about your brand.",
-      "We review your request and get in touch to understand your goals and agree on the scope.",
-      "We send you a proposal with what's included, the timeline and the price.",
-      "We deliver the report and walk you through it on a call."
+      {
+        "title": "Tell us about your brand.",
+        "text": "Fill in the short audit request form."
+      },
+      {
+        "title": "We agree on the scope.",
+        "text": "We review your request and talk through your goals."
+      },
+      {
+        "title": "You get a proposal.",
+        "text": "Scope, timeline and price, in writing."
+      },
+      {
+        "title": "We deliver your audit.",
+        "text": "A detailed report, walked through with you on a call."
+      }
     ],
     "pricing": "Pricing depends on the size of your catalogue and the number of marketplaces, and is set out in your proposal."
   },

@@ -1023,6 +1023,18 @@ body:has(.modal[open]) {
   line-height: 1.55;
 }
 
+.audit-step-title {
+  display: block;
+  font-weight: 500;
+}
+
+.audit-step-text {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-top: 0.15rem;
+}
+
 .audit-step-num {
   flex-shrink: 0;
   width: 28px;

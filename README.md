@@ -70,7 +70,7 @@ Until then, the live site shows Sellora's own promise in the same quote style (t
 
 - [x] Rebrand to Sellora
 - [x] Convert to React
-- [ ] Create contact@hellosellora.com in Google Workspace (the site already uses it)
+- [x] contact@hellosellora.com set up as a Google Workspace group
 - [ ] Replace placeholder stats (+147%, -38%) with real client results
 - [x] Testimonials carousel (placeholders show locally only)
 - [ ] Add real client testimonials and delete the placeholders
@@ -79,4 +79,4 @@ Until then, the live site shows Sellora's own promise in the same quote style (t
 - [x] Point link previews (og:url, og:image) at hellosellora.com
 - [ ] Connect the CTA buttons to a contact form (e.g. Tally, Typeform, or Calendly)
 - [x] Deploy to GitHub Pages (auto deploys on every push to main)
-- [ ] Connect hellosellora.com (DNS records at the registrar + GitHub Pages custom domain + HTTPS)
+- [x] Connect hellosellora.com (DNS at Namecheap, GitHub Pages custom domain, HTTPS)

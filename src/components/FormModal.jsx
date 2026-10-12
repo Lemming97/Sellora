@@ -5,12 +5,13 @@ import { sendForm, validateField } from '../forms/forms.js';
 
 // A modal form ('audit' or 'contact'). Mount it to open; it calls onClose when dismissed.
 export default function FormModal({ type, onClose }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const copy = t.forms[type];
   const fields = forms[type];
   const dialogRef = useRef(null);
   const formRef = useRef(null);
   const pressedBackdrop = useRef(false);
+  const botcheckRef = useRef(null); // hidden honeypot: real visitors never tick it
   const [values, setValues] = useState(() => Object.fromEntries(fields.map((f) => [f.id, ''])));
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // idle | sending | failed | sent | mailto
@@ -47,7 +48,15 @@ export default function FormModal({ type, onClose }) {
 
     setStatus('sending');
     try {
-      setStatus(await sendForm({ subject: copy.title, fields, values, labels: t.forms.fields }));
+      setStatus(await sendForm({
+        kind: type,
+        subject: copy.title,
+        fields,
+        values,
+        labels: t.forms.fields,
+        lang,
+        botcheck: botcheckRef.current?.checked,
+      }));
     } catch {
       setStatus('failed');
     }
@@ -71,7 +80,7 @@ export default function FormModal({ type, onClose }) {
 
         {done ? (
           <div className="modal-done" role="status">
-            <p>{t.forms.success[status]}</p>
+            <p>{t.forms.success[status].replace('{email}', site.email)}</p>
             <button type="button" className="btn-primary" onClick={close}>{t.forms.close}</button>
           </div>
         ) : (
@@ -93,6 +102,15 @@ export default function FormModal({ type, onClose }) {
                   />
                 ))}
               </div>
+              <input
+                ref={botcheckRef}
+                type="checkbox"
+                name="botcheck"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="form-honeypot"
+              />
               <p className="form-required-note">{t.forms.requiredNote}</p>
               {status === 'failed' && (
                 <p className="form-error" role="alert">{t.forms.failed.replace('{email}', site.email)}</p>

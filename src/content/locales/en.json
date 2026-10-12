@@ -177,7 +177,7 @@
     "failed": "Something went wrong and your message wasn't sent. Please try again, or email us at {email}.",
     "success": {
       "sent": "Thank you! We've received your message and will get back to you within 48 hours.",
-      "mailto": "Your email app should now open with your message ready. Just press send and we'll reply within 48 hours."
+      "mailto": "Your email app should now open with your message ready. Just press send and we'll reply within 48 hours. If nothing opens, email us directly at {email}."
     },
     "errors": {
       "required": "This field is required.",

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sellora · Amazon Agency · France",
-    "description": "We help French brands launch, optimise, and scale their Amazon presence — without getting lost in the complexity of the platform."
+    "title": "Sellora · Amazon Agency · Europe",
+    "description": "We help brands launch, optimise and scale their Amazon presence across Europe, without getting lost in the complexity of the platform."
   },
   "nav": {
     "services": "Services",
@@ -10,13 +10,13 @@
     "cta": "Free audit"
   },
   "hero": {
-    "eyebrow": "Amazon Agency · France",
+    "eyebrow": "Amazon Agency · Europe",
     "title": {
       "before": "Your brand deserves to",
       "em": "dominate",
       "after": "Amazon"
     },
-    "sub": "We help French brands launch, optimise, and scale their Amazon presence — without getting lost in the complexity of the platform.",
+    "sub": "We help brands launch, optimise and scale their Amazon presence across Europe, without getting lost in the complexity of the platform.",
     "primaryCta": "Get a free audit",
     "secondaryCta": "See our results"
   },
@@ -67,7 +67,7 @@
       },
       "listings": {
         "title": "Product listing optimisation",
-        "description": "Titles, bullet points, and descriptions written to convert — in French and aligned with Amazon's algorithms."
+        "description": "Titles, bullet points and descriptions written to convert, in the language of each marketplace and aligned with Amazon's algorithms."
       },
       "seo": {
         "title": "Amazon SEO",

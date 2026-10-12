@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sellora · Agence Amazon · France",
-    "description": "Nous aidons les marques françaises à lancer, optimiser et scaler leur présence sur Amazon — sans se perdre dans la complexité de la plateforme."
+    "title": "Sellora · Agence Amazon · Europe",
+    "description": "Nous aidons les marques à lancer, optimiser et scaler leur présence sur Amazon partout en Europe, sans se perdre dans la complexité de la plateforme."
   },
   "nav": {
     "services": "Services",
@@ -10,13 +10,13 @@
     "cta": "Audit gratuit"
   },
   "hero": {
-    "eyebrow": "Agence Amazon · France",
+    "eyebrow": "Agence Amazon · Europe",
     "title": {
       "before": "Votre marque mérite de",
       "em": "dominer",
       "after": "Amazon"
     },
-    "sub": "Nous aidons les marques françaises à lancer, optimiser et scaler leur présence sur Amazon — sans se perdre dans la complexité de la plateforme.",
+    "sub": "Nous aidons les marques à lancer, optimiser et scaler leur présence sur Amazon partout en Europe, sans se perdre dans la complexité de la plateforme.",
     "primaryCta": "Obtenir un audit gratuit",
     "secondaryCta": "Voir nos résultats"
   },
@@ -67,7 +67,7 @@
       },
       "listings": {
         "title": "Optimisation des fiches produits",
-        "description": "Titres, bullet points et descriptions rédigés pour convertir — en français et selon les algorithmes d'Amazon."
+        "description": "Titres, bullet points et descriptions rédigés pour convertir, dans la langue de chaque marketplace et selon les algorithmes d'Amazon."
       },
       "seo": {
         "title": "SEO Amazon",

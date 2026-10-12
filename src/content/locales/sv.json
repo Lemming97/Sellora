@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sellora · Amazon-byrå · Frankrike",
-    "description": "Vi hjälper franska varumärken att lansera, optimera och skala sin närvaro på Amazon — utan att gå vilse i plattformens komplexitet."
+    "title": "Sellora · Amazon-byrå · Europa",
+    "description": "Vi hjälper varumärken att lansera, optimera och skala sin närvaro på Amazon i hela Europa, utan att gå vilse i plattformens komplexitet."
   },
   "nav": {
     "services": "Tjänster",
@@ -10,13 +10,13 @@
     "cta": "Gratis analys"
   },
   "hero": {
-    "eyebrow": "Amazon-byrå · Frankrike",
+    "eyebrow": "Amazon-byrå · Europa",
     "title": {
       "before": "Ditt varumärke förtjänar att",
       "em": "dominera",
       "after": "Amazon"
     },
-    "sub": "Vi hjälper franska varumärken att lansera, optimera och skala sin närvaro på Amazon — utan att gå vilse i plattformens komplexitet.",
+    "sub": "Vi hjälper varumärken att lansera, optimera och skala sin närvaro på Amazon i hela Europa, utan att gå vilse i plattformens komplexitet.",
     "primaryCta": "Få en gratis analys",
     "secondaryCta": "Se våra resultat"
   },
@@ -67,7 +67,7 @@
       },
       "listings": {
         "title": "Optimering av produktlistor",
-        "description": "Titlar, punktlistor och beskrivningar skrivna för att konvertera — på franska och anpassade till Amazons algoritmer."
+        "description": "Titlar, punktlistor och beskrivningar skrivna för att konvertera, på varje marknadsplats språk och anpassade till Amazons algoritmer."
       },
       "seo": {
         "title": "Amazon SEO",

@@ -207,10 +207,22 @@
     ],
     "stepsTitle": "Cómo funciona",
     "steps": [
-      "Solicita una auditoría y cuéntanos sobre tu marca.",
-      "Revisamos tu solicitud y nos ponemos en contacto para entender tus objetivos y acordar el alcance.",
-      "Te enviamos una propuesta con lo que incluye, el plazo y el precio.",
-      "Te entregamos el informe y lo repasamos contigo en una llamada."
+      {
+        "title": "Cuéntanos sobre tu marca.",
+        "text": "Rellena el breve formulario de solicitud de auditoría."
+      },
+      {
+        "title": "Acordamos el alcance.",
+        "text": "Revisamos tu solicitud y hablamos de tus objetivos."
+      },
+      {
+        "title": "Recibes una propuesta.",
+        "text": "Alcance, plazo y precio, por escrito."
+      },
+      {
+        "title": "Entregamos tu auditoría.",
+        "text": "Un informe detallado que repasamos contigo en una llamada."
+      }
     ],
     "pricing": "El precio depende del tamaño de tu catálogo y del número de marketplaces, y se detalla en tu propuesta."
   },

@@ -207,10 +207,22 @@
     ],
     "stepsTitle": "Comment ça marche",
     "steps": [
-      "Demandez un audit et parlez-nous de votre marque.",
-      "Nous étudions votre demande et revenons vers vous pour comprendre vos objectifs et définir le périmètre.",
-      "Nous vous envoyons une proposition précisant le contenu, le calendrier et le prix.",
-      "Nous vous remettons le rapport et le passons en revue avec vous lors d'un appel."
+      {
+        "title": "Parlez-nous de votre marque.",
+        "text": "Remplissez le court formulaire de demande d'audit."
+      },
+      {
+        "title": "Nous définissons le périmètre.",
+        "text": "Nous étudions votre demande et échangeons sur vos objectifs."
+      },
+      {
+        "title": "Vous recevez une proposition.",
+        "text": "Périmètre, calendrier et prix, par écrit."
+      },
+      {
+        "title": "Nous livrons votre audit.",
+        "text": "Un rapport détaillé, présenté lors d'un appel avec vous."
+      }
     ],
     "pricing": "Le prix dépend de la taille de votre catalogue et du nombre de marketplaces, et figure dans votre proposition."
   },

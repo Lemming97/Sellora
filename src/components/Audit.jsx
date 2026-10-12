@@ -46,7 +46,10 @@ export default function Audit() {
             {a.steps.map((step, i) => (
               <li key={i}>
                 <span className="audit-step-num" aria-hidden="true">{i + 1}</span>
-                <span>{step}</span>
+                <span>
+                  <strong className="audit-step-title">{step.title}</strong>
+                  <span className="audit-step-text">{step.text}</span>
+                </span>
               </li>
             ))}
           </ol>

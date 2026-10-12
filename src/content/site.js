@@ -13,6 +13,7 @@ import {
 export const site = {
   name: 'Hello Sellora',
   email: 'contact@hellosellora.com',
+  linkedin: 'https://www.linkedin.com/company/hellosellora',
   defaultLanguage: 'fr',
   // How the audit and contact forms are delivered, in order of preference:
   // 1. web3formsKey: the access key from https://web3forms.com (created for contact@hellosellora.com).

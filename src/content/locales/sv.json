@@ -115,11 +115,45 @@
   },
   "testimonials": [
     {
-      "quote": "Vi var rädda för att lansera på Amazon ensamma. På sex månader blev det vår viktigaste försäljningskanal i Europa.",
-      "author": "Sophie Marchand",
-      "role": "Grundare, Maison Lumière (Paris)"
+      "quote": "Vi var oroliga för att lansera på Amazon på egen hand. Inom sex månader blev det vår största försäljningskanal i Europa.",
+      "author": "Camille R.",
+      "role": "Grundare, kosmetikmärke (Lyon)",
+      "placeholder": true
+    },
+    {
+      "quote": "Våra produktsidor var ordagranna översättningar. När de skrevs om ökade vår konverteringsgrad tydligt.",
+      "author": "Thomas L.",
+      "role": "E-handelschef, delikatessmärke",
+      "placeholder": true
+    },
+    {
+      "quote": "Äntligen en rapportering som hela teamet förstår. Vi vet exakt vart varje annonskrona tar vägen.",
+      "author": "Julie M.",
+      "role": "Medgrundare, inredningsmärke",
+      "placeholder": true
+    },
+    {
+      "quote": "De skötte lanseringen från start till mål: säljarkonto, FBA och kampanjer. Vi kunde fokusera på våra produkter.",
+      "author": "Antoine D.",
+      "role": "Grundare, märke för sporttillbehör",
+      "placeholder": true
+    },
+    {
+      "quote": "Efter ett år säljer vi på fem europeiska marknadsplatser med samma team.",
+      "author": "Sarah B.",
+      "role": "Marknadsansvarig, modemärke",
+      "placeholder": true
     }
   ],
+  "testimonialsUi": {
+    "label": "Kundomdömen",
+    "previous": "Föregående omdöme",
+    "next": "Nästa omdöme",
+    "goTo": "Visa omdöme {n}",
+    "pause": "Pausa",
+    "play": "Spela",
+    "placeholder": "Exempel · endast lokalt"
+  },
   "cta": {
     "title": {
       "before": "Redo att göra Amazon till din",

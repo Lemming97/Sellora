@@ -728,9 +728,113 @@ body:has(.modal[open]) {
 
 .testimonial-section {
   text-align: center;
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 6rem 4rem;
+}
+
+/* Carousel: all slides share one grid cell, so the height stays that of the
+   tallest quote and nothing jumps when the slide changes. */
+.carousel-track {
+  display: grid;
+}
+
+.carousel-slide {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.carousel-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.carousel-arrow,
+.carousel-pause {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.carousel-pause {
+  width: 32px;
+  height: 32px;
+  color: var(--text-muted);
+}
+
+.carousel-arrow:hover,
+.carousel-pause:hover {
+  border-color: var(--accent);
+  background: var(--surface-2);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 100px;
+  background: var(--border-strong);
+  cursor: pointer;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.carousel-dot.is-active {
+  width: 24px;
+  background: var(--accent);
+}
+
+.carousel-arrow:focus-visible,
+.carousel-pause:focus-visible,
+.carousel-dot:focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 3px;
+}
+
+.placeholder-badge {
+  display: inline-block;
+  white-space: nowrap;
+  margin-bottom: 1.5rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px dashed var(--accent-text);
+  border-radius: 100px;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--accent-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-slide,
+  .carousel-slide.is-active {
+    transition: none;
+    transform: none;
+  }
 }
 
 .quote-mark {

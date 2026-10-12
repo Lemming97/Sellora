@@ -48,11 +48,13 @@ sellora/
 
 All text lives in `src/content/locales/<lang>.json`, so you rarely need to touch the components.
 
-**Add a testimonial:** add an entry to the `testimonials` list in every locale file:
+**Testimonials (carousel):** each locale file has a `testimonials` list. Entries marked `"placeholder": true` only show when you run the site locally (`npm run dev`), with an "Example" badge, and are hidden on the live site so visitors never see invented quotes. While there are no real testimonials, the live site hides the section and the "See our results" link. To add a real one, add an entry without `placeholder` to every locale file:
 
 ```json
 { "quote": "…", "author": "Name", "role": "Title, Company (City)" }
 ```
+
+When you have real quotes, delete the placeholder entries.
 
 **Add a service card:**
 1. Pick an icon on [phosphoricons.com](https://phosphoricons.com), import it at the top of `src/content/site.js`, and add `{ id: 'my-service', icon: ShoppingCart }` to `services`.
@@ -70,7 +72,8 @@ All text lives in `src/content/locales/<lang>.json`, so you rarely need to touch
 - [x] Convert to React
 - [ ] Confirm the real contact email (currently `contact@sellora.fr`)
 - [ ] Replace placeholder stats (+147%, -38%) with real client results
-- [ ] Replace the testimonial with a real client quote
+- [x] Testimonials carousel (placeholders show locally only)
+- [ ] Add real client testimonials and delete the placeholders
 - [x] Replace emoji icons with Phosphor duotone icons
 - [x] Add logo, favicon, app icons and link preview image
 - [ ] Update the og:url and og:image addresses in index.html once the custom domain is live

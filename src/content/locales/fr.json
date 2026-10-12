@@ -116,10 +116,44 @@
   "testimonials": [
     {
       "quote": "Nous avions peur de nous lancer sur Amazon seuls. En six mois, c'est devenu notre premier canal de vente en Europe.",
-      "author": "Sophie Marchand",
-      "role": "Fondatrice, Maison Lumière (Paris)"
+      "author": "Camille R.",
+      "role": "Fondatrice, marque de cosmétiques (Lyon)",
+      "placeholder": true
+    },
+    {
+      "quote": "Nos fiches produits étaient traduites mot à mot. Une fois réécrites, notre taux de conversion a nettement progressé.",
+      "author": "Thomas L.",
+      "role": "Directeur e-commerce, marque d'épicerie fine",
+      "placeholder": true
+    },
+    {
+      "quote": "Enfin un reporting que toute l'équipe comprend. Nous savons exactement où va chaque euro de publicité.",
+      "author": "Julie M.",
+      "role": "Cofondatrice, marque de décoration",
+      "placeholder": true
+    },
+    {
+      "quote": "Ils ont géré le lancement de A à Z : compte vendeur, FBA et campagnes. Nous avons pu nous concentrer sur nos produits.",
+      "author": "Antoine D.",
+      "role": "Fondateur, marque d'accessoires de sport",
+      "placeholder": true
+    },
+    {
+      "quote": "Après un an, nous vendons sur cinq marketplaces européennes avec la même équipe.",
+      "author": "Sarah B.",
+      "role": "Responsable marketing, marque de mode",
+      "placeholder": true
     }
   ],
+  "testimonialsUi": {
+    "label": "Témoignages clients",
+    "previous": "Témoignage précédent",
+    "next": "Témoignage suivant",
+    "goTo": "Afficher le témoignage {n}",
+    "pause": "Mettre en pause",
+    "play": "Lecture",
+    "placeholder": "Exemple · local uniquement"
+  },
   "cta": {
     "title": {
       "before": "Prêt à faire d'Amazon votre",

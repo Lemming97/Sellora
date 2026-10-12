@@ -3,10 +3,13 @@ import { stats } from '../content/site.js';
 import EmphasisTitle from './EmphasisTitle.jsx';
 import FadeIn from './FadeIn.jsx';
 import StatBox from './StatBox.jsx';
+import { useVisibleTestimonials } from './Testimonials.jsx';
 
 export default function Hero() {
   const { t } = useLanguage();
   const { hero, panel } = t;
+  // "See our results" scrolls to the testimonials, so it only shows when there are some.
+  const hasTestimonials = useVisibleTestimonials().length > 0;
 
   return (
     <section className="hero" id="top">
@@ -16,7 +19,7 @@ export default function Hero() {
         <p className="hero-sub">{hero.sub}</p>
         <div className="hero-btns">
           <a href="#contact" className="btn-primary">{hero.primaryCta}</a>
-          <a href="#resultats" className="btn-ghost">{hero.secondaryCta}</a>
+          {hasTestimonials && <a href="#resultats" className="btn-ghost">{hero.secondaryCta}</a>}
         </div>
       </div>
 

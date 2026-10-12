@@ -115,11 +115,45 @@
   },
   "testimonials": [
     {
-      "quote": "We were afraid to launch on Amazon alone. Within six months, it became our number one sales channel in Europe.",
-      "author": "Sophie Marchand",
-      "role": "Founder, Maison Lumière (Paris)"
+      "quote": "We were nervous about launching on Amazon alone. Within six months it became our number one sales channel in Europe.",
+      "author": "Camille R.",
+      "role": "Founder, cosmetics brand (Lyon)",
+      "placeholder": true
+    },
+    {
+      "quote": "Our listings were word-for-word translations. Once they were rewritten, our conversion rate clearly went up.",
+      "author": "Thomas L.",
+      "role": "E-commerce director, gourmet food brand",
+      "placeholder": true
+    },
+    {
+      "quote": "Finally, reporting the whole team understands. We know exactly where every euro of ad spend goes.",
+      "author": "Julie M.",
+      "role": "Co-founder, home decor brand",
+      "placeholder": true
+    },
+    {
+      "quote": "They handled the launch end to end: seller account, FBA and campaigns. We could focus on our products.",
+      "author": "Antoine D.",
+      "role": "Founder, sports accessories brand",
+      "placeholder": true
+    },
+    {
+      "quote": "A year in, we sell on five European marketplaces with the same team.",
+      "author": "Sarah B.",
+      "role": "Marketing lead, fashion brand",
+      "placeholder": true
     }
   ],
+  "testimonialsUi": {
+    "label": "Client testimonials",
+    "previous": "Previous testimonial",
+    "next": "Next testimonial",
+    "goTo": "Show testimonial {n}",
+    "pause": "Pause",
+    "play": "Play",
+    "placeholder": "Example · local only"
+  },
   "cta": {
     "title": {
       "before": "Ready to make Amazon your",

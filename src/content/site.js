@@ -1,10 +1,12 @@
 import {
   Camera,
   ChartBar,
+  GlobeHemisphereEast,
   MagnifyingGlass,
   Megaphone,
   Package,
   PencilLine,
+  Scales,
 } from '@phosphor-icons/react';
 
 // Content that is the same in every language.
@@ -48,6 +50,16 @@ export const services = [
   { id: 'inventory', icon: Package },
   { id: 'visuals', icon: Camera },
   { id: 'reporting', icon: ChartBar },
+];
+
+// "What does the audit entail?" items, in display order. Text: audit.items.<id>
+export const auditItems = [
+  { id: 'listings', icon: PencilLine },
+  { id: 'advertising', icon: Megaphone },
+  { id: 'ranking', icon: MagnifyingGlass },
+  { id: 'competitors', icon: Scales },
+  { id: 'operations', icon: Package },
+  { id: 'expansion', icon: GlobeHemisphereEast },
 ];
 
 // Fields for the modal forms, in display order. Labels: forms.fields.<id>

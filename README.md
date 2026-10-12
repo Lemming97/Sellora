@@ -49,6 +49,7 @@ sellora/
     │   ├── Services.jsx, ServiceCard.jsx
     │   ├── Method.jsx, MethodStep.jsx
     │   ├── Testimonials.jsx, TestimonialCard.jsx   # Testimonials carousel
+    │   ├── Audit.jsx                # "What's in your Amazon audit" section
     │   ├── CallToAction.jsx, FormModal.jsx          # Audit and contact forms
     │   ├── Footer.jsx
     │   └── SectionHeader.jsx, EmphasisTitle.jsx, FadeIn.jsx
@@ -85,6 +86,8 @@ All visible text lives in `src/content/locales/<lang>.json`, so you rarely need 
 **Service cards:**
 1. Pick an icon on [phosphoricons.com](https://phosphoricons.com) (we use the duotone style), import it at the top of `src/content/site.js`, and add `{ id: 'my-service', icon: ShoppingCart }` to `services`.
 2. Add `"my-service": { "title": "…", "description": "…" }` under `services.items` in every locale file.
+
+**Audit section:** the text is under `audit` in each locale file (what the audit covers, what you receive, how it works, pricing note). The six items and their icons are listed in `auditItems` in `src/content/site.js`. Keep the steps in line with the auto-reply email in `email/auto-reply/Code.gs`.
 
 **Hero stats:** values are in `stats` in `src/content/site.js`, labels under `panel.stats` in each locale file.
 

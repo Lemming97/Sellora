@@ -158,6 +158,53 @@
     "goTo": "Show testimonial {n}",
     "placeholder": "Example · local only"
   },
+  "audit": {
+    "eyebrow": "Your audit",
+    "title": {
+      "before": "What's in your",
+      "em": "Amazon audit",
+      "after": ""
+    },
+    "intro": "Before we recommend anything, we look at your brand the way Amazon and your customers see it.",
+    "scopeTitle": "What does the audit entail?",
+    "items": {
+      "listings": {
+        "title": "Listings",
+        "description": "Titles, bullet points, images and A+ content, in the language of each marketplace."
+      },
+      "advertising": {
+        "title": "Advertising",
+        "description": "Campaign structure, spend, wasted budget and missed keywords."
+      },
+      "ranking": {
+        "title": "Search ranking",
+        "description": "Where your products appear for the searches that matter, and why."
+      },
+      "competitors": {
+        "title": "Competitors and pricing",
+        "description": "How you compare on price, reviews and visibility."
+      },
+      "operations": {
+        "title": "Operations",
+        "description": "Stock levels, FBA setup and the risk of running out."
+      },
+      "expansion": {
+        "title": "Expansion",
+        "description": "Which other European marketplaces are worth opening, and in what order."
+      }
+    },
+    "accessNote": "For the advertising and operations review, we'll ask for read access to your Amazon account.",
+    "receiveTitle": "What you receive",
+    "receiveText": "A written report with clear, prioritized recommendations.",
+    "stepsTitle": "How it works",
+    "steps": [
+      "Request an audit and tell us about your brand.",
+      "We review your request and get in touch to understand your goals and agree on the scope.",
+      "We send you a proposal with what's included, the timeline and the price.",
+      "We deliver the report and walk you through it on a call."
+    ],
+    "pricing": "Pricing depends on the size of your catalogue and the number of marketplaces, and is set out in your proposal."
+  },
   "cta": {
     "title": {
       "before": "Ready to make Amazon your",

@@ -158,6 +158,53 @@
     "goTo": "Visa omdöme {n}",
     "placeholder": "Exempel · endast lokalt"
   },
+  "audit": {
+    "eyebrow": "Din analys",
+    "title": {
+      "before": "Det här ingår i din",
+      "em": "Amazon-analys",
+      "after": ""
+    },
+    "intro": "Innan vi rekommenderar något ser vi på ditt varumärke så som Amazon och dina kunder ser det.",
+    "scopeTitle": "Vad omfattar analysen?",
+    "items": {
+      "listings": {
+        "title": "Produktlistor",
+        "description": "Titlar, punktlistor, bilder och A+-innehåll, på varje marknadsplats språk."
+      },
+      "advertising": {
+        "title": "Annonsering",
+        "description": "Kampanjstruktur, annonskostnader, slösad budget och missade sökord."
+      },
+      "ranking": {
+        "title": "Sökranking",
+        "description": "Var dina produkter syns i de sökningar som spelar roll, och varför."
+      },
+      "competitors": {
+        "title": "Konkurrenter och priser",
+        "description": "Hur du står dig i pris, recensioner och synlighet."
+      },
+      "operations": {
+        "title": "Drift",
+        "description": "Lagernivåer, FBA-upplägg och risken att varor tar slut."
+      },
+      "expansion": {
+        "title": "Expansion",
+        "description": "Vilka andra europeiska marknadsplatser som är värda att öppna, och i vilken ordning."
+      }
+    },
+    "accessNote": "För granskningen av annonsering och drift ber vi om läsbehörighet till ditt Amazon-konto.",
+    "receiveTitle": "Det här får du",
+    "receiveText": "En skriftlig rapport med tydliga, prioriterade rekommendationer.",
+    "stepsTitle": "Så går det till",
+    "steps": [
+      "Beställ en analys och berätta om ditt varumärke.",
+      "Vi går igenom din förfrågan och hör av oss för att förstå dina mål och komma överens om omfattningen.",
+      "Vi skickar ett förslag med vad som ingår, tidsplan och pris.",
+      "Vi levererar rapporten och går igenom den med dig i ett samtal."
+    ],
+    "pricing": "Priset beror på hur stort ditt sortiment är och hur många marknadsplatser det gäller, och anges i ditt förslag."
+  },
   "cta": {
     "title": {
       "before": "Redo att göra Amazon till din",

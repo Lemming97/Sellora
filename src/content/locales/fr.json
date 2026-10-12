@@ -158,6 +158,53 @@
     "goTo": "Afficher le témoignage {n}",
     "placeholder": "Exemple · local uniquement"
   },
+  "audit": {
+    "eyebrow": "Votre audit",
+    "title": {
+      "before": "Ce que contient votre",
+      "em": "audit Amazon",
+      "after": ""
+    },
+    "intro": "Avant de recommander quoi que ce soit, nous examinons votre marque comme Amazon et vos clients la voient.",
+    "scopeTitle": "En quoi consiste l'audit ?",
+    "items": {
+      "listings": {
+        "title": "Fiches produits",
+        "description": "Titres, bullet points, images et contenu A+, dans la langue de chaque marketplace."
+      },
+      "advertising": {
+        "title": "Publicité",
+        "description": "Structure des campagnes, dépenses, budget gaspillé et mots-clés manqués."
+      },
+      "ranking": {
+        "title": "Positionnement",
+        "description": "Où vos produits apparaissent sur les recherches qui comptent, et pourquoi."
+      },
+      "competitors": {
+        "title": "Concurrence et prix",
+        "description": "Comment vous vous situez en prix, en avis et en visibilité."
+      },
+      "operations": {
+        "title": "Opérations",
+        "description": "Niveaux de stock, configuration FBA et risque de rupture."
+      },
+      "expansion": {
+        "title": "Expansion",
+        "description": "Quelles autres marketplaces européennes valent la peine d'être ouvertes, et dans quel ordre."
+      }
+    },
+    "accessNote": "Pour l'analyse de la publicité et des opérations, nous vous demanderons un accès en lecture à votre compte Amazon.",
+    "receiveTitle": "Ce que vous recevez",
+    "receiveText": "Un rapport écrit avec des recommandations claires et priorisées.",
+    "stepsTitle": "Comment ça marche",
+    "steps": [
+      "Demandez un audit et parlez-nous de votre marque.",
+      "Nous étudions votre demande et revenons vers vous pour comprendre vos objectifs et définir le périmètre.",
+      "Nous vous envoyons une proposition précisant le contenu, le calendrier et le prix.",
+      "Nous vous remettons le rapport et le passons en revue avec vous lors d'un appel."
+    ],
+    "pricing": "Le prix dépend de la taille de votre catalogue et du nombre de marketplaces, et figure dans votre proposition."
+  },
   "cta": {
     "title": {
       "before": "Prêt à faire d'Amazon votre",

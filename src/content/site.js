@@ -1,3 +1,12 @@
+import {
+  Camera,
+  ChartBar,
+  MagnifyingGlass,
+  Megaphone,
+  Package,
+  PencilLine,
+} from '@phosphor-icons/react';
+
 // Content that is the same in every language.
 // Translated text lives in ./locales/<lang>.json, keyed by the same ids.
 
@@ -24,14 +33,16 @@ export const stats = [
 ];
 
 // Service cards, in display order. Text: services.items.<id>
+// Icons come from Phosphor (https://phosphoricons.com). To change one, find an icon
+// on that site, import it by name above, and swap it in here.
 // To add a service: add it here, then add its title and description to every locale file.
 export const services = [
-  { id: 'ppc', icon: '🎯' },
-  { id: 'listings', icon: '✍️' },
-  { id: 'seo', icon: '📈' },
-  { id: 'inventory', icon: '📦' },
-  { id: 'visuals', icon: '📸' },
-  { id: 'reporting', icon: '📊' },
+  { id: 'ppc', icon: Megaphone },
+  { id: 'listings', icon: PencilLine },
+  { id: 'seo', icon: MagnifyingGlass },
+  { id: 'inventory', icon: Package },
+  { id: 'visuals', icon: Camera },
+  { id: 'reporting', icon: ChartBar },
 ];
 
 // Fields for the modal forms, in display order. Labels: forms.fields.<id>

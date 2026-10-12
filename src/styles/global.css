@@ -19,6 +19,7 @@
   --accent-hover: #F5C86A;  /* button hover */
   --accent-text: #9A6210;   /* gold used as text on light backgrounds (darker for readability) */
   --on-accent: #0B1929;     /* text on gold buttons */
+  --icon: #C7860F;          /* service card icons */
   --border: rgba(11, 25, 41, 0.10);
   --border-strong: rgba(11, 25, 41, 0.18);
   --border-hover: rgba(11, 25, 41, 0.35);
@@ -637,7 +638,7 @@ body:has(.modal[open]) {
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.2rem;
-  font-size: 1.3rem;
+  color: var(--icon);
 }
 
 .service-card h3 {

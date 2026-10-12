@@ -53,7 +53,7 @@ All text lives in `src/content/locales/<lang>.json`, so you rarely need to touch
 ```
 
 **Add a service card:**
-1. Add `{ id: 'my-service', icon: '🛒' }` to `services` in `src/content/site.js`.
+1. Pick an icon on [phosphoricons.com](https://phosphoricons.com), import it at the top of `src/content/site.js`, and add `{ id: 'my-service', icon: ShoppingCart }` to `services`.
 2. Add `"my-service": { "title": "…", "description": "…" }` under `services.items` in every locale file.
 
 **Change the stats:** edit the values in `stats` in `src/content/site.js` and the labels under `panel.stats` in each locale file.
@@ -69,6 +69,7 @@ All text lives in `src/content/locales/<lang>.json`, so you rarely need to touch
 - [ ] Confirm the real contact email (currently `contact@sellora.fr`)
 - [ ] Replace placeholder stats (+147%, -38%) with real client results
 - [ ] Replace the testimonial with a real client quote
+- [x] Replace emoji icons with Phosphor duotone icons
 - [ ] Add a logo and favicon
 - [ ] Connect the CTA buttons to a contact form (e.g. Tally, Typeform, or Calendly)
 - [x] Deploy to GitHub Pages (auto deploys on every push to main)

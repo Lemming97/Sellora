@@ -37,6 +37,7 @@ sellora/
 │   ├── og-image.png            # Link preview image (1200x630)
 │   └── robots.txt, sitemap.xml
 ├── vite.config.js
+├── email/auto-reply/         # Google Apps Script: automatic confirmation email to form senders
 ├── .github/workflows/deploy.yml  # Build and deploy to GitHub Pages
 └── src/
     ├── main.jsx                # Entry point
@@ -122,6 +123,7 @@ The full logo pack (SVG and PNG, light and dark, seal, favicons, Google Workspac
 - [x] Every email on the site points to contact@hellosellora.com
 - [x] Branded email signatures and company footer
 - [x] Audit and contact forms send straight to contact@ (Web3Forms)
+- [ ] Install the auto-reply script (`email/auto-reply/`) in Google Apps Script
 - [ ] Replace placeholder stats (+147%, -38%) with real client results, or reword them as goals
 - [ ] Add real client testimonials and delete the placeholders and the promise
 - [ ] Check "Sellora" on INPI and EUIPO trademark databases

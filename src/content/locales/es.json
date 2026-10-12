@@ -6,6 +6,7 @@
   "nav": {
     "services": "Servicios",
     "approach": "Nuestro enfoque",
+    "audit": "La auditoría",
     "contact": "Contacto",
     "cta": "Solicitar auditoría"
   },
@@ -195,7 +196,7 @@
     },
     "accessNote": "Para el análisis de publicidad y operaciones, te pediremos acceso de lectura a tu cuenta de Amazon.",
     "receiveTitle": "Qué recibes",
-    "receiveText": "Un informe escrito con recomendaciones claras y priorizadas.",
+    "receiveText": "Un informe escrito detallado con recomendaciones claras y priorizadas.",
     "stepsTitle": "Cómo funciona",
     "steps": [
       "Solicita una auditoría y cuéntanos sobre tu marca.",

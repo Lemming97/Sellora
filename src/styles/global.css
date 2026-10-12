@@ -56,6 +56,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Header links stop below the sticky menu bar instead of under it. */
+  scroll-padding-top: 5.5rem;
 }
 
 body {
@@ -117,10 +119,39 @@ nav > ul a {
   font-weight: 400;
   letter-spacing: 0.03em;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 nav > ul a:hover {
   color: var(--text);
+}
+
+/* Medium screens: tighter links, and drop the plain "Contact" link
+   (the gold button goes to the same place) so the menu stays on one line. */
+@media (max-width: 1180px) {
+  nav > ul {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1060px) and (min-width: 601px) {
+  nav > ul .nav-contact {
+    display: none;
+  }
+}
+
+/* Tablets: keep only the audit link and the gold button. */
+@media (max-width: 960px) and (min-width: 601px) {
+  nav > ul .nav-wide {
+    display: none;
+  }
+}
+
+/* Small tablets: only the gold button, as on phones. */
+@media (max-width: 680px) {
+  nav > ul li:not(:last-child) {
+    display: none;
+  }
 }
 
 .nav-cta {

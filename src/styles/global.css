@@ -74,7 +74,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 4rem;
+  padding: 1.2rem 4rem;
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
@@ -91,7 +91,7 @@ nav {
 
 .logo img {
   display: block;
-  height: 36px;
+  height: 46px;
   width: auto;
 }
 
@@ -100,7 +100,7 @@ nav {
 }
 
 footer .logo img {
-  height: 30px;
+  height: 40px;
 }
 
 nav > ul {
@@ -934,7 +934,7 @@ footer p {
 
 @media (max-width: 900px) {
   nav {
-    padding: 1.2rem 2rem;
+    padding: 1rem 2rem;
   }
 
   nav > ul {

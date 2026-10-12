@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "Sellora · Amazon Agency · France",
+    "description": "We help French brands launch, optimise, and scale their Amazon presence — without getting lost in the complexity of the platform."
+  },
+  "nav": {
+    "services": "Services",
+    "approach": "Our approach",
+    "contact": "Contact",
+    "cta": "Free audit"
+  },
+  "hero": {
+    "eyebrow": "Amazon Agency · France",
+    "title": {
+      "before": "Your brand deserves to",
+      "em": "dominate",
+      "after": "Amazon"
+    },
+    "sub": "We help French brands launch, optimise, and scale their Amazon presence — without getting lost in the complexity of the platform.",
+    "primaryCta": "Get a free audit",
+    "secondaryCta": "See our results"
+  },
+  "panel": {
+    "resultsTitle": "Our average results",
+    "stats": {
+      "revenue": "Revenue growth in the first year",
+      "acos": "Reduction in advertising cost (ACoS)"
+    },
+    "howTitle": "How it works",
+    "steps": [
+      {
+        "title": "Brand audit",
+        "sub": "Free analysis of your Amazon potential"
+      },
+      {
+        "title": "Tailored strategy",
+        "sub": "Action plan personalised to your sector"
+      },
+      {
+        "title": "Measurable growth",
+        "sub": "Results tracked every month, fully transparent"
+      }
+    ]
+  },
+  "sectors": {
+    "label": "Industries we serve",
+    "items": [
+      "Beauty & cosmetics",
+      "Food & beverages",
+      "Home & décor",
+      "Fashion & accessories",
+      "Sport & outdoor",
+      "Health & wellness"
+    ]
+  },
+  "services": {
+    "eyebrow": "Our services",
+    "title": {
+      "before": "Everything you need to",
+      "em": "succeed",
+      "after": "on Amazon"
+    },
+    "items": {
+      "ppc": {
+        "title": "Amazon Advertising (PPC)",
+        "description": "Sponsored Products, Brands, and Display campaigns optimised to maximise your return on investment."
+      },
+      "listings": {
+        "title": "Product listing optimisation",
+        "description": "Titles, bullet points, and descriptions written to convert — in French and aligned with Amazon's algorithms."
+      },
+      "seo": {
+        "title": "Amazon SEO",
+        "description": "Keyword research, indexing, and ranking strategy to get your products appearing first."
+      },
+      "inventory": {
+        "title": "Inventory & FBA management",
+        "description": "Stock level management, replenishment forecasting, and FBA shipment optimisation."
+      },
+      "visuals": {
+        "title": "Photography & visuals",
+        "description": "Professional product photos, videos, and A+ content that turn visitors into buyers."
+      },
+      "reporting": {
+        "title": "Reporting & tracking",
+        "description": "Clear dashboards and monthly meetings so you always know exactly where your budget is going."
+      }
+    }
+  },
+  "method": {
+    "eyebrow": "Our method",
+    "title": {
+      "before": "From zero to",
+      "em": "category leader",
+      "after": ""
+    },
+    "steps": [
+      {
+        "title": "Audit & analysis",
+        "description": "We analyse your market, competitors, and Amazon potential in detail."
+      },
+      {
+        "title": "Strategy & launch",
+        "description": "Listing creation, campaign setup, and seller account opening."
+      },
+      {
+        "title": "Continuous optimisation",
+        "description": "A/B tests, ad adjustments, and conversion rate improvement every week."
+      },
+      {
+        "title": "Scaling & growth",
+        "description": "Expansion into other European countries and new product categories."
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "We were afraid to launch on Amazon alone. Within six months, it became our number one sales channel in Europe.",
+      "author": "Sophie Marchand",
+      "role": "Founder, Maison Lumière (Paris)"
+    }
+  ],
+  "cta": {
+    "title": {
+      "before": "Ready to make Amazon your",
+      "em": "best salesperson",
+      "after": "?"
+    },
+    "sub": "Get a free brand audit — no commitment, within 48 hours.",
+    "primary": "Request my free audit",
+    "secondary": "Contact us"
+  },
+  "footer": {
+    "tagline": "French Amazon agency.",
+    "location": "Paris, France"
+  }
+}

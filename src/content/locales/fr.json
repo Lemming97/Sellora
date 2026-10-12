@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "Sellora · Agence Amazon · France",
+    "description": "Nous aidons les marques françaises à lancer, optimiser et scaler leur présence sur Amazon — sans se perdre dans la complexité de la plateforme."
+  },
+  "nav": {
+    "services": "Services",
+    "approach": "Notre approche",
+    "contact": "Contact",
+    "cta": "Audit gratuit"
+  },
+  "hero": {
+    "eyebrow": "Agence Amazon · France",
+    "title": {
+      "before": "Votre marque mérite de",
+      "em": "dominer",
+      "after": "Amazon"
+    },
+    "sub": "Nous aidons les marques françaises à lancer, optimiser et scaler leur présence sur Amazon — sans se perdre dans la complexité de la plateforme.",
+    "primaryCta": "Obtenir un audit gratuit",
+    "secondaryCta": "Voir nos résultats"
+  },
+  "panel": {
+    "resultsTitle": "Nos résultats moyens",
+    "stats": {
+      "revenue": "Croissance du chiffre d'affaires la première année",
+      "acos": "Réduction du coût publicitaire (ACoS)"
+    },
+    "howTitle": "Comment ça marche",
+    "steps": [
+      {
+        "title": "Audit de votre marque",
+        "sub": "Analyse gratuite de votre potentiel Amazon"
+      },
+      {
+        "title": "Stratégie sur-mesure",
+        "sub": "Plan d'action personnalisé à votre secteur"
+      },
+      {
+        "title": "Croissance mesurable",
+        "sub": "Résultats suivis chaque mois, en toute transparence"
+      }
+    ]
+  },
+  "sectors": {
+    "label": "Secteurs accompagnés",
+    "items": [
+      "Beauté & cosmétiques",
+      "Alimentation & boissons",
+      "Maison & décoration",
+      "Mode & accessoires",
+      "Sport & outdoor",
+      "Santé & bien-être"
+    ]
+  },
+  "services": {
+    "eyebrow": "Nos services",
+    "title": {
+      "before": "Tout ce dont vous avez besoin pour",
+      "em": "réussir",
+      "after": "sur Amazon"
+    },
+    "items": {
+      "ppc": {
+        "title": "Publicité Amazon (PPC)",
+        "description": "Campagnes Sponsored Products, Brands et Display optimisées pour maximiser votre retour sur investissement."
+      },
+      "listings": {
+        "title": "Optimisation des fiches produits",
+        "description": "Titres, bullet points et descriptions rédigés pour convertir — en français et selon les algorithmes d'Amazon."
+      },
+      "seo": {
+        "title": "SEO Amazon",
+        "description": "Recherche de mots-clés, indexation et stratégie de ranking pour que vos produits apparaissent en premier."
+      },
+      "inventory": {
+        "title": "Gestion des stocks & FBA",
+        "description": "Pilotage des niveaux de stock, prévisions de réapprovisionnement et optimisation de l'expédition FBA."
+      },
+      "visuals": {
+        "title": "Photographie & visuels",
+        "description": "Photos produits professionnelles, vidéos et contenu A+ qui transforment les visiteurs en acheteurs."
+      },
+      "reporting": {
+        "title": "Reporting & suivi",
+        "description": "Tableaux de bord clairs et réunions mensuelles pour que vous sachiez exactement où va votre budget."
+      }
+    }
+  },
+  "method": {
+    "eyebrow": "Notre méthode",
+    "title": {
+      "before": "De zéro à leader de",
+      "em": "catégorie",
+      "after": ""
+    },
+    "steps": [
+      {
+        "title": "Audit & analyse",
+        "description": "On analyse votre marché, vos concurrents et votre potentiel Amazon en détail."
+      },
+      {
+        "title": "Stratégie & lancement",
+        "description": "Création des fiches, mise en place des campagnes et ouverture du compte vendeur."
+      },
+      {
+        "title": "Optimisation continue",
+        "description": "Tests A/B, ajustements publicitaires et amélioration du taux de conversion chaque semaine."
+      },
+      {
+        "title": "Scaling & croissance",
+        "description": "Expansion vers d'autres pays européens et nouvelles catégories de produits."
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Nous avions peur de nous lancer sur Amazon seuls. En six mois, c'est devenu notre premier canal de vente en Europe.",
+      "author": "Sophie Marchand",
+      "role": "Fondatrice, Maison Lumière (Paris)"
+    }
+  ],
+  "cta": {
+    "title": {
+      "before": "Prêt à faire d'Amazon votre",
+      "em": "meilleur vendeur",
+      "after": " ?"
+    },
+    "sub": "Obtenez un audit gratuit de votre marque — sans engagement, en 48h.",
+    "primary": "Demander mon audit gratuit",
+    "secondary": "Nous contacter"
+  },
+  "footer": {
+    "tagline": "Agence Amazon française.",
+    "location": "Paris, France"
+  }
+}

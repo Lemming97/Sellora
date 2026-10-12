@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "Sellora · Amazon-byrå · Frankrike",
+    "description": "Vi hjälper franska varumärken att lansera, optimera och skala sin närvaro på Amazon — utan att gå vilse i plattformens komplexitet."
+  },
+  "nav": {
+    "services": "Tjänster",
+    "approach": "Vårt sätt",
+    "contact": "Kontakt",
+    "cta": "Gratis analys"
+  },
+  "hero": {
+    "eyebrow": "Amazon-byrå · Frankrike",
+    "title": {
+      "before": "Ditt varumärke förtjänar att",
+      "em": "dominera",
+      "after": "Amazon"
+    },
+    "sub": "Vi hjälper franska varumärken att lansera, optimera och skala sin närvaro på Amazon — utan att gå vilse i plattformens komplexitet.",
+    "primaryCta": "Få en gratis analys",
+    "secondaryCta": "Se våra resultat"
+  },
+  "panel": {
+    "resultsTitle": "Våra genomsnittliga resultat",
+    "stats": {
+      "revenue": "Omsättningstillväxt under första året",
+      "acos": "Minskning av annonskostnad (ACoS)"
+    },
+    "howTitle": "Så fungerar det",
+    "steps": [
+      {
+        "title": "Varumärkesanalys",
+        "sub": "Gratis analys av din Amazon-potential"
+      },
+      {
+        "title": "Skräddarsydd strategi",
+        "sub": "Handlingsplan anpassad till din bransch"
+      },
+      {
+        "title": "Mätbar tillväxt",
+        "sub": "Resultat följs varje månad, helt transparent"
+      }
+    ]
+  },
+  "sectors": {
+    "label": "Branscher vi arbetar med",
+    "items": [
+      "Skönhet & kosmetika",
+      "Mat & dryck",
+      "Hem & inredning",
+      "Mode & accessoarer",
+      "Sport & friluftsliv",
+      "Hälsa & välmående"
+    ]
+  },
+  "services": {
+    "eyebrow": "Våra tjänster",
+    "title": {
+      "before": "Allt du behöver för att",
+      "em": "lyckas",
+      "after": "på Amazon"
+    },
+    "items": {
+      "ppc": {
+        "title": "Amazon-annonsering (PPC)",
+        "description": "Sponsored Products-, Brands- och Display-kampanjer optimerade för att maximera din avkastning."
+      },
+      "listings": {
+        "title": "Optimering av produktlistor",
+        "description": "Titlar, punktlistor och beskrivningar skrivna för att konvertera — på franska och anpassade till Amazons algoritmer."
+      },
+      "seo": {
+        "title": "Amazon SEO",
+        "description": "Sökordsforskning, indexering och rankingstrategi för att dina produkter ska synas först."
+      },
+      "inventory": {
+        "title": "Lager- & FBA-hantering",
+        "description": "Lagernivåhantering, påfyllnadsprognoser och optimering av FBA-leveranser."
+      },
+      "visuals": {
+        "title": "Fotografi & visuals",
+        "description": "Professionella produktfoton, videor och A+-innehåll som förvandlar besökare till köpare."
+      },
+      "reporting": {
+        "title": "Rapportering & uppföljning",
+        "description": "Tydliga dashboards och månatliga möten så att du alltid vet exakt var din budget går."
+      }
+    }
+  },
+  "method": {
+    "eyebrow": "Vår metod",
+    "title": {
+      "before": "Från noll till",
+      "em": "kategoryledare",
+      "after": ""
+    },
+    "steps": [
+      {
+        "title": "Analys & granskning",
+        "description": "Vi analyserar din marknad, dina konkurrenter och din Amazon-potential i detalj."
+      },
+      {
+        "title": "Strategi & lansering",
+        "description": "Skapande av listor, kampanjupplägg och öppning av säljarkonto."
+      },
+      {
+        "title": "Kontinuerlig optimering",
+        "description": "A/B-tester, annonsjusteringar och förbättring av konverteringsgrad varje vecka."
+      },
+      {
+        "title": "Skalning & tillväxt",
+        "description": "Expansion till andra europeiska länder och nya produktkategorier."
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Vi var rädda för att lansera på Amazon ensamma. På sex månader blev det vår viktigaste försäljningskanal i Europa.",
+      "author": "Sophie Marchand",
+      "role": "Grundare, Maison Lumière (Paris)"
+    }
+  ],
+  "cta": {
+    "title": {
+      "before": "Redo att göra Amazon till din",
+      "em": "bästa säljare",
+      "after": "?"
+    },
+    "sub": "Få en gratis varumärkesanalys — utan förpliktelser, inom 48 timmar.",
+    "primary": "Begär min gratis analys",
+    "secondary": "Kontakta oss"
+  },
+  "footer": {
+    "tagline": "Fransk Amazon-byrå.",
+    "location": "Paris, Frankrike"
+  }
+}

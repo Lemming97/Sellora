@@ -1,5 +1,5 @@
 /* ===========================
-   SELLORA — Main Stylesheet
+   SELLORA · Global styles
    =========================== */
 
 *, *::before, *::after {
@@ -813,5 +813,67 @@ footer p {
 
   .lang-btn {
     padding: 0.4rem 0.55rem;
+  }
+}
+
+/* ===========================
+   React additions
+   =========================== */
+
+nav {
+  transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.section--compact {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-header--center {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header--center .section-title {
+  margin: 0 auto;
+}
+
+.testimonial {
+  margin: 0;
+}
+
+.testimonial + .testimonial {
+  margin-top: 4rem;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--white);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

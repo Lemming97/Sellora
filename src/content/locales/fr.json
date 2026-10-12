@@ -7,7 +7,7 @@
     "services": "Services",
     "approach": "Notre approche",
     "contact": "Contact",
-    "cta": "Audit gratuit"
+    "cta": "Demander un audit"
   },
   "hero": {
     "eyebrow": "Agence Amazon · Europe",
@@ -17,7 +17,7 @@
       "after": "Amazon"
     },
     "sub": "Nous aidons les marques à lancer, optimiser et scaler leur présence sur Amazon partout en Europe, sans se perdre dans la complexité de la plateforme.",
-    "primaryCta": "Obtenir un audit gratuit",
+    "primaryCta": "Demander un audit",
     "secondaryCta": "Voir nos résultats"
   },
   "panel": {
@@ -30,7 +30,7 @@
     "steps": [
       {
         "title": "Audit de votre marque",
-        "sub": "Analyse gratuite de votre potentiel Amazon"
+        "sub": "Analyse approfondie de votre potentiel Amazon"
       },
       {
         "title": "Stratégie sur-mesure",
@@ -164,8 +164,8 @@
       "em": "meilleur vendeur",
       "after": " ?"
     },
-    "sub": "Obtenez un audit gratuit de votre marque — sans engagement, en 48h.",
-    "primary": "Demander mon audit gratuit",
+    "sub": "Demandez un audit de votre marque et obtenez une vision claire de votre potentiel Amazon.",
+    "primary": "Demander mon audit",
     "secondary": "Nous contacter"
   },
   "forms": {
@@ -176,8 +176,8 @@
     "requiredNote": "* Champs obligatoires",
     "failed": "Une erreur est survenue et votre message n'a pas été envoyé. Veuillez réessayer ou nous écrire à {email}.",
     "success": {
-      "sent": "Merci ! Nous avons bien reçu votre message et vous répondrons sous 48 h.",
-      "mailto": "Votre messagerie devrait s'ouvrir avec votre message prêt. Il ne vous reste qu'à l'envoyer : nous vous répondrons sous 48 h. Si rien ne s'ouvre, écrivez-nous directement à {email}."
+      "sent": "Merci ! Nous avons bien reçu votre message et vous répondrons très rapidement.",
+      "mailto": "Votre messagerie devrait s'ouvrir avec votre message prêt. Il ne vous reste qu'à l'envoyer : nous vous répondrons très rapidement. Si rien ne s'ouvre, écrivez-nous directement à {email}."
     },
     "errors": {
       "required": "Ce champ est obligatoire.",
@@ -195,8 +195,8 @@
       "message": "Message"
     },
     "audit": {
-      "title": "Demandez votre audit gratuit",
-      "intro": "Parlez-nous de votre marque : nous vous enverrons une analyse complète de votre potentiel Amazon sous 48 h.",
+      "title": "Demandez votre audit",
+      "intro": "Parlez-nous de votre marque : nous revenons vers vous pour échanger sur vos objectifs et le contenu de votre audit.",
       "submit": "Demander mon audit"
     },
     "contact": {

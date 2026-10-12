@@ -7,7 +7,7 @@
     "services": "Servicios",
     "approach": "Nuestro enfoque",
     "contact": "Contacto",
-    "cta": "Auditoría gratis"
+    "cta": "Solicitar auditoría"
   },
   "hero": {
     "eyebrow": "Agencia Amazon · Europa",
@@ -17,7 +17,7 @@
       "after": "Amazon"
     },
     "sub": "Ayudamos a las marcas a lanzarse, optimizar y escalar su presencia en Amazon en toda Europa, sin perderse en la complejidad de la plataforma.",
-    "primaryCta": "Obtener auditoría gratuita",
+    "primaryCta": "Solicitar una auditoría",
     "secondaryCta": "Ver nuestros resultados"
   },
   "panel": {
@@ -30,7 +30,7 @@
     "steps": [
       {
         "title": "Auditoría de tu marca",
-        "sub": "Análisis gratuito de tu potencial en Amazon"
+        "sub": "Análisis en profundidad de tu potencial en Amazon"
       },
       {
         "title": "Estrategia personalizada",
@@ -164,8 +164,8 @@
       "em": "mejor vendedor",
       "after": "?"
     },
-    "sub": "Obtén una auditoría de marca gratuita — sin compromiso, en 48 horas.",
-    "primary": "Solicitar mi auditoría gratuita",
+    "sub": "Solicita una auditoría de tu marca y obtén una visión clara de tu potencial en Amazon.",
+    "primary": "Solicitar mi auditoría",
     "secondary": "Contactarnos"
   },
   "forms": {
@@ -176,8 +176,8 @@
     "requiredNote": "* Campos obligatorios",
     "failed": "Algo salió mal y tu mensaje no se envió. Inténtalo de nuevo o escríbenos a {email}.",
     "success": {
-      "sent": "¡Gracias! Hemos recibido tu mensaje y te responderemos en 48 horas.",
-      "mailto": "Tu aplicación de correo debería abrirse con el mensaje listo. Solo tienes que enviarlo y te responderemos en 48 horas. Si no se abre nada, escríbenos directamente a {email}."
+      "sent": "¡Gracias! Hemos recibido tu mensaje y te responderemos muy pronto.",
+      "mailto": "Tu aplicación de correo debería abrirse con el mensaje listo. Solo tienes que enviarlo y te responderemos muy pronto. Si no se abre nada, escríbenos directamente a {email}."
     },
     "errors": {
       "required": "Este campo es obligatorio.",
@@ -195,8 +195,8 @@
       "message": "Mensaje"
     },
     "audit": {
-      "title": "Solicita tu auditoría gratuita",
-      "intro": "Cuéntanos sobre tu marca y te enviaremos un análisis completo de tu potencial en Amazon en 48 horas.",
+      "title": "Solicita tu auditoría",
+      "intro": "Cuéntanos sobre tu marca y te contactaremos para hablar de tus objetivos y del alcance de tu auditoría.",
       "submit": "Solicitar mi auditoría"
     },
     "contact": {

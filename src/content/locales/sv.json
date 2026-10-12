@@ -7,7 +7,7 @@
     "services": "Tjänster",
     "approach": "Vårt sätt",
     "contact": "Kontakt",
-    "cta": "Gratis analys"
+    "cta": "Beställ en analys"
   },
   "hero": {
     "eyebrow": "Amazon-byrå · Europa",
@@ -17,7 +17,7 @@
       "after": "Amazon"
     },
     "sub": "Vi hjälper varumärken att lansera, optimera och skala sin närvaro på Amazon i hela Europa, utan att gå vilse i plattformens komplexitet.",
-    "primaryCta": "Få en gratis analys",
+    "primaryCta": "Beställ en analys",
     "secondaryCta": "Se våra resultat"
   },
   "panel": {
@@ -30,7 +30,7 @@
     "steps": [
       {
         "title": "Varumärkesanalys",
-        "sub": "Gratis analys av din Amazon-potential"
+        "sub": "Grundlig analys av din Amazon-potential"
       },
       {
         "title": "Skräddarsydd strategi",
@@ -164,8 +164,8 @@
       "em": "bästa säljare",
       "after": "?"
     },
-    "sub": "Få en gratis varumärkesanalys — utan förpliktelser, inom 48 timmar.",
-    "primary": "Begär min gratis analys",
+    "sub": "Beställ en varumärkesanalys och få en tydlig bild av din Amazon-potential.",
+    "primary": "Beställ min analys",
     "secondary": "Kontakta oss"
   },
   "forms": {
@@ -176,8 +176,8 @@
     "requiredNote": "* Obligatoriska fält",
     "failed": "Något gick fel och ditt meddelande skickades inte. Försök igen eller mejla oss på {email}.",
     "success": {
-      "sent": "Tack! Vi har tagit emot ditt meddelande och svarar inom 48 timmar.",
-      "mailto": "Ditt e-postprogram bör nu öppnas med meddelandet klart. Tryck bara på skicka så svarar vi inom 48 timmar. Om inget öppnas, mejla oss direkt på {email}."
+      "sent": "Tack! Vi har tagit emot ditt meddelande och återkommer snart.",
+      "mailto": "Ditt e-postprogram bör nu öppnas med meddelandet klart. Tryck bara på skicka så återkommer vi snart. Om inget öppnas, mejla oss direkt på {email}."
     },
     "errors": {
       "required": "Det här fältet är obligatoriskt.",
@@ -195,8 +195,8 @@
       "message": "Meddelande"
     },
     "audit": {
-      "title": "Beställ din gratis analys",
-      "intro": "Berätta om ditt varumärke så skickar vi en fullständig analys av din Amazon-potential inom 48 timmar.",
+      "title": "Beställ din analys",
+      "intro": "Berätta om ditt varumärke så återkommer vi för att prata om dina mål och vad analysen ska omfatta.",
       "submit": "Beställ min analys"
     },
     "contact": {

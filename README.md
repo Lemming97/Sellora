@@ -69,7 +69,7 @@ All visible text lives in `src/content/locales/<lang>.json`, so you rarely need 
 
 **Contact email:** set once in `src/content/site.js` (`email`). The footer link and the forms' messages use it. It is currently `contact@hellosellora.com`.
 
-**Audit and contact forms:** the "Demander mon audit gratuit" and "Nous contacter" buttons open form pop-ups. Fields are defined in `forms` in `src/content/site.js`; labels and error messages are in each locale file under `forms`. Submissions are sent through [Web3Forms](https://web3forms.com) (`web3formsKey` in `site.js`) and arrive at contact@ with an English subject and field labels; replying answers the visitor directly. If the key is ever removed, the forms fall back to opening the visitor's email app.
+**Audit and contact forms:** the "Demander mon audit" and "Nous contacter" buttons open form pop-ups. Fields are defined in `forms` in `src/content/site.js`; labels and error messages are in each locale file under `forms`. Submissions are sent through [Web3Forms](https://web3forms.com) (`web3formsKey` in `site.js`) and arrive at contact@ with an English subject and field labels; replying answers the visitor directly. If the key is ever removed, the forms fall back to opening the visitor's email app.
 
 **Testimonials (carousel):** each locale file has a `testimonials` list. The carousel slides to the next quote every 8 seconds, and visitors can use the arrows, dots, keyboard, drag or swipe.
 * Entries marked `"placeholder": true` are example quotes. They only show when you run the site locally (`npm run dev`), with an "Example" badge, and are hidden on the live site so visitors never see invented quotes.

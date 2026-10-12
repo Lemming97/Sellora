@@ -6,6 +6,7 @@
   "nav": {
     "services": "Services",
     "approach": "Our approach",
+    "audit": "The audit",
     "contact": "Contact",
     "cta": "Request an audit"
   },
@@ -195,7 +196,7 @@
     },
     "accessNote": "For the advertising and operations review, we'll ask for read access to your Amazon account.",
     "receiveTitle": "What you receive",
-    "receiveText": "A written report with clear, prioritized recommendations.",
+    "receiveText": "A detailed written report with clear, prioritized recommendations.",
     "stepsTitle": "How it works",
     "steps": [
       "Request an audit and tell us about your brand.",

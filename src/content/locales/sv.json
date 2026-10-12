@@ -6,6 +6,7 @@
   "nav": {
     "services": "Tjänster",
     "approach": "Vårt sätt",
+    "audit": "Analysen",
     "contact": "Kontakt",
     "cta": "Beställ en analys"
   },
@@ -195,7 +196,7 @@
     },
     "accessNote": "För granskningen av annonsering och drift ber vi om läsbehörighet till ditt Amazon-konto.",
     "receiveTitle": "Det här får du",
-    "receiveText": "En skriftlig rapport med tydliga, prioriterade rekommendationer.",
+    "receiveText": "En detaljerad skriftlig rapport med tydliga, prioriterade rekommendationer.",
     "stepsTitle": "Så går det till",
     "steps": [
       "Beställ en analys och berätta om ditt varumärke.",

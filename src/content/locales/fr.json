@@ -6,6 +6,7 @@
   "nav": {
     "services": "Services",
     "approach": "Notre approche",
+    "audit": "L'audit",
     "contact": "Contact",
     "cta": "Demander un audit"
   },
@@ -195,7 +196,7 @@
     },
     "accessNote": "Pour l'analyse de la publicité et des opérations, nous vous demanderons un accès en lecture à votre compte Amazon.",
     "receiveTitle": "Ce que vous recevez",
-    "receiveText": "Un rapport écrit avec des recommandations claires et priorisées.",
+    "receiveText": "Un rapport écrit détaillé avec des recommandations claires et priorisées.",
     "stepsTitle": "Comment ça marche",
     "steps": [
       "Demandez un audit et parlez-nous de votre marque.",

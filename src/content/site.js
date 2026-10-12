@@ -19,7 +19,7 @@ export const site = {
   //    Submissions are emailed straight to contact@. The key is designed to be public.
   // 2. formEndpoint: any service that accepts a JSON POST (e.g. a Formspree form URL).
   // 3. Neither set: the visitor's email app opens with the message prefilled.
-  web3formsKey: '',
+  web3formsKey: 'efb4ad51-131b-40e4-91aa-e250c7f8cb34',
   formEndpoint: '',
 };
 

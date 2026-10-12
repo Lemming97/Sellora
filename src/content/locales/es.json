@@ -150,8 +150,6 @@
     "previous": "Testimonio anterior",
     "next": "Testimonio siguiente",
     "goTo": "Ver testimonio {n}",
-    "pause": "Pausar",
-    "play": "Reproducir",
     "placeholder": "Ejemplo · solo en local"
   },
   "cta": {

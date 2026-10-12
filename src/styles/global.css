@@ -728,30 +728,44 @@ body:has(.modal[open]) {
 
 .testimonial-section {
   text-align: center;
-  max-width: 760px;
+  max-width: 860px;
   margin: 0 auto;
   padding: 6rem 4rem;
 }
 
-/* Carousel: all slides share one grid cell, so the height stays that of the
-   tallest quote and nothing jumps when the slide changes. */
+/* Carousel: slides sit side by side and the track slides horizontally. */
+.carousel-viewport {
+  overflow: hidden;
+  /* soft fade at both edges while slides move */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+
 .carousel-track {
-  display: grid;
+  display: flex;
+  touch-action: pan-y; /* vertical page scroll still works on phones */
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel-track.is-dragging {
+  cursor: grabbing;
 }
 
 .carousel-slide {
-  grid-area: 1 / 1;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(8px);
-  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0 3.5rem;
 }
 
-.carousel-slide.is-active {
-  opacity: 1;
-  visibility: visible;
-  transform: none;
-  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s;
+@media (max-width: 600px) {
+  .testimonial-section {
+    padding: 4rem 0.5rem;
+  }
+
+  .carousel-slide {
+    padding: 0 1.75rem;
+  }
 }
 
 .carousel-controls {
@@ -762,8 +776,7 @@ body:has(.modal[open]) {
   margin-top: 2.5rem;
 }
 
-.carousel-arrow,
-.carousel-pause {
+.carousel-arrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -777,14 +790,8 @@ body:has(.modal[open]) {
   transition: border-color 0.2s, background 0.2s;
 }
 
-.carousel-pause {
-  width: 32px;
-  height: 32px;
-  color: var(--text-muted);
-}
 
-.carousel-arrow:hover,
-.carousel-pause:hover {
+.carousel-arrow:hover {
   border-color: var(--accent);
   background: var(--surface-2);
 }
@@ -811,7 +818,6 @@ body:has(.modal[open]) {
 }
 
 .carousel-arrow:focus-visible,
-.carousel-pause:focus-visible,
 .carousel-dot:focus-visible {
   outline: 2px solid var(--accent-text);
   outline-offset: 3px;
@@ -829,13 +835,6 @@ body:has(.modal[open]) {
   color: var(--accent-text);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .carousel-slide,
-  .carousel-slide.is-active {
-    transition: none;
-    transform: none;
-  }
-}
 
 .quote-mark {
   font-family: var(--serif);

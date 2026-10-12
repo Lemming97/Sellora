@@ -150,8 +150,6 @@
     "previous": "Föregående omdöme",
     "next": "Nästa omdöme",
     "goTo": "Visa omdöme {n}",
-    "pause": "Pausa",
-    "play": "Spela",
     "placeholder": "Exempel · endast lokalt"
   },
   "cta": {

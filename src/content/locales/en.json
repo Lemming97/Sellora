@@ -150,8 +150,6 @@
     "previous": "Previous testimonial",
     "next": "Next testimonial",
     "goTo": "Show testimonial {n}",
-    "pause": "Pause",
-    "play": "Play",
     "placeholder": "Example · local only"
   },
   "cta": {

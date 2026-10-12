@@ -150,8 +150,6 @@
     "previous": "Témoignage précédent",
     "next": "Témoignage suivant",
     "goTo": "Afficher le témoignage {n}",
-    "pause": "Mettre en pause",
-    "play": "Lecture",
     "placeholder": "Exemple · local uniquement"
   },
   "cta": {

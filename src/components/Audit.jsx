@@ -34,6 +34,11 @@ export default function Audit() {
         <FadeIn className="audit-card">
           <h3 className="audit-subtitle">{a.receiveTitle}</h3>
           <p>{a.receiveText}</p>
+          <ul className="audit-receive">
+            {a.receiveItems.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
         </FadeIn>
         <FadeIn className="audit-card">
           <h3 className="audit-subtitle">{a.stepsTitle}</h3>

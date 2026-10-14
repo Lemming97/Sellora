@@ -276,5 +276,12 @@
   "footer": {
     "tagline": "Lanza, crece y escala en toda Europa.",
     "location": "París, Francia"
+  },
+  "cookies": {
+    "title": "Cookies",
+    "text": "Usamos cookies de Google Analytics y Google Ads para medir las visitas y los resultados de nuestros anuncios. Solo se instalan si las aceptas. Puedes cambiar tu elección en cualquier momento al final de la página.",
+    "accept": "Aceptar",
+    "refuse": "Rechazar",
+    "settings": "Configuración de cookies"
   }
 }

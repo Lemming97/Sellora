@@ -26,6 +26,14 @@ export const site = {
   formEndpoint: '',
 };
 
+// Google Analytics 4 and Google Ads. Loaded only after a visitor accepts cookies
+// (see src/analytics/googleTag.js). Leave an ID empty to switch that part off.
+export const googleTag = {
+  analyticsId: 'G-5NCZPXGX3Q',          // GA4 property "hellosellora.com", stream "Hello Sellora website"
+  adsId: 'AW-18513143620',              // Google Ads account
+  adsLeadLabel: 'DF42CNLV3JwdEMTO4PtE', // Ads conversion action "Submit lead form"
+};
+
 export const languages = [
   { code: 'fr', name: 'Français' },
   { code: 'en', name: 'English' },

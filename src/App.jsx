@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials.jsx';
 import Audit from './components/Audit.jsx';
 import CallToAction from './components/CallToAction.jsx';
 import Footer from './components/Footer.jsx';
+import CookieBanner from './components/CookieBanner.jsx';
 import { FormModalProvider } from './forms/FormModalContext.jsx';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <CallToAction />
       </main>
       <Footer />
+      <CookieBanner />
     </FormModalProvider>
   );
 }

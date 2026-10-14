@@ -276,5 +276,12 @@
   "footer": {
     "tagline": "Launch, grow, and scale across Europe.",
     "location": "Paris, France"
+  },
+  "cookies": {
+    "title": "Cookies",
+    "text": "We use Google Analytics and Google Ads cookies to measure visits and the results of our ads. They are only set if you accept. You can change your choice at any time from the bottom of the page.",
+    "accept": "Accept",
+    "refuse": "Refuse",
+    "settings": "Cookie settings"
   }
 }

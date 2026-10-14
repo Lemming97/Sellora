@@ -276,5 +276,12 @@
   "footer": {
     "tagline": "Lansera, väx och skala upp i hela Europa.",
     "location": "Paris, Frankrike"
+  },
+  "cookies": {
+    "title": "Cookies",
+    "text": "Vi använder cookies från Google Analytics och Google Ads för att mäta besök och resultatet av våra annonser. De sparas bara om du godkänner. Du kan ändra ditt val när som helst längst ned på sidan.",
+    "accept": "Godkänn",
+    "refuse": "Avböj",
+    "settings": "Cookieinställningar"
   }
 }

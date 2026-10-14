@@ -10,6 +10,14 @@
     "contact": "Kontakt",
     "cta": "Beställ en analys"
   },
+  "heroBand": {
+    "label": "Från Paris till Stockholm",
+    "line": {
+      "before": "Lansera, väx och",
+      "em": "skala upp",
+      "after": "i hela Europa."
+    }
+  },
   "hero": {
     "eyebrow": "Amazon-byrå · Europa",
     "title": {

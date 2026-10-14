@@ -34,10 +34,18 @@ function WarehouseIllustration() {
       <g fill="rgba(255, 255, 255, 0.05)">
         {[430, 820, 1210].map((x) => <rect key={x} x={x} y="0" width="14" height="440" />)}
       </g>
-      <g fill="rgba(255, 255, 255, 0.09)">
-        <rect x="0" y="150" width="1224" height="12" />
-        <rect x="0" y="300" width="1224" height="12" />
-        <rect x="0" y="430" width="1224" height="10" />
+      {/* Only the shelves fade in on the left; the parcels stay solid over the gradient. */}
+      <defs>
+        <linearGradient id="hero-band-shelf-fade" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stopColor="#FFFFFF" stopOpacity="0" />
+          <stop offset="0.3" stopColor="#FFFFFF" stopOpacity="0.09" />
+          <stop offset="1" stopColor="#FFFFFF" stopOpacity="0.09" />
+        </linearGradient>
+      </defs>
+      <g fill="url(#hero-band-shelf-fade)">
+        <rect x="0" y="150" width="1312" height="12" />
+        <rect x="0" y="300" width="1312" height="12" />
+        <rect x="0" y="430" width="1312" height="10" />
       </g>
       <g>
         {PARCELS.map(([x, y, w, h, tone, tapeX]) => (

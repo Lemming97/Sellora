@@ -203,7 +203,7 @@ nav > ul a:hover {
   pointer-events: none;
 }
 
-/* The parcels fill the right side and fade into the gradient on their left edge. */
+/* The parcels fill the right side, solid over the gradient. */
 .hero-band-art {
   position: absolute;
   top: 0;
@@ -211,8 +211,6 @@ nav > ul a:hover {
   width: 60%;
   height: 100%;
   display: block;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 30%);
-  mask-image: linear-gradient(to right, transparent 0%, #000 30%);
 }
 
 .hero-band-panel {
@@ -327,8 +325,6 @@ nav > ul a:hover {
   /* On phones the text sits at the bottom, with parcels showing above it. */
   .hero-band-art {
     width: 100%;
-    -webkit-mask-image: none;
-    mask-image: none;
   }
 
   .hero-band-panel {

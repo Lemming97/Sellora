@@ -10,6 +10,14 @@
     "contact": "Contacto",
     "cta": "Solicitar auditoría"
   },
+  "heroBand": {
+    "label": "De París a Estocolmo",
+    "line": {
+      "before": "Lanza, crece y",
+      "em": "escala",
+      "after": "en toda Europa."
+    }
+  },
   "hero": {
     "eyebrow": "Agencia Amazon · Europa",
     "title": {

@@ -10,6 +10,14 @@
     "contact": "Contact",
     "cta": "Demander un audit"
   },
+  "heroBand": {
+    "label": "De Paris à Stockholm",
+    "line": {
+      "before": "Lancez, développez et",
+      "em": "scalez",
+      "after": "partout en Europe."
+    }
+  },
   "hero": {
     "eyebrow": "Agence Amazon · Europe",
     "title": {

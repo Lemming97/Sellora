@@ -1,4 +1,5 @@
 import Nav from './components/Nav.jsx';
+import HeroBand from './components/HeroBand.jsx';
 import Hero from './components/Hero.jsx';
 import SectorsStrip from './components/SectorsStrip.jsx';
 import Services from './components/Services.jsx';
@@ -15,6 +16,7 @@ export default function App() {
     <FormModalProvider>
       <Nav />
       <main>
+        <HeroBand />
         <Hero />
         <SectorsStrip />
         <Services />

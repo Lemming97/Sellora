@@ -3,6 +3,7 @@ import { useFormModal } from '../forms/FormModalContext.jsx';
 import { site } from '../content/site.js';
 import { LinkedinLogo } from '@phosphor-icons/react';
 import Logo from './Logo.jsx';
+import { openCookieSettings } from '../analytics/googleTag.js';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -30,6 +31,7 @@ export default function Footer() {
           <LinkedinLogo size={18} weight="duotone" aria-hidden="true" />
           <span>LinkedIn</span>
         </a>
+        <button type="button" className="footer-cookies" onClick={openCookieSettings}>{t.cookies.settings}</button>
       </div>
     </footer>
   );

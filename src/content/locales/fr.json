@@ -276,5 +276,12 @@
   "footer": {
     "tagline": "Lancer, développer et scaler votre marque en Europe.",
     "location": "Paris, France"
+  },
+  "cookies": {
+    "title": "Cookies",
+    "text": "Nous utilisons des cookies Google Analytics et Google Ads pour mesurer la fréquentation du site et les résultats de nos annonces. Ils ne sont déposés que si vous acceptez. Vous pouvez modifier votre choix à tout moment en bas de la page.",
+    "accept": "Accepter",
+    "refuse": "Refuser",
+    "settings": "Gestion des cookies"
   }
 }

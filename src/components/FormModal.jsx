@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import { forms, site } from '../content/site.js';
 import { sendForm, validateField } from '../forms/forms.js';
+import { trackLead } from '../analytics/googleTag.js';
 
 // A modal form ('audit' or 'contact'). Mount it to open; it calls onClose when dismissed.
 export default function FormModal({ type, onClose }) {
@@ -48,7 +49,7 @@ export default function FormModal({ type, onClose }) {
 
     setStatus('sending');
     try {
-      setStatus(await sendForm({
+      const result = await sendForm({
         kind: type,
         subject: copy.title,
         fields,
@@ -56,7 +57,10 @@ export default function FormModal({ type, onClose }) {
         labels: t.forms.fields,
         lang,
         botcheck: botcheckRef.current?.checked,
-      }));
+      });
+      // Count a lead only when the form service confirmed delivery.
+      if (result === 'sent') trackLead(type);
+      setStatus(result);
     } catch {
       setStatus('failed');
     }

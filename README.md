@@ -26,6 +26,15 @@ Every push to `main` deploys the site automatically through GitHub Actions (`.gi
 
 GitHub Pages settings: **Source** is "GitHub Actions", **Custom domain** is `hellosellora.com`, and **Enforce HTTPS** is on. The domain is verified on the Lemming97 GitHub account.
 
+## Analytics, Google Ads and cookies
+
+Google Analytics 4 (`G-5NCZPXGX3Q`) and Google Ads (`AW-18513143620`) load **only after a visitor clicks Accept** in the cookie banner (Consent Mode v2, basic setup). Before that, no Google script is downloaded. The choice is stored in the browser and can be changed from **Cookie settings** in the footer; refusing later also deletes the Google cookies.
+
+* IDs and the Ads conversion label are in `googleTag` in `src/content/site.js`. Empty an ID to switch that part off.
+* Code: `src/analytics/googleTag.js` and `src/components/CookieBanner.jsx`. Banner text is under `cookies` in each locale file.
+* When the audit or contact form is delivered, the site sends a GA4 `generate_lead` event (with `form_name` audit or contact) and the Google Ads "Submit lead form" conversion. In GA4, mark `generate_lead` as a key event (Admin, Events).
+* To test: open https://tagassistant.google.com, connect to hellosellora.com, accept cookies and send a test form.
+
 ## Project structure
 
 ```
@@ -51,12 +60,13 @@ sellora/
     │   ├── Testimonials.jsx, TestimonialCard.jsx   # Testimonials carousel
     │   ├── Audit.jsx                # "What's in your Amazon audit" section
     │   ├── CallToAction.jsx, FormModal.jsx          # Audit and contact forms
-    │   ├── Footer.jsx
+    │   ├── Footer.jsx, CookieBanner.jsx
     │   └── SectionHeader.jsx, EmphasisTitle.jsx, FadeIn.jsx
     ├── content/
     │   ├── site.js             # Shared settings: email, form endpoint, languages, stats, service icons, form fields
     │   └── locales/            # All page text, one file per language
     │       └── fr.json, en.json, sv.json, es.json
+    ├── analytics/googleTag.js  # Google Analytics and Ads, loaded after cookie consent
     ├── forms/forms.js          # Form validation and sending
     ├── assets/brand/           # Logo SVGs (light, dark, seal)
     ├── i18n/LanguageContext.jsx  # Current language, remembered in the visitor's browser

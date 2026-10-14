@@ -263,6 +263,37 @@ nav > ul a:hover {
   background: var(--accent);
 }
 
+/* Sellora stars: one large in the gold glow, two small ones scattered. */
+.hero-band-star {
+  position: absolute;
+  z-index: 2;
+  fill: var(--accent);
+  pointer-events: none;
+}
+
+.hero-band-star-lg {
+  top: 1.3rem;
+  right: 1.5rem;
+  width: 34px;
+  height: 34px;
+}
+
+.hero-band-star-md {
+  top: 46%;
+  right: 34%;
+  width: 18px;
+  height: 18px;
+  opacity: 0.85;
+}
+
+.hero-band-star-sm {
+  bottom: 2rem;
+  left: 3.5rem;
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+}
+
 /* The band already gives the page its opening, so the hero sits closer to it. */
 .hero-band-wrap + .hero {
   padding-top: 4.5rem;
@@ -310,6 +341,23 @@ nav > ul a:hover {
 
   .hero-band-label {
     margin-bottom: 0.8rem;
+  }
+
+  .hero-band-star-lg {
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 26px;
+    height: 26px;
+  }
+
+  .hero-band-star-md {
+    top: 1.6rem;
+    right: auto;
+    left: 1.4rem;
+  }
+
+  .hero-band-star-sm {
+    display: none;
   }
 
   .hero-band-line {

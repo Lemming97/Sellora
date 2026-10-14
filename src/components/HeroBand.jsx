@@ -47,10 +47,16 @@ function WarehouseIllustration() {
           </g>
         ))}
       </g>
-      <g fill="var(--accent)">
-        <path d="M1246 40 l5 13 l13 5 l-13 5 l-5 13 l-5 -13 l-13 -5 l13 -5 z" />
-        <path d="M28 404 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z" />
-      </g>
+    </svg>
+  );
+}
+
+// The four point star from the Sellora seal, in gold. Kept outside the
+// illustration so the band's cropping and fade never hide it.
+function SelloraStar({ className }) {
+  return (
+    <svg className={`hero-band-star ${className}`} viewBox="43 11 10 10" aria-hidden="true" focusable="false">
+      <polygon points="48,11 49.13,14.87 53,16 49.13,17.13 48,21 46.87,17.13 43,16 46.87,14.87" />
     </svg>
   );
 }
@@ -83,6 +89,9 @@ export default function HeroBand() {
     <div className="hero-band-wrap">
       <div className="hero-band">
         <WarehouseIllustration />
+        <SelloraStar className="hero-band-star-lg" />
+        <SelloraStar className="hero-band-star-md" />
+        <SelloraStar className="hero-band-star-sm" />
         <div className="hero-band-panel">
           <div className={`hero-band-copy${visible ? '' : ' is-hidden'}`}>
             <p className="hero-band-label">{copy.label}</p>

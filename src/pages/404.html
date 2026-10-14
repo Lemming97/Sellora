@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable · Hello Sellora</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FAF8F4">
+  <!-- GitHub Pages serves this file for any address that doesn't exist, at any depth,
+       so every link and asset here starts with "/". Built from src/pages/404.html. -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script>
+    // A known short address typed with other capitals or a trailing slash
+    // (e.g. /Audit/) is forwarded instead of showing the error.
+    (function () {
+      var redirects = __REDIRECTS__;
+      var languages = __LANGUAGES__;
+      var path = location.pathname.toLowerCase().replace(/\/+$/, '') || '/';
+      if (redirects[path]) {
+        location.replace(redirects[path]);
+      } else if (languages.indexOf(path.slice(1)) !== -1) {
+        try { localStorage.setItem('sellora-lang', path.slice(1)); } catch (e) {}
+        location.replace('/');
+      }
+    })();
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #FAF8F4;
+      --text: #0B1929;
+      --text-muted: #55657A;
+      --accent: #E8A020;
+      --accent-hover: #F5C86A;
+      --accent-text: #9A6210;
+      --border: rgba(11, 25, 41, 0.10);
+      --border-strong: rgba(11, 25, 41, 0.18);
+      --navy: #0B1929;
+      --navy-gradient: linear-gradient(135deg, #284878 0%, #1A2E45 55%, #0B1929 100%);
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .nf-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nf-logo { display: flex; align-items: center; gap: 0.75rem; }
+    .nf-seal { width: 46px; height: 46px; display: block; }
+    .nf-wordmark { display: flex; flex-direction: column; line-height: 1; font-family: var(--serif); }
+    .nf-wordmark small { font-style: italic; font-size: 1.05rem; color: var(--accent-text); }
+    .nf-wordmark span { font-size: 1.9rem; }
+    .nf-wordmark em { color: var(--accent-text); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.8rem 1.7rem;
+      border-radius: 100px;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .btn-primary { background: var(--accent); color: var(--text); }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-ghost { border: 1px solid var(--border-strong); }
+    .btn-ghost:hover { border-color: rgba(11, 25, 41, 0.35); }
+
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 3.5rem 4rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .nf-art {
+      position: relative;
+      aspect-ratio: 8 / 7;
+      max-height: 560px;
+      border-radius: 28px;
+      overflow: hidden;
+      background: var(--navy-gradient);
+      border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+    }
+    .nf-art::after {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 10%, transparent) 0%, transparent 70%);
+    }
+    .nf-art svg.nf-shelves { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .nf-code {
+      position: absolute;
+      top: 1.6rem;
+      left: 2.2rem;
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 7vw, 6rem);
+      line-height: 1;
+      color: var(--bg);
+    }
+    .nf-star { position: absolute; fill: var(--accent); }
+    .nf-star-lg { top: 1.3rem; right: 1.5rem; width: 34px; height: 34px; z-index: 1; }
+    .nf-star-sm { bottom: 2.2rem; left: 2.4rem; width: 16px; height: 16px; opacity: 0.75; }
+
+    .nf-copy { display: flex; flex-direction: column; gap: 1.6rem; max-width: 520px; }
+
+    .nf-eyebrow {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+      color: var(--accent-text);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      font-weight: 500;
+    }
+    .nf-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2.6rem, 5vw, 4.4rem);
+      line-height: 1.04;
+      letter-spacing: -0.01em;
+    }
+    h1 em { font-style: italic; color: var(--accent-text); }
+
+    .nf-sub { color: var(--text-muted); font-size: 1.1rem; font-weight: 300; line-height: 1.7; }
+
+    .nf-btns { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+    .nf-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 1.75rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid var(--border);
+    }
+    .nf-links a {
+      color: var(--text-muted);
+      padding: 0.6rem 0;
+    }
+    .nf-links a:hover { color: var(--accent-text); }
+
+    @media (max-width: 900px) {
+      .nf-nav { padding: 1rem 2rem; }
+      main { grid-template-columns: 1fr; padding: 2rem 2rem 3rem; gap: 2.5rem; }
+      .nf-art { aspect-ratio: 16 / 9; max-height: none; }
+    }
+
+    @media (max-width: 600px) {
+      .nf-nav { padding: 1rem; }
+      .nf-wordmark { display: none; }
+      .nf-nav .btn { min-height: 44px; padding: 0.55rem 1.1rem; font-size: 0.85rem; }
+      main { padding: 1rem 1rem 2.5rem; gap: 1.75rem; }
+      .nf-art { aspect-ratio: 4 / 3; border-radius: 20px; }
+      .nf-code { top: 0.9rem; left: 1.25rem; font-size: 3rem; }
+      .nf-star-lg { top: 0.9rem; right: 1rem; width: 24px; height: 24px; }
+      .nf-btns .btn { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nf-nav">
+    <a href="/" class="nf-logo" aria-label="Hello Sellora">
+      <img class="nf-seal" src="/email/sellora-seal.png" alt="" width="46" height="46">
+      <span class="nf-wordmark" aria-hidden="true"><small>Hello</small><span>Sell<em>ora</em></span></span>
+    </a>
+    <a href="/#contact" class="btn btn-primary" data-t="cta">Demander un audit</a>
+  </nav>
+
+  <main>
+    <div class="nf-art" aria-hidden="true">
+      <svg class="nf-shelves" viewBox="0 0 640 560" preserveAspectRatio="xMidYMax slice" focusable="false">
+        <defs>
+          <linearGradient id="nf-shelf" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+            <stop offset="0.25" stop-color="#FFFFFF" stop-opacity="0.09"/>
+            <stop offset="0.75" stop-color="#FFFFFF" stop-opacity="0.09"/>
+            <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(0 60)">
+        <rect x="0" y="236" width="640" height="12" fill="url(#nf-shelf)"/>
+        <rect x="0" y="420" width="640" height="12" fill="url(#nf-shelf)"/>
+        <rect x="96" y="150" width="120" height="86" rx="4" fill="#C9965A"/><rect x="150" y="150" width="12" height="86" fill="#E3C18D"/>
+        <rect x="230" y="176" width="92" height="60" rx="4" fill="#B98448"/>
+        <rect x="430" y="140" width="110" height="96" rx="4" fill="#D6A86B"/><rect x="479" y="140" width="12" height="96" fill="#EBCB98"/>
+        <rect x="336" y="150" width="82" height="86" rx="6" fill="none" stroke="#E8A020" stroke-width="2.5" stroke-dasharray="8 8"/>
+        <text x="377" y="206" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="40" fill="#E8A020">?</text>
+        <rect x="110" y="340" width="140" height="80" rx="4" fill="#D6A86B"/><rect x="174" y="340" width="12" height="80" fill="#EBCB98"/>
+        <rect x="390" y="356" width="120" height="64" rx="4" fill="#C9965A"/><rect x="444" y="356" width="12" height="64" fill="#E3C18D"/>
+        </g>
+      </svg>
+      <svg class="nf-star nf-star-lg" viewBox="43 11 10 10" focusable="false"><polygon points="48,11 49.13,14.87 53,16 49.13,17.13 48,21 46.87,17.13 43,16 46.87,14.87"/></svg>
+      <svg class="nf-star nf-star-sm" viewBox="43 11 10 10" focusable="false"><polygon points="48,11 49.13,14.87 53,16 49.13,17.13 48,21 46.87,17.13 43,16 46.87,14.87"/></svg>
+      <span class="nf-code">404</span>
+    </div>
+
+    <div class="nf-copy">
+      <span class="nf-eyebrow" data-t="eyebrow">Page introuvable</span>
+      <h1><span data-t="before">Ce colis s'est</span> <em data-t="em">égaré</em><span data-t="after">.</span></h1>
+      <p class="nf-sub" data-t="sub">La page que vous cherchez n'existe pas ou a été déplacée. Voici où reprendre la route.</p>
+      <div class="nf-btns">
+        <a href="/" class="btn btn-primary" data-t="home">Retour à l'accueil</a>
+        <a href="/#audit" class="btn btn-ghost" data-t="audit">Voir l'audit</a>
+      </div>
+      <nav class="nf-links" data-t-label="linksLabel" aria-label="Liens utiles">
+        <a href="/#services" data-t="services">Services</a>
+        <a href="/#methode" data-t="approach">Notre approche</a>
+        <a href="/#contact" data-t="contact">Contact</a>
+      </nav>
+    </div>
+  </main>
+
+  <script>
+    // Shows the page in the language chosen on the site, else the browser's, else French.
+    (function () {
+      var text = {
+        fr: {
+          title: 'Page introuvable · Hello Sellora', cta: 'Demander un audit', eyebrow: 'Page introuvable',
+          before: "Ce colis s'est", em: 'égaré', after: '.',
+          sub: "La page que vous cherchez n'existe pas ou a été déplacée. Voici où reprendre la route.",
+          home: "Retour à l'accueil", audit: "Voir l'audit", linksLabel: 'Liens utiles',
+          services: 'Services', approach: 'Notre approche', contact: 'Contact'
+        },
+        en: {
+          title: 'Page not found · Hello Sellora', cta: 'Request an audit', eyebrow: 'Page not found',
+          before: 'This parcel went', em: 'missing', after: '.',
+          sub: "The page you're looking for doesn't exist or has moved. Here's how to get back on track.",
+          home: 'Back to the homepage', audit: 'See the audit', linksLabel: 'Useful links',
+          services: 'Services', approach: 'Our approach', contact: 'Contact'
+        },
+        sv: {
+          title: 'Sidan hittades inte · Hello Sellora', cta: 'Beställ en analys', eyebrow: 'Sidan hittades inte',
+          before: 'Det här paketet har', em: 'kommit bort', after: '.',
+          sub: 'Sidan du letar efter finns inte eller har flyttats. Så här hittar du rätt igen.',
+          home: 'Till startsidan', audit: 'Se analysen', linksLabel: 'Användbara länkar',
+          services: 'Tjänster', approach: 'Vårt sätt', contact: 'Kontakt'
+        },
+        es: {
+          title: 'Página no encontrada · Hello Sellora', cta: 'Solicitar auditoría', eyebrow: 'Página no encontrada',
+          before: 'Este paquete se ha', em: 'perdido', after: '.',
+          sub: 'La página que buscas no existe o ha cambiado de dirección. Así puedes retomar el camino.',
+          home: 'Volver al inicio', audit: 'Ver la auditoría', linksLabel: 'Enlaces útiles',
+          services: 'Servicios', approach: 'Nuestro enfoque', contact: 'Contacto'
+        }
+      };
+      var lang = null;
+      try { lang = localStorage.getItem('sellora-lang'); } catch (e) {}
+      if (!text[lang]) {
+        var browser = (navigator.language || '').slice(0, 2).toLowerCase();
+        lang = text[browser] ? browser : 'fr';
+      }
+      if (lang === 'fr') return;
+      var t = text[lang];
+      document.documentElement.lang = lang;
+      document.title = t.title;
+      var nodes = document.querySelectorAll('[data-t]');
+      for (var i = 0; i < nodes.length; i++) nodes[i].textContent = t[nodes[i].getAttribute('data-t')];
+      var labelled = document.querySelectorAll('[data-t-label]');
+      for (var j = 0; j < labelled.length; j++) labelled[j].setAttribute('aria-label', t[labelled[j].getAttribute('data-t-label')]);
+    })();
+  </script>
+</body>
+</html>

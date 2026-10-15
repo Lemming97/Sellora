@@ -232,6 +232,25 @@
         "text": "A detailed report, walked through with you on a call."
       }
     ],
+    "after": {
+      "title": {
+        "before": "What happens",
+        "em": "after",
+        "after": "the audit?"
+      },
+      "intro": "We don't leave you alone with a report. We put the plan into action for you, from start to finish.",
+      "you": {
+        "label": "With you",
+        "title": "You approve the priorities",
+        "text": "We go through the plan together and you decide where to start, with a direct line to the team."
+      },
+      "us": {
+        "label": "With Hello Sellora",
+        "title": "We take care of the rest",
+        "text": "Advertising, listings, stock and new marketplaces: we handle it all, with a results review every month.",
+        "link": "See our services"
+      }
+    },
     "pricing": "Pricing depends on the size of your catalogue and the number of marketplaces, and is set out in your proposal."
   },
   "cta": {

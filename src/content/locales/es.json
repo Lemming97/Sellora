@@ -232,6 +232,25 @@
         "text": "Un informe detallado que repasamos contigo en una llamada."
       }
     ],
+    "after": {
+      "title": {
+        "before": "¿Qué pasa",
+        "em": "después",
+        "after": "de la auditoría?"
+      },
+      "intro": "No te dejamos solo con un informe. Ponemos el plan en marcha por ti, de principio a fin.",
+      "you": {
+        "label": "Contigo",
+        "title": "Tú apruebas las prioridades",
+        "text": "Repasamos el plan juntos y decides por dónde empezar, con línea directa con el equipo."
+      },
+      "us": {
+        "label": "Con Hello Sellora",
+        "title": "Nos encargamos del resto",
+        "text": "Publicidad, fichas de producto, stock y nuevos marketplaces: lo gestionamos todo, con una revisión de resultados cada mes.",
+        "link": "Ver nuestros servicios"
+      }
+    },
     "pricing": "El precio depende del tamaño de tu catálogo y del número de marketplaces, y se detalla en tu propuesta."
   },
   "cta": {

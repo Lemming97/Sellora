@@ -232,6 +232,25 @@
         "text": "En detaljerad rapport som vi går igenom med dig i ett samtal."
       }
     ],
+    "after": {
+      "title": {
+        "before": "Vad händer",
+        "em": "efter",
+        "after": "analysen?"
+      },
+      "intro": "Vi lämnar dig inte ensam med en rapport. Vi genomför planen åt dig, från början till slut.",
+      "you": {
+        "label": "Med dig",
+        "title": "Du godkänner prioriteringarna",
+        "text": "Vi går igenom planen tillsammans och du bestämmer var vi börjar, med en direkt kontakt med teamet."
+      },
+      "us": {
+        "label": "Med Hello Sellora",
+        "title": "Vi sköter resten",
+        "text": "Annonsering, produktsidor, lager och nya marknadsplatser: vi tar hand om allt, med en genomgång av resultaten varje månad.",
+        "link": "Se våra tjänster"
+      }
+    },
     "pricing": "Priset beror på hur stort ditt sortiment är och hur många marknadsplatser det gäller, och anges i ditt förslag."
   },
   "cta": {

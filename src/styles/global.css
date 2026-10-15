@@ -1247,6 +1247,143 @@ body:has(.modal[open]) {
   font-size: 1rem;
 }
 
+/* "What happens after the audit?": one card, two parts (client / Hello Sellora). */
+.audit-after {
+  margin-top: 1.25rem;
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(15, 25, 40, 0.06);
+}
+
+.audit-after-title {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.audit-after-title em {
+  font-style: italic;
+  color: var(--accent-text);
+}
+
+.audit-after-intro {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+  max-width: 640px;
+}
+
+.audit-after-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.audit-after-card {
+  background: var(--surface-2);
+  border-radius: 16px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.audit-after-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.audit-after-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--icon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.audit-after-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--accent-text);
+}
+
+.audit-after-card h4 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.audit-after-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.audit-after-card-navy {
+  background: var(--navy-gradient);
+  color: #FFFFFF;
+}
+
+.audit-after-card-navy .audit-after-icon {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent);
+}
+
+.audit-after-card-navy .audit-after-label {
+  color: var(--accent);
+}
+
+.audit-after-card-navy p {
+  color: #C9D4E0;
+}
+
+.audit-after-link {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  padding: 0.6rem 0;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.audit-after-link:hover {
+  color: var(--accent-hover);
+}
+
+@media (max-width: 900px) {
+  .audit-after-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .audit-after {
+    padding: 1.75rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .audit-after-title {
+    font-size: 1.7rem;
+  }
+
+  .audit-after-card {
+    padding: 1.4rem;
+  }
+}
+
 .audit-pricing {
   font-size: 0.9rem;
   color: var(--text-muted);

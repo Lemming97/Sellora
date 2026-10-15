@@ -232,6 +232,25 @@
         "text": "Un rapport détaillé, présenté lors d'un appel avec vous."
       }
     ],
+    "after": {
+      "title": {
+        "before": "Et",
+        "em": "après",
+        "after": "l'audit ?"
+      },
+      "intro": "Nous ne vous laissons pas seul avec un rapport. Nous mettons le plan en œuvre pour vous, du début à la fin.",
+      "you": {
+        "label": "Avec vous",
+        "title": "Vous validez les priorités",
+        "text": "Nous passons le plan en revue ensemble et vous décidez par où commencer, avec une ligne directe vers l'équipe."
+      },
+      "us": {
+        "label": "Avec Hello Sellora",
+        "title": "Nous nous occupons du reste",
+        "text": "Publicité, fiches produits, stock et nouvelles marketplaces : nous gérons tout, avec un point sur les résultats chaque mois.",
+        "link": "Voir nos services"
+      }
+    },
     "pricing": "Le prix dépend de la taille de votre catalogue et du nombre de marketplaces, et figure dans votre proposition."
   },
   "cta": {

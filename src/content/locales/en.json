@@ -320,7 +320,7 @@
         "after": "?"
       },
       "text": "Tell us about your products and we'll come back with what a launch would look like for your brand.",
-      "button": "Plan my Amazon launch"
+      "button": "Plan My Amazon Launch"
     }
   },
   "cta": {
@@ -363,12 +363,12 @@
     "audit": {
       "title": "Request your audit",
       "intro": "Tell us about your brand and we'll get back to you to discuss your goals and what your audit will cover.",
-      "submit": "Request my audit"
+      "submit": "Request My Audit"
     },
     "contact": {
       "title": "Contact us",
       "intro": "Have a question? Send us a message and we'll get back to you within 48 hours.",
-      "submit": "Send message"
+      "submit": "Send Message"
     },
     "choices": {
       "selling": {
@@ -379,7 +379,7 @@
     "launch": {
       "title": "Plan your Amazon launch",
       "intro": "Tell us about your brand and products and we'll get back to you to discuss your goals and what your launch study will cover.",
-      "submit": "Plan my launch"
+      "submit": "Plan My Launch"
     }
   },
   "footer": {

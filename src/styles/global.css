@@ -2572,3 +2572,39 @@ footer a:hover {
   opacity: 0;
   pointer-events: none;
 }
+
+/* ===========================
+   LANGUAGE CHANGE
+   Page text fades out, the language switches, then it fades back in
+   (LanguageContext.jsx). The logo and the language menu stay put.
+   =========================== */
+
+main,
+footer,
+nav > ul,
+.legal-back,
+.cookie-banner,
+.modal-body {
+  transition: opacity 220ms ease;
+}
+
+html.lang-fading main,
+html.lang-fading footer,
+html.lang-fading nav > ul,
+html.lang-fading .legal-back,
+html.lang-fading .cookie-banner,
+html.lang-fading .modal-body {
+  opacity: 0;
+  transition-duration: 180ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main,
+  footer,
+  nav > ul,
+  .legal-back,
+  .cookie-banner,
+  .modal-body {
+    transition: none;
+  }
+}

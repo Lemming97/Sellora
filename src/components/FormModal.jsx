@@ -5,23 +5,35 @@ import { sendForm, validateField } from '../forms/forms.js';
 import { trackLead } from '../analytics/googleTag.js';
 
 // A modal form ('audit' or 'contact'). Mount it to open; it calls onClose when dismissed.
-export default function FormModal({ type, onClose }) {
+// Focuses a field by id; a group of radio buttons focuses its selected or first option.
+function focusField(form, id) {
+  const el = form?.elements[id];
+  if (!el) return;
+  if (typeof el.focus === 'function') el.focus();
+  else (Array.from(el).find((r) => r.checked) || el[0])?.focus();
+}
+
+export default function FormModal({ type, initial = {}, onClose }) {
   const { t, lang } = useLanguage();
-  const copy = t.forms[type];
   const fields = forms[type];
   const dialogRef = useRef(null);
   const formRef = useRef(null);
   const pressedBackdrop = useRef(false);
   const botcheckRef = useRef(null); // hidden honeypot: real visitors never tick it
-  const [values, setValues] = useState(() => Object.fromEntries(fields.map((f) => [f.id, ''])));
+  const [values, setValues] = useState(() => Object.fromEntries(fields.map((f) => [f.id, initial[f.id] ?? ''])));
+  // An audit request from a brand not yet on Amazon is a launch request.
+  const isLaunch = type === 'audit' && values.selling === 'no';
+  const copy = isLaunch ? t.forms.launch : t.forms[type];
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // idle | sending | failed | sent | mailto
 
   useEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog.open) dialog.showModal();
-    formRef.current?.elements[fields[0].id]?.focus();
-  }, [fields]);
+    // Start on the first field still empty (skips a prefilled choice).
+    const first = fields.find((f) => !values[f.id]) || fields[0];
+    focusField(formRef.current, first.id);
+  }, [fields]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const close = () => dialogRef.current.close();
 
@@ -43,7 +55,7 @@ export default function FormModal({ type, onClose }) {
     setErrors(next);
     const firstInvalid = fields.find((f) => next[f.id]);
     if (firstInvalid) {
-      formRef.current.elements[firstInvalid.id].focus();
+      focusField(formRef.current, firstInvalid.id);
       return;
     }
 
@@ -55,11 +67,12 @@ export default function FormModal({ type, onClose }) {
         fields,
         values,
         labels: t.forms.fields,
+        choices: t.forms.choices,
         lang,
         botcheck: botcheckRef.current?.checked,
       });
       // Count a lead only when the form service confirmed delivery.
-      if (result === 'sent') trackLead(type);
+      if (result === 'sent') trackLead(isLaunch ? 'launch' : type);
       setStatus(result);
     } catch {
       setStatus('failed');
@@ -98,6 +111,7 @@ export default function FormModal({ type, onClose }) {
                     field={field}
                     id={`${type}-${field.id}`}
                     label={t.forms.fields[field.id]}
+                    choiceLabels={t.forms.choices?.[field.id]}
                     optionalLabel={t.forms.optional}
                     value={values[field.id]}
                     error={errors[field.id]}
@@ -133,7 +147,45 @@ export default function FormModal({ type, onClose }) {
   );
 }
 
-function Field({ field, id, label, optionalLabel, value, error, onChange, onBlur }) {
+// A required either/or question shown as two large radio options.
+function ChoiceField({ field, id, label, choiceLabels, value, error, onChange }) {
+  const errorId = `${id}-error`;
+  return (
+    <fieldset
+      className="form-field form-choice"
+      aria-invalid={error ? true : undefined}
+      aria-describedby={error ? errorId : undefined}
+    >
+      <legend>
+        {label}
+        {field.required && <span className="form-required" aria-hidden="true"> *</span>}
+      </legend>
+      <div className="form-choice-options">
+        {field.options.map((option) => (
+          <label key={option} className={value === option ? 'form-choice-option selected' : 'form-choice-option'}>
+            <input
+              type="radio"
+              name={field.id}
+              value={option}
+              checked={value === option}
+              onChange={() => onChange(option)}
+              required={field.required}
+            />
+            <span>{choiceLabels[option]}</span>
+          </label>
+        ))}
+      </div>
+      {error && <p className="form-field-error" id={errorId}>{error}</p>}
+    </fieldset>
+  );
+}
+
+function Field(props) {
+  if (props.field.type === 'choice') return <ChoiceField {...props} />;
+  return <TextField {...props} />;
+}
+
+function TextField({ field, id, label, optionalLabel, value, error, onChange, onBlur }) {
   const isTextarea = field.type === 'textarea';
   const Control = isTextarea ? 'textarea' : 'input';
   const errorId = `${id}-error`;

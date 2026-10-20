@@ -26,6 +26,12 @@ export const redirects = {
   '/resultats': '/#resultats',
   '/results': '/#resultats',
 
+  // The launch section for brands not on Amazon yet
+  '/launch': '/#lancement',
+  '/lancement': '/#lancement',
+  '/lansering': '/#lancement',
+  '/lanzamiento': '/#lancement',
+
   // Other names for the legal pages
   '/legal': '/mentions-legales/',
   '/legal-notice': '/mentions-legales/',

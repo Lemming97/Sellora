@@ -251,7 +251,76 @@
         "link": "Se våra tjänster"
       }
     },
-    "pricing": "Priset beror på hur stort ditt sortiment är och hur många marknadsplatser det gäller, och anges i ditt förslag."
+    "pricing": "Priset beror på hur stort ditt sortiment är och hur många marknadsplatser det gäller, och anges i ditt förslag.",
+    "launchPointer": {
+      "text": "Inte på Amazon än?",
+      "link": "Vi bygger din butik från grunden"
+    }
+  },
+  "launch": {
+    "eyebrow": "Ny på Amazon",
+    "title": {
+      "before": "Inte på Amazon än? Vi",
+      "em": "bygger din butik",
+      "after": "åt dig."
+    },
+    "intro": "För varumärken som aldrig har sålt på Amazon. Vi sätter upp allt, lanserar dina första produkter och finns kvar när försäljningen kommer i gång.",
+    "setupTitle": "Det här sätter vi upp",
+    "items": {
+      "account": {
+        "title": "Säljarkonto",
+        "description": "Ditt Amazon Seller Central-konto för Europa, öppnat och verifierat."
+      },
+      "brand": {
+        "title": "Varumärkesskydd",
+        "description": "Amazon Brand Registry, när ditt varumärke är inlämnat, så att ingen annan styr dina produktsidor."
+      },
+      "listings": {
+        "title": "Produktsidor",
+        "description": "Titlar, punktlistor och beskrivningar byggda på sökordsanalys, på varje marknadsplats språk."
+      },
+      "visuals": {
+        "title": "Bilder och A+-innehåll",
+        "description": "Foton och infografik som vi tar fram eller ordnar åt dig, eller utifrån bilder du redan har, plus A+-innehåll för varumärket."
+      },
+      "logistics": {
+        "title": "Logistik och regelefterlevnad",
+        "description": "Uppsättning av FBA och din första leverans, plus en checklista för moms, förpackningsregler (EPR) och produktkrav per land att gå igenom med din redovisningskonsult."
+      },
+      "ads": {
+        "title": "Lanseringsannonsering",
+        "description": "Dina första Sponsored Products-kampanjer och tidiga recensioner via Amazon Vine, för att få i gång försäljningen."
+      }
+    },
+    "stepsTitle": "Så går en lansering till",
+    "steps": [
+      {
+        "title": "Berätta om dina produkter.",
+        "text": "Samma korta formulär, välj bara ”Inte än, jag vill lansera”."
+      },
+      {
+        "title": "Du får ett förslag.",
+        "text": "Omfattning, tidsplan och pris för din lanseringsanalys, skriftligt."
+      },
+      {
+        "title": "Vi analyserar din potential.",
+        "text": "Efterfrågan, konkurrens, Amazons avgifter och var du bör börja, genomgånget med dig i ett samtal."
+      },
+      {
+        "title": "Vi bygger och lanserar.",
+        "text": "Butik, produktsidor, lager och första annonser, sedan fortsätter vi driva den med dig."
+      }
+    ],
+    "pricing": "Lanseringsanalysen och själva lanseringen prissätts i ditt förslag, utifrån ditt sortiment och dina marknadsplatser.",
+    "cta": {
+      "title": {
+        "before": "Redo att sälja på",
+        "em": "Amazon",
+        "after": "?"
+      },
+      "text": "Berätta om dina produkter så återkommer vi med hur en lansering skulle se ut för ditt varumärke.",
+      "button": "Planera min Amazon-lansering"
+    }
   },
   "cta": {
     "title": {
@@ -281,6 +350,7 @@
       "url": "Ange en giltig webbadress, t.ex. acme.se."
     },
     "fields": {
+      "selling": "Säljer du redan på Amazon?",
       "company": "Företagsnamn",
       "website": "Företagets webbplats",
       "firstName": "Förnamn",
@@ -298,6 +368,17 @@
       "title": "Kontakta oss",
       "intro": "Har du en fråga? Skicka ett meddelande så återkommer vi inom 48 timmar.",
       "submit": "Skicka meddelande"
+    },
+    "choices": {
+      "selling": {
+        "yes": "Ja, jag vill ha en analys",
+        "no": "Inte än, jag vill lansera"
+      }
+    },
+    "launch": {
+      "title": "Planera din Amazon-lansering",
+      "intro": "Berätta om ditt varumärke och dina produkter så återkommer vi för att prata om dina mål och vad lanseringsanalysen ska omfatta.",
+      "submit": "Planera min lansering"
     }
   },
   "footer": {

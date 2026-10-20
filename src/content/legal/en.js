@@ -9,7 +9,7 @@ export default function legalEn(L, site) {
       menu: 'Legal pages',
       label: 'Legal',
       lastUpdated: 'Last updated',
-      openSettings: 'Open cookie settings',
+      openSettings: 'Open Cookie Settings',
       languageNote: 'This is a translation. If it differs from the French version, the French version prevails.',
     },
     notice: {

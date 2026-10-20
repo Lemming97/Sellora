@@ -6,6 +6,7 @@ import Services from './components/Services.jsx';
 import Method from './components/Method.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import Audit from './components/Audit.jsx';
+import LaunchSection from './components/LaunchSection.jsx';
 import CallToAction from './components/CallToAction.jsx';
 import Footer from './components/Footer.jsx';
 import CookieBanner from './components/CookieBanner.jsx';
@@ -38,6 +39,7 @@ function HomePage() {
         <Method />
         <Testimonials />
         <Audit />
+        <LaunchSection />
         <CallToAction />
       </main>
     </>

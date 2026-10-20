@@ -7,6 +7,7 @@
     "services": "Services",
     "approach": "Notre approche",
     "audit": "L'audit",
+    "launch": "Lancement",
     "contact": "Contact",
     "cta": "Demander un audit"
   },
@@ -236,7 +237,7 @@
       "title": {
         "before": "Et",
         "em": "après",
-        "after": "l'audit ?"
+        "after": "l'audit ?"
       },
       "intro": "Nous ne vous laissons pas seul avec un rapport. Nous mettons le plan en œuvre pour vous, du début à la fin.",
       "you": {
@@ -251,7 +252,76 @@
         "link": "Voir nos services"
       }
     },
-    "pricing": "Le prix dépend de la taille de votre catalogue et du nombre de marketplaces, et figure dans votre proposition."
+    "pricing": "Le prix dépend de la taille de votre catalogue et du nombre de marketplaces, et figure dans votre proposition.",
+    "launchPointer": {
+      "text": "Pas encore sur Amazon ?",
+      "link": "Nous créons votre boutique de A à Z"
+    }
+  },
+  "launch": {
+    "eyebrow": "Nouveau sur Amazon",
+    "title": {
+      "before": "Pas encore sur Amazon ? Nous",
+      "em": "créons votre boutique",
+      "after": "pour vous."
+    },
+    "intro": "Pour les marques qui n’ont jamais vendu sur Amazon. Nous mettons tout en place, lançons vos premiers produits et restons à vos côtés une fois les ventes lancées.",
+    "setupTitle": "Ce que nous mettons en place",
+    "items": {
+      "account": {
+        "title": "Compte vendeur",
+        "description": "Votre compte Amazon Seller Central pour l’Europe, ouvert et vérifié."
+      },
+      "brand": {
+        "title": "Protection de la marque",
+        "description": "Amazon Brand Registry, une fois votre marque déposée, pour que personne d’autre ne contrôle vos fiches."
+      },
+      "listings": {
+        "title": "Fiches produits",
+        "description": "Titres, points clés et descriptions fondés sur une recherche de mots-clés, dans la langue de chaque marketplace."
+      },
+      "visuals": {
+        "title": "Images et contenu A+",
+        "description": "Photos et infographies que nous réalisons ou organisons pour vous, ou à partir de vos images existantes, plus le contenu de marque A+."
+      },
+      "logistics": {
+        "title": "Logistique et conformité",
+        "description": "Mise en place de FBA et de votre premier envoi, plus une liste de contrôle TVA, emballages (REP) et règles produits par pays, à valider avec votre expert-comptable."
+      },
+      "ads": {
+        "title": "Publicité de lancement",
+        "description": "Vos premières campagnes Sponsored Products et vos premiers avis via Amazon Vine, pour lancer les ventes."
+      }
+    },
+    "stepsTitle": "Comment se passe un lancement",
+    "steps": [
+      {
+        "title": "Parlez-nous de vos produits.",
+        "text": "Le même formulaire court, en choisissant « Pas encore, je veux me lancer »."
+      },
+      {
+        "title": "Vous recevez une proposition.",
+        "text": "Périmètre, délai et prix de votre étude de lancement, par écrit."
+      },
+      {
+        "title": "Nous étudions votre potentiel.",
+        "text": "Demande, concurrence, frais Amazon et par où commencer, présentés lors d’un appel avec vous."
+      },
+      {
+        "title": "Nous créons et lançons.",
+        "text": "Boutique, fiches, stock et premières publicités, puis nous continuons à la gérer avec vous."
+      }
+    ],
+    "pricing": "L’étude de lancement et le lancement sont chiffrés dans votre proposition, selon votre catalogue et vos marketplaces.",
+    "cta": {
+      "title": {
+        "before": "Prêt à vendre sur",
+        "em": "Amazon",
+        "after": " ?"
+      },
+      "text": "Parlez-nous de vos produits et nous reviendrons vers vous avec ce que serait un lancement pour votre marque.",
+      "button": "Préparer mon lancement Amazon"
+    }
   },
   "cta": {
     "title": {
@@ -281,6 +351,7 @@
       "url": "Saisissez une adresse de site valide, par exemple acme.fr."
     },
     "fields": {
+      "selling": "Vendez-vous déjà sur Amazon ?",
       "company": "Nom de l'entreprise",
       "website": "Site web de l'entreprise",
       "firstName": "Prénom",
@@ -298,6 +369,17 @@
       "title": "Contactez-nous",
       "intro": "Une question ? Écrivez-nous, nous vous répondrons sous 48 h.",
       "submit": "Envoyer le message"
+    },
+    "choices": {
+      "selling": {
+        "yes": "Oui, je veux un audit",
+        "no": "Pas encore, je veux me lancer"
+      }
+    },
+    "launch": {
+      "title": "Préparez votre lancement Amazon",
+      "intro": "Parlez-nous de votre marque et de vos produits, et nous revenons vers vous pour échanger sur vos objectifs et le contenu de votre étude de lancement.",
+      "submit": "Préparer mon lancement"
     }
   },
   "footer": {

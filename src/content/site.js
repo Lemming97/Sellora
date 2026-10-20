@@ -1,5 +1,8 @@
 import {
   Camera,
+  ImageSquare,
+  ShieldCheck,
+  Storefront,
   ChartBar,
   GlobeHemisphereEast,
   MagnifyingGlass,
@@ -103,10 +106,22 @@ export const auditItems = [
   { id: 'expansion', icon: GlobeHemisphereEast },
 ];
 
+// "Not on Amazon yet?" launch section: the six things we set up. Text: launch.items.<id>
+export const launchItems = [
+  { id: 'account', icon: Storefront },
+  { id: 'brand', icon: ShieldCheck },
+  { id: 'listings', icon: PencilLine },
+  { id: 'visuals', icon: ImageSquare },
+  { id: 'logistics', icon: Package },
+  { id: 'ads', icon: Megaphone },
+];
+
 // Fields for the modal forms, in display order. Labels: forms.fields.<id>
 // half: shares a row with the next half field on wider screens.
 export const forms = {
   audit: [
+    // "Not yet" turns the audit request into a launch request (title, intro, button, inbox).
+    { id: 'selling', type: 'choice', required: true, options: ['yes', 'no'] },
     { id: 'company', required: true, autoComplete: 'organization', maxLength: 120 },
     { id: 'website', type: 'url', required: true, autoComplete: 'url', maxLength: 200 },
     { id: 'firstName', required: true, autoComplete: 'given-name', maxLength: 80, half: true },

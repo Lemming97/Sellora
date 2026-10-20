@@ -5,10 +5,11 @@
   },
   "nav": {
     "services": "Services",
-    "approach": "Our approach",
-    "audit": "The audit",
+    "approach": "Our Approach",
+    "audit": "The Audit",
+    "launch": "Launch",
     "contact": "Contact",
-    "cta": "Request an audit"
+    "cta": "Request an Audit"
   },
   "heroBand": {
     "label": "From Paris to Stockholm",
@@ -26,7 +27,7 @@
       "after": "Amazon"
     },
     "sub": "We help brands launch, optimise and scale their Amazon presence across Europe, without getting lost in the complexity of the platform.",
-    "primaryCta": "Request an audit",
+    "primaryCta": "Request an Audit",
     "secondaryCta": "See our results"
   },
   "panel": {
@@ -251,7 +252,76 @@
         "link": "See our services"
       }
     },
-    "pricing": "Pricing depends on the size of your catalogue and the number of marketplaces, and is set out in your proposal."
+    "pricing": "Pricing depends on the size of your catalogue and the number of marketplaces, and is set out in your proposal.",
+    "launchPointer": {
+      "text": "Not on Amazon yet?",
+      "link": "We build your store from scratch"
+    }
+  },
+  "launch": {
+    "eyebrow": "New to Amazon",
+    "title": {
+      "before": "Not on Amazon yet? We",
+      "em": "build your store",
+      "after": "for you."
+    },
+    "intro": "For brands that have never sold on Amazon. We set everything up, launch your first products and stay with you once sales start.",
+    "setupTitle": "What we set up",
+    "items": {
+      "account": {
+        "title": "Seller account",
+        "description": "Your Amazon Seller Central account for Europe, opened and verified."
+      },
+      "brand": {
+        "title": "Brand protection",
+        "description": "Amazon Brand Registry, once your trademark is filed, so no one else controls your listings."
+      },
+      "listings": {
+        "title": "Product listings",
+        "description": "Titles, bullet points and descriptions built on keyword research, in each marketplace's language."
+      },
+      "visuals": {
+        "title": "Images and A+ content",
+        "description": "Photos and infographics we produce or arrange for you, or built from images you already have, plus A+ brand content."
+      },
+      "logistics": {
+        "title": "Logistics and compliance",
+        "description": "FBA setup and your first shipment, plus a checklist of VAT, packaging (EPR) and product rules per country to go through with your accountant."
+      },
+      "ads": {
+        "title": "Launch advertising",
+        "description": "Your first Sponsored Products campaigns and early reviews through Amazon Vine, to get the first sales moving."
+      }
+    },
+    "stepsTitle": "How a launch works",
+    "steps": [
+      {
+        "title": "Tell us about your products.",
+        "text": "The same short form, just choose “Not yet, I want to launch”."
+      },
+      {
+        "title": "You get a proposal.",
+        "text": "Scope, timeline and price for your launch study, in writing."
+      },
+      {
+        "title": "We study your potential.",
+        "text": "Demand, competition, Amazon fees and where to start, walked through with you on a call."
+      },
+      {
+        "title": "We build and launch.",
+        "text": "Store, listings, stock and first ads, then we keep running it with you."
+      }
+    ],
+    "pricing": "The launch study and the launch itself are priced in your proposal, depending on your catalogue and marketplaces.",
+    "cta": {
+      "title": {
+        "before": "Ready to sell on",
+        "em": "Amazon",
+        "after": "?"
+      },
+      "text": "Tell us about your products and we'll come back with what a launch would look like for your brand.",
+      "button": "Plan My Amazon Launch"
+    }
   },
   "cta": {
     "title": {
@@ -260,8 +330,8 @@
       "after": "?"
     },
     "sub": "Request a brand audit and get a clear picture of your Amazon potential.",
-    "primary": "Request my audit",
-    "secondary": "Contact us"
+    "primary": "Request My Audit",
+    "secondary": "Contact Us"
   },
   "forms": {
     "close": "Close",
@@ -281,6 +351,7 @@
       "url": "Enter a valid website address, like acme.com."
     },
     "fields": {
+      "selling": "Are you already selling on Amazon?",
       "company": "Company name",
       "website": "Company website",
       "firstName": "First name",
@@ -292,12 +363,23 @@
     "audit": {
       "title": "Request your audit",
       "intro": "Tell us about your brand and we'll get back to you to discuss your goals and what your audit will cover.",
-      "submit": "Request my audit"
+      "submit": "Request My Audit"
     },
     "contact": {
       "title": "Contact us",
       "intro": "Have a question? Send us a message and we'll get back to you within 48 hours.",
-      "submit": "Send message"
+      "submit": "Send Message"
+    },
+    "choices": {
+      "selling": {
+        "yes": "Yes, I want an audit",
+        "no": "Not yet, I want to launch"
+      }
+    },
+    "launch": {
+      "title": "Plan your Amazon launch",
+      "intro": "Tell us about your brand and products and we'll get back to you to discuss your goals and what your launch study will cover.",
+      "submit": "Plan My Launch"
     }
   },
   "footer": {

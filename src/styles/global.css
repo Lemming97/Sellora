@@ -134,14 +134,14 @@ nav > ul a:hover {
   }
 }
 
-@media (max-width: 1060px) and (min-width: 601px) {
+@media (max-width: 1100px) and (min-width: 601px) {
   nav > ul .nav-contact {
     display: none;
   }
 }
 
 /* Tablets: keep only the audit link and the gold button. */
-@media (max-width: 960px) and (min-width: 601px) {
+@media (max-width: 1000px) and (min-width: 601px) {
   nav > ul .nav-wide {
     display: none;
   }
@@ -1412,6 +1412,355 @@ body:has(.modal[open]) {
 }
 
 /* ===========================
+   LAUNCH: "Not on Amazon yet?" (LaunchSection.jsx)
+   =========================== */
+
+.audit-intro + .audit-launch-pointer {
+  margin: -1.75rem 0 3rem;
+}
+
+.audit-launch-pointer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: 100px;
+  padding: 0.55rem 1.25rem 0.55rem 0.6rem;
+  min-height: 44px;
+  color: var(--text);
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.audit-launch-pointer:hover {
+  border-color: var(--accent);
+}
+
+.audit-launch-pointer strong {
+  font-weight: 500;
+  color: var(--accent-text);
+}
+
+.audit-launch-star {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.launch-section {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 8rem);
+  max-width: 1100px;
+  margin: 0 auto 6rem;
+  background: var(--navy-gradient);
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  border-radius: 28px;
+  padding: 4rem;
+  scroll-margin-top: 6rem;
+}
+
+.launch-section::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 12%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.launch-star {
+  position: absolute;
+  top: 1.75rem;
+  right: 2rem;
+  width: 30px;
+  height: 30px;
+  fill: var(--accent);
+}
+
+.launch-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+}
+
+.launch-eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.launch-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 3.1rem;
+  line-height: 1.08;
+  margin: 1.25rem 0 0.9rem;
+  max-width: 760px;
+}
+
+.launch-title em,
+.launch-cta h3 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.launch-intro {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+}
+
+.launch-subtitle {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: 1.1rem;
+}
+
+.launch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.launch-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.4rem;
+}
+
+.launch-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+}
+
+.launch-item h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.launch-item p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.launch-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.launch-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.launch-steps li {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.launch-steps strong {
+  display: block;
+  font-weight: 500;
+}
+
+.launch-steps li > span:last-child > span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-top: 0.15rem;
+}
+
+.launch-step-num {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+
+.launch-pricing {
+  margin-top: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.launch-cta {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.launch-cta h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.launch-cta p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.launch-cta .btn-primary {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+}
+
+/* The audit form's "Are you already selling on Amazon?" question */
+.form-choice {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.form-choice legend {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.form-choice-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.form-choice-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  background: var(--bg);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  cursor: pointer;
+}
+
+.form-choice-option.selected {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+}
+
+.form-field .form-choice-option input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  accent-color: var(--accent-text);
+  box-shadow: none;
+}
+
+.form-choice[aria-invalid="true"] .form-choice-option {
+  border-color: var(--error);
+}
+
+@media (max-width: 900px) {
+  .launch-section {
+    width: calc(100% - 4rem);
+    margin-bottom: 4rem;
+    padding: 3rem 2rem;
+  }
+
+  .launch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .launch-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .launch-section {
+    width: calc(100% - 2rem);
+    margin-bottom: 3rem;
+    padding: 2.5rem 1.25rem;
+    border-radius: 20px;
+  }
+
+  .launch-title {
+    font-size: 2.2rem;
+  }
+
+  .launch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-choice-options {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-launch-pointer {
+    border-radius: 16px;
+  }
+}
+
+/* ===========================
    CTA SECTION
    =========================== */
 
@@ -2222,4 +2571,40 @@ footer a:hover {
   clip-path: inset(50%);
   opacity: 0;
   pointer-events: none;
+}
+
+/* ===========================
+   LANGUAGE CHANGE
+   Page text fades out, the language switches, then it fades back in
+   (LanguageContext.jsx). The logo and the language menu stay put.
+   =========================== */
+
+main,
+footer,
+nav > ul,
+.legal-back,
+.cookie-banner,
+.modal-body {
+  transition: opacity 220ms ease;
+}
+
+html.lang-fading main,
+html.lang-fading footer,
+html.lang-fading nav > ul,
+html.lang-fading .legal-back,
+html.lang-fading .cookie-banner,
+html.lang-fading .modal-body {
+  opacity: 0;
+  transition-duration: 180ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main,
+  footer,
+  nav > ul,
+  .legal-back,
+  .cookie-banner,
+  .modal-body {
+    transition: none;
+  }
 }

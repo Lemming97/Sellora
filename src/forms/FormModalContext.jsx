@@ -6,19 +6,21 @@ import FormModal from '../components/FormModal.jsx';
 const FormModalContext = createContext(() => {});
 
 export function FormModalProvider({ children }) {
-  const [openForm, setOpenForm] = useState(null); // 'audit' | 'contact' | null
-  const open = useCallback((type) => setOpenForm(type), []);
+  // { type: 'audit' | 'contact', initial: { fieldId: value } } or null
+  const [openForm, setOpenForm] = useState(null);
+  const open = useCallback((type, initial = {}) => setOpenForm({ type, initial }), []);
 
   return (
     <FormModalContext.Provider value={open}>
       {children}
       {/* Rendered at page level, outside the navy sections, so the modal uses the light theme. */}
-      {openForm && <FormModal type={openForm} onClose={() => setOpenForm(null)} />}
+      {openForm && <FormModal type={openForm.type} initial={openForm.initial} onClose={() => setOpenForm(null)} />}
     </FormModalContext.Provider>
   );
 }
 
-// Returns open(type), where type is 'audit' or 'contact'.
+// Returns open(type, initial): type is 'audit' or 'contact'; initial prefills fields,
+// e.g. open('audit', { selling: 'no' }) for a launch request.
 export function useFormModal() {
   return useContext(FormModalContext);
 }

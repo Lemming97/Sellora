@@ -1,10 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import EmphasisTitle from './EmphasisTitle.jsx';
-
-// How long the band text takes to fade out before the new language fades in (ms).
-// Keep in sync with the transition on .hero-band-copy in global.css.
-const FADE_MS = 320;
 
 // Kraft parcel colours for the warehouse illustration.
 const BOX = { a: '#C9965A', b: '#B98448', c: '#D6A86B' };
@@ -69,29 +64,11 @@ function SelloraStar({ className }) {
   );
 }
 
-// Image band above the hero: warehouse illustration with a short tagline that
-// fades out and back in when the visitor changes language.
+// Image band above the hero: warehouse illustration with a short tagline.
 export default function HeroBand() {
   const { t } = useLanguage();
-  const [copy, setCopy] = useState(t.heroBand);
-  const [visible, setVisible] = useState(true);
-  const timer = useRef(null);
-
-  useEffect(() => {
-    if (t.heroBand === copy) return undefined;
-    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion) {
-      setCopy(t.heroBand);
-      return undefined;
-    }
-    setVisible(false);
-    clearTimeout(timer.current);
-    timer.current = setTimeout(() => {
-      setCopy(t.heroBand);
-      setVisible(true);
-    }, FADE_MS);
-    return () => clearTimeout(timer.current);
-  }, [t.heroBand, copy]);
+  // The whole page fades when the language changes (LanguageContext.jsx).
+  const copy = t.heroBand;
 
   return (
     <div className="hero-band-wrap">
@@ -101,7 +78,7 @@ export default function HeroBand() {
         <SelloraStar className="hero-band-star-md" />
         <SelloraStar className="hero-band-star-sm" />
         <div className="hero-band-panel">
-          <div className={`hero-band-copy${visible ? '' : ' is-hidden'}`}>
+          <div className="hero-band-copy">
             <p className="hero-band-label">{copy.label}</p>
             <p className="hero-band-line"><EmphasisTitle title={copy.line} /></p>
           </div>

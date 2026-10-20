@@ -7,6 +7,7 @@
     "services": "Servicios",
     "approach": "Nuestro enfoque",
     "audit": "La auditoría",
+    "launch": "Lanzamiento",
     "contact": "Contacto",
     "cta": "Solicitar auditoría"
   },
@@ -251,7 +252,76 @@
         "link": "Ver nuestros servicios"
       }
     },
-    "pricing": "El precio depende del tamaño de tu catálogo y del número de marketplaces, y se detalla en tu propuesta."
+    "pricing": "El precio depende del tamaño de tu catálogo y del número de marketplaces, y se detalla en tu propuesta.",
+    "launchPointer": {
+      "text": "¿Aún no estás en Amazon?",
+      "link": "Creamos tu tienda desde cero"
+    }
+  },
+  "launch": {
+    "eyebrow": "Nuevo en Amazon",
+    "title": {
+      "before": "¿Aún no estás en Amazon?",
+      "em": "Creamos tu tienda",
+      "after": "por ti."
+    },
+    "intro": "Para marcas que nunca han vendido en Amazon. Lo ponemos todo en marcha, lanzamos tus primeros productos y seguimos a tu lado cuando empiezan las ventas.",
+    "setupTitle": "Lo que ponemos en marcha",
+    "items": {
+      "account": {
+        "title": "Cuenta de vendedor",
+        "description": "Tu cuenta de Amazon Seller Central para Europa, abierta y verificada."
+      },
+      "brand": {
+        "title": "Protección de marca",
+        "description": "Amazon Brand Registry, una vez solicitada tu marca, para que nadie más controle tus fichas."
+      },
+      "listings": {
+        "title": "Fichas de producto",
+        "description": "Títulos, viñetas y descripciones basados en un estudio de palabras clave, en el idioma de cada marketplace."
+      },
+      "visuals": {
+        "title": "Imágenes y contenido A+",
+        "description": "Fotos e infografías que producimos u organizamos por ti, o a partir de las imágenes que ya tienes, más contenido de marca A+."
+      },
+      "logistics": {
+        "title": "Logística y cumplimiento",
+        "description": "Configuración de FBA y tu primer envío, más una lista de control de IVA, envases (RAP) y normas de producto por país para revisar con tu gestor."
+      },
+      "ads": {
+        "title": "Publicidad de lanzamiento",
+        "description": "Tus primeras campañas de Sponsored Products y primeras reseñas con Amazon Vine, para arrancar las ventas."
+      }
+    },
+    "stepsTitle": "Cómo es un lanzamiento",
+    "steps": [
+      {
+        "title": "Háblanos de tus productos.",
+        "text": "El mismo formulario breve, solo elige «Aún no, quiero lanzarme»."
+      },
+      {
+        "title": "Recibes una propuesta.",
+        "text": "Alcance, plazo y precio de tu estudio de lanzamiento, por escrito."
+      },
+      {
+        "title": "Estudiamos tu potencial.",
+        "text": "Demanda, competencia, tarifas de Amazon y por dónde empezar, repasado contigo en una llamada."
+      },
+      {
+        "title": "Creamos y lanzamos.",
+        "text": "Tienda, fichas, stock y primeros anuncios, y después seguimos gestionándola contigo."
+      }
+    ],
+    "pricing": "El estudio de lanzamiento y el lanzamiento se presupuestan en tu propuesta, según tu catálogo y tus marketplaces.",
+    "cta": {
+      "title": {
+        "before": "¿Listo para vender en",
+        "em": "Amazon",
+        "after": "?"
+      },
+      "text": "Háblanos de tus productos y te contamos cómo sería un lanzamiento para tu marca.",
+      "button": "Preparar mi lanzamiento en Amazon"
+    }
   },
   "cta": {
     "title": {
@@ -281,6 +351,7 @@
       "url": "Introduce una dirección web válida, como acme.com."
     },
     "fields": {
+      "selling": "¿Ya vendes en Amazon?",
       "company": "Nombre de la empresa",
       "website": "Sitio web de la empresa",
       "firstName": "Nombre",
@@ -298,6 +369,17 @@
       "title": "Contáctanos",
       "intro": "¿Tienes alguna pregunta? Envíanos un mensaje y te responderemos en 48 horas.",
       "submit": "Enviar mensaje"
+    },
+    "choices": {
+      "selling": {
+        "yes": "Sí, quiero una auditoría",
+        "no": "Aún no, quiero lanzarme"
+      }
+    },
+    "launch": {
+      "title": "Prepara tu lanzamiento en Amazon",
+      "intro": "Háblanos de tu marca y tus productos y te contactaremos para hablar de tus objetivos y de lo que incluirá tu estudio de lanzamiento.",
+      "submit": "Preparar mi lanzamiento"
     }
   },
   "footer": {

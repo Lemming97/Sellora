@@ -37,7 +37,8 @@ export default function legalEs(L, site) {
         {
           heading: 'Propiedad intelectual',
           paragraphs: [
-            'Los textos, el logotipo, la marca Hello Sellora, las ilustraciones y el diseño del sitio están protegidos por la propiedad intelectual. Queda prohibida cualquier reproducción o reutilización, total o parcial, sin autorización previa por escrito.',
+            `El nombre Hello Sellora, el logotipo, el sello, las ilustraciones, los textos, el diseño y el código del sitio son propiedad exclusiva de ${L.publisher} y están protegidos por la propiedad intelectual. Queda prohibida cualquier reproducción o reutilización, total o parcial, sin autorización previa por escrito.`,
+            'Amazon y los nombres de sus servicios (Seller Central, Brand Registry, FBA, Sponsored Products, A+, Vine) son marcas de Amazon.com, Inc. o de sus filiales. Hello Sellora es una agencia independiente, sin relación con Amazon.',
           ],
         },
         {

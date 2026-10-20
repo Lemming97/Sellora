@@ -37,7 +37,8 @@ export default function legalSv(L, site) {
         {
           heading: 'Immateriella rättigheter',
           paragraphs: [
-            'Texter, logotyp, varumärket Hello Sellora, illustrationer och layout på webbplatsen skyddas av immaterialrätten. All kopiering eller återanvändning, helt eller delvis, utan skriftligt tillstånd i förväg är förbjuden.',
+            `Namnet Hello Sellora, logotypen, sigillet, illustrationer, texter, layout och kod på webbplatsen tillhör uteslutande ${L.publisher} och skyddas av immaterialrätten. All kopiering eller återanvändning, helt eller delvis, utan skriftligt tillstånd i förväg är förbjuden.`,
+            'Amazon och namnen på dess tjänster (Seller Central, Brand Registry, FBA, Sponsored Products, A+, Vine) är varumärken som tillhör Amazon.com, Inc. eller dess dotterbolag. Hello Sellora är en oberoende byrå utan koppling till Amazon.',
           ],
         },
         {

@@ -23,6 +23,19 @@ const legalPage = legalPageFromPath(window.location.pathname);
 function HomePage() {
   const { t } = useLanguage();
 
+  // Links that open the site on a section (/#audit from the ads, /#launch...) land
+  // there: the browser looks for the section before the page is drawn, so scroll
+  // to it once it exists, and again after fonts load in case the layout shifted.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return undefined;
+    const jump = () => document.getElementById(id)?.scrollIntoView({ behavior: 'instant', block: 'start' });
+    const frame = requestAnimationFrame(jump);
+    let cancelled = false;
+    document.fonts?.ready.then(() => { if (!cancelled) jump(); });
+    return () => { cancelled = true; cancelAnimationFrame(frame); };
+  }, []);
+
   useEffect(() => {
     document.title = t.meta.title;
     document.querySelector('meta[name="description"]')?.setAttribute('content', t.meta.description);

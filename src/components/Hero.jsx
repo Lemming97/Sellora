@@ -19,7 +19,7 @@ export default function Hero() {
         <p className="hero-sub">{hero.sub}</p>
         <div className="hero-btns">
           <a href="#contact" className="btn-primary">{hero.primaryCta}</a>
-          {hasTestimonials && <a href="#resultats" className="btn-ghost">{hero.secondaryCta}</a>}
+          {hasTestimonials && <a href="#results" className="btn-ghost">{hero.secondaryCta}</a>}
         </div>
       </div>
 

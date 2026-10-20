@@ -15,7 +15,7 @@ export default function Audit() {
     <section className="section audit-section" id="audit">
       <SectionHeader eyebrow={a.eyebrow} title={a.title} />
       <p className="audit-intro">{a.intro}</p>
-      <a href="#lancement" className="audit-launch-pointer">
+      <a href="#launch" className="audit-launch-pointer">
         <span className="audit-launch-star" aria-hidden="true">
           <svg viewBox="43 11 10 10" width="14" height="14" focusable="false">
             <polygon points="48,11 49.13,14.87 53,16 49.13,17.13 48,21 46.87,17.13 43,16 46.87,14.87" fill="currentColor" />

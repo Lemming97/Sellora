@@ -19,18 +19,18 @@ export const redirects = {
   '/contacto': '/#contact',
   '/kontakt': '/#contact',
 
-  '/approche': '/#methode',
-  '/approach': '/#methode',
-  '/methode': '/#methode',
+  '/approche': '/#approach',
+  '/approach': '/#approach',
+  '/methode': '/#approach',
 
-  '/resultats': '/#resultats',
-  '/results': '/#resultats',
+  '/resultats': '/#results',
+  '/results': '/#results',
 
   // The launch section for brands not on Amazon yet
-  '/launch': '/#lancement',
-  '/lancement': '/#lancement',
-  '/lansering': '/#lancement',
-  '/lanzamiento': '/#lancement',
+  '/launch': '/#launch',
+  '/lancement': '/#launch',
+  '/lansering': '/#launch',
+  '/lanzamiento': '/#launch',
 
   // Other names for the legal pages
   '/legal': '/mentions-legales/',

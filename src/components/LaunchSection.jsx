@@ -19,7 +19,7 @@ export default function LaunchSection() {
   const l = t.launch;
 
   return (
-    <section className="launch-section theme-dark" id="lancement" aria-labelledby="launch-title">
+    <section className="launch-section theme-dark" id="launch" aria-labelledby="launch-title">
       <Star className="launch-star" />
       <span className="launch-eyebrow">{l.eyebrow}</span>
       <h2 id="launch-title" className="launch-title"><EmphasisTitle title={l.title} /></h2>

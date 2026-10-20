@@ -134,7 +134,7 @@ export default function Testimonials() {
   return (
     <section
       className="testimonial-section"
-      id="resultats"
+      id="results"
       aria-roledescription="carousel"
       aria-label={ui.label}
       onKeyDown={onKeyDown}

@@ -5,7 +5,7 @@ import MethodStep from './MethodStep.jsx';
 export default function Method() {
   const { t } = useLanguage();
   return (
-    <section className="how-section" id="methode">
+    <section className="how-section" id="approach">
       <div className="section section--compact">
         <SectionHeader eyebrow={t.method.eyebrow} title={t.method.title} centered />
         <div className="how-grid">

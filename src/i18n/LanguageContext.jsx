@@ -20,14 +20,12 @@ export function LanguageProvider({ children }) {
 
   useEffect(() => {
     document.documentElement.lang = lang;
-    document.title = t.meta.title;
-    document.querySelector('meta[name="description"]')?.setAttribute('content', t.meta.description);
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch {
       // Storage can be blocked (private mode); the switcher still works for this visit.
     }
-  }, [lang, t]);
+  }, [lang]);
 
   return (
     <LanguageContext.Provider value={{ lang, setLang, t }}>

@@ -2,7 +2,7 @@
 // Enlaces en el texto: [texto](dirección). Los datos del editor están en `legal` en src/content/site.js.
 
 export default function legalEs(L, site) {
-  const contact = `[${site.email}](mailto:${site.email}) o el [formulario de contacto](/#contact)`;
+  const contact = `[${site.email}](mailto:${site.email}) o el [formulario de contacto](form:contact)`;
   return {
     ui: {
       back: 'Volver al sitio',

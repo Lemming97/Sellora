@@ -2,7 +2,7 @@
 // Links in text: [text](address). Publisher details come from `legal` in src/content/site.js.
 
 export default function legalEn(L, site) {
-  const contact = `[${site.email}](mailto:${site.email}) or the [contact form](/#contact)`;
+  const contact = `[${site.email}](mailto:${site.email}) or the [contact form](form:contact)`;
   return {
     ui: {
       back: 'Back to the site',

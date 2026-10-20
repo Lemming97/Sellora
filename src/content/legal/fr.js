@@ -3,7 +3,7 @@
 // viennent de `legal` dans src/content/site.js.
 
 export default function legalFr(L, site) {
-  const contact = `[${site.email}](mailto:${site.email}) ou le [formulaire de contact](/#contact)`;
+  const contact = `[${site.email}](mailto:${site.email}) ou le [formulaire de contact](form:contact)`;
   return {
     ui: {
       back: 'Retour au site',

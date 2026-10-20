@@ -3,17 +3,30 @@ import { useLanguage } from '../i18n/LanguageContext.jsx';
 import { legalContent } from '../content/legal/index.js';
 import { legalPages, site } from '../content/site.js';
 import { openCookieSettings } from '../analytics/googleTag.js';
+import { useFormModal } from '../forms/FormModalContext.jsx';
 import EmphasisTitle from './EmphasisTitle.jsx';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
 import Logo from './Logo.jsx';
 
-// Turns "[text](address)" in the legal text into links.
+// Turns "[text](address)" in the legal text into links. "form:contact" opens the
+// contact form pop-up; the link still points at the homepage's contact section, so
+// Cmd/Ctrl-click and "open in new tab" keep working.
 function RichText({ text }) {
+  const openForm = useFormModal();
   const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
   return parts.map((part, i) => {
     const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     if (!match) return <Fragment key={i}>{part}</Fragment>;
     const [, label, href] = match;
+    if (href.startsWith('form:')) {
+      const type = href.slice(5);
+      const onClick = (event) => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        openForm(type);
+      };
+      return <a key={i} href={`/#${type}`} onClick={onClick} aria-haspopup="dialog">{label}</a>;
+    }
     const external = /^https?:/.test(href);
     return (
       <a key={i} href={href} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>

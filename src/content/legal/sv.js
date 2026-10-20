@@ -2,7 +2,7 @@
 // Länkar i texten: [text](adress). Uppgifter om utgivaren finns i `legal` i src/content/site.js.
 
 export default function legalSv(L, site) {
-  const contact = `[${site.email}](mailto:${site.email}) eller [kontaktformuläret](/#contact)`;
+  const contact = `[${site.email}](mailto:${site.email}) eller [kontaktformuläret](form:contact)`;
   return {
     ui: {
       back: 'Tillbaka till webbplatsen',

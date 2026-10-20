@@ -43,6 +43,14 @@ const INBOX_CHOICES = {
   selling: { yes: 'Yes, already selling (audit)', no: 'Not yet, wants to launch (launch)' },
 };
 
+// A short reference for each request, e.g. "K7Q2F": letters and digits, easy to quote.
+function requestReference() {
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  const bytes = new Uint8Array(5);
+  crypto.getRandomValues(bytes);
+  return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join('');
+}
+
 // Sends a form. Resolves to 'sent' (delivered by a form service) or 'mailto' (visitor's
 // email app opened). Rejects if the form service returns an error.
 // `kind` is 'audit' or 'contact'; `lang` is the page language; `botcheck` is the honeypot.
@@ -51,14 +59,18 @@ export async function sendForm({ kind, subject, fields, values, labels, choices 
   const who = [data.firstName, data.lastName].filter(Boolean).join(' ');
   // The subject carries the visitor's name and language in a fixed format, because the
   // auto-reply script (email/auto-reply/Code.gs) reads them from here. Keep the two in sync.
-  // Audit:   "New audit request: Maison Test · Camille R [EN]"
+  // Audit:   "New audit request: Maison Test · Camille R · #K7Q2F [EN]"
   //          (launch requests use the same subject so the auto-reply still finds them;
   //          they are marked "Form: Launch request" and "On Amazon: Not yet" in the email)
-  // Contact: "New message from Camille R: Question about pricing [EN]"
+  // Contact: "New message from Camille R: Question about pricing · #K7Q2F [EN]"
+  // The #reference makes every subject unique. Without it Gmail files a second request
+  // with the same name into the earlier conversation, which the auto-reply has already
+  // labelled as answered, so the visitor never gets a confirmation.
   const langTag = `[${String(lang || 'fr').slice(0, 2).toUpperCase()}]`;
+  const ref = `#${requestReference()}`;
   const inboxSubject = kind === 'audit'
-    ? `New audit request: ${data.company || who} · ${who} ${langTag}`
-    : `New message from ${who}${data.subject ? `: ${data.subject}` : ''} ${langTag}`;
+    ? `New audit request: ${data.company || who} · ${who} · ${ref} ${langTag}`
+    : `New message from ${who}${data.subject ? `: ${data.subject}` : ''} · ${ref} ${langTag}`;
 
   if (site.web3formsKey) {
     const readable = Object.fromEntries(

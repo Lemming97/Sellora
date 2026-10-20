@@ -34,6 +34,39 @@ export const googleTag = {
   adsLeadLabel: 'DF42CNLV3JwdEMTO4PtE', // Ads conversion action "Submit lead form"
 };
 
+// Who publishes the site, shown on the legal pages (src/content/legal/).
+// Until Hello Sellora is registered as its own business, it is run by Lindsey
+// Martin as an entrepreneur individuel (her consulting registration).
+// When the business is registered, update these fields; the pages follow.
+// address and phone are left empty on purpose: when set, they appear in the
+// legal notice (French law asks for both on a professional site).
+export const legal = {
+  publisher: 'Lindsey Martin',
+  siren: '131 358 541',
+  ape: '70.22Z',
+  rneDate: '2026-10-12', // date of registration in the RNE
+  city: 'Paris (75), France',
+  address: '',
+  phone: '',
+  director: 'Lindsey Martin', // directrice de la publication
+  lastUpdated: '2026-10-20',
+  host: {
+    name: 'GitHub, Inc. (GitHub Pages)',
+    address: '88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States',
+    phone: '+1 877 448 4820',
+  },
+};
+
+// The four legal pages: id → address on the site. Each becomes its own page at
+// build time (see vite.config.js). Old or English addresses redirect here
+// through src/content/redirects.js.
+export const legalPages = {
+  notice: '/mentions-legales/',
+  privacy: '/confidentialite/',
+  cookies: '/cookies/',
+  terms: '/conditions/',
+};
+
 export const languages = [
   { code: 'fr', name: 'Français' },
   { code: 'en', name: 'English' },

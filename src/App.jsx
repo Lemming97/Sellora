@@ -9,11 +9,26 @@ import Audit from './components/Audit.jsx';
 import CallToAction from './components/CallToAction.jsx';
 import Footer from './components/Footer.jsx';
 import CookieBanner from './components/CookieBanner.jsx';
+import LegalPage from './components/LegalPage.jsx';
 import { FormModalProvider } from './forms/FormModalContext.jsx';
+import { useLanguage } from './i18n/LanguageContext.jsx';
+import { legalPageFromPath } from './content/legal/index.js';
+import { useEffect } from 'react';
 
-export default function App() {
+// /mentions-legales/, /confidentialite/, /cookies/ and /conditions/ show a legal
+// page; every other address shows the one page site.
+const legalPage = legalPageFromPath(window.location.pathname);
+
+function HomePage() {
+  const { t } = useLanguage();
+
+  useEffect(() => {
+    document.title = t.meta.title;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', t.meta.description);
+  }, [t]);
+
   return (
-    <FormModalProvider>
+    <>
       <Nav />
       <main>
         <HeroBand />
@@ -25,6 +40,14 @@ export default function App() {
         <Audit />
         <CallToAction />
       </main>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <FormModalProvider>
+      {legalPage ? <LegalPage id={legalPage} /> : <HomePage />}
       <Footer />
       <CookieBanner />
     </FormModalProvider>

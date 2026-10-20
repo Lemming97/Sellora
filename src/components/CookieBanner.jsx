@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import { onOpenCookieSettings, readConsent, setConsent } from '../analytics/googleTag.js';
+import { legalPages } from '../content/site.js';
 
 // Cookie consent banner. Shown until the visitor accepts or refuses, and again
 // whenever they click "Cookie settings" in the footer. Both choices are equally
@@ -20,7 +21,7 @@ export default function CookieBanner() {
 
   return (
     <div className="cookie-banner" role="region" aria-label={t.cookies.title}>
-      <p>{t.cookies.text}</p>
+      <p>{t.cookies.text} <a href={legalPages.cookies}>{t.cookies.policyLink}</a></p>
       <div className="cookie-actions">
         <button type="button" className="btn-secondary" onClick={() => choose('denied')}>{t.cookies.refuse}</button>
         <button type="button" className="btn-secondary" onClick={() => choose('granted')}>{t.cookies.accept}</button>

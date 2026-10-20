@@ -1,6 +1,6 @@
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import { useFormModal } from '../forms/FormModalContext.jsx';
-import { site } from '../content/site.js';
+import { legalPages, site } from '../content/site.js';
 import { LinkedinLogo } from '@phosphor-icons/react';
 import Logo from './Logo.jsx';
 import { openCookieSettings } from '../analytics/googleTag.js';
@@ -20,8 +20,16 @@ export default function Footer() {
 
   return (
     <footer>
-      <Logo />
-      <p>© {year} {site.name}. {t.footer.tagline}</p>
+      <Logo href="/" />
+      <div className="footer-middle">
+        <p>© {year} {site.name}. {t.footer.tagline}</p>
+        <nav className="footer-legal" aria-label={t.footer.legal.label}>
+          <a href={legalPages.notice}>{t.footer.legal.notice}</a>
+          <a href={legalPages.privacy}>{t.footer.legal.privacy}</a>
+          <button type="button" onClick={openCookieSettings} aria-haspopup="dialog">{t.footer.legal.cookies}</button>
+          <a href={legalPages.terms}>{t.footer.legal.terms}</a>
+        </nav>
+      </div>
       <div className="footer-contact">
         <p>
           {t.footer.location} ·{' '}
@@ -31,7 +39,6 @@ export default function Footer() {
           <LinkedinLogo size={18} weight="duotone" aria-hidden="true" />
           <span>LinkedIn</span>
         </a>
-        <button type="button" className="footer-cookies" onClick={openCookieSettings}>{t.cookies.settings}</button>
       </div>
     </footer>
   );

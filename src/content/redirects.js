@@ -25,6 +25,22 @@ export const redirects = {
 
   '/resultats': '/#resultats',
   '/results': '/#resultats',
+
+  // Other names for the legal pages
+  '/legal': '/mentions-legales/',
+  '/legal-notice': '/mentions-legales/',
+  '/mentions': '/mentions-legales/',
+  '/privacy': '/confidentialite/',
+  '/privacy-policy': '/confidentialite/',
+  '/politique-de-confidentialite': '/confidentialite/',
+  '/integritetspolicy': '/confidentialite/',
+  '/privacidad': '/confidentialite/',
+  '/cookie-policy': '/cookies/',
+  '/terms': '/conditions/',
+  '/terms-and-conditions': '/conditions/',
+  '/cgu': '/conditions/',
+  '/villkor': '/conditions/',
+  '/condiciones': '/conditions/',
 };
 
 // /fr, /en, /sv, /es open the homepage in that language.

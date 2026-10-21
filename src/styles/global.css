@@ -292,6 +292,65 @@ nav > ul a:hover {
   opacity: 0.7;
 }
 
+/* Restocking loop: each moving parcel drops in, sits, then is picked (lifts out),
+   on its own cycle (set in HeroBand.jsx). Stars twinkle on their own timings. */
+.hero-parcel {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+
+.hero-parcel.is-moving {
+  animation-name: hero-restock;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes hero-restock {
+  0% { transform: translateY(-480px); opacity: 0; animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45); }
+  1% { opacity: 1; }
+  6% { transform: translateY(0) scale(1, 1); animation-timing-function: ease-out; }
+  7.5% { transform: translateY(0) scale(1.05, 0.9); }
+  9% { transform: translateY(-5px) scale(0.98, 1.03); }
+  11% { transform: translateY(0) scale(1, 1); }
+  80% { transform: translateY(0); opacity: 1; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  88% { transform: translateY(-46px); opacity: 0; }
+  100% { transform: translateY(-480px); opacity: 0; }
+}
+
+.hero-band-star {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: hero-twinkle 6s ease-in-out infinite;
+}
+
+.hero-band-star-md {
+  animation-duration: 4.6s;
+  animation-delay: -1.7s;
+}
+
+.hero-band-star-sm {
+  animation-duration: 5.3s;
+  animation-delay: -3.4s;
+}
+
+@keyframes hero-twinkle {
+  0%, 82%, 100% { transform: scale(1) rotate(0); filter: none; }
+  91% { transform: scale(1.35) rotate(45deg); filter: drop-shadow(0 0 4px rgba(232, 160, 32, 0.7)); }
+}
+
+.hero-band.is-paused .hero-parcel,
+.hero-band.is-paused .hero-band-star {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-parcel.is-moving,
+  .hero-band-star {
+    animation: none;
+  }
+}
+
 /* The band already gives the page its opening, so the hero sits closer to it. */
 .hero-band-wrap + .hero {
   padding-top: 4.5rem;

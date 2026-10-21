@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import EmphasisTitle from './EmphasisTitle.jsx';
 
@@ -5,17 +6,44 @@ import EmphasisTitle from './EmphasisTitle.jsx';
 const BOX = { a: '#C9965A', b: '#B98448', c: '#D6A86B' };
 const TAPE = { a: '#E3C18D', b: '#D9B07A', c: '#EBCB98' };
 
-// Each parcel: x, y, width, height, colour, and where its tape strip sits (omit for no tape).
+// The shelves' top edges (the parcels sit on these).
+const SHELVES = [150, 300, 430];
+
+// Each parcel: [x, bottom (the shelf or box it sits on), width, height, colour, tape strip?, stays?].
+// "stays" marks a box with another box on top: it never leaves, so nothing floats.
+// Every other parcel keeps being picked (lifts out) and restocked (drops back in).
+// Only x 0 to about 850 shows on wide screens, less on phones.
 const PARCELS = [
-  [70, 70, 120, 80, 'a', 124], [200, 96, 90, 54, 'b', 238], [300, 50, 110, 100, 'c', 349],
-  [470, 84, 150, 66, 'a', 539], [636, 60, 96, 90, 'b', 678], [744, 104, 60, 46, 'c'],
-  [860, 56, 130, 94, 'c', 919], [1004, 92, 88, 58, 'a'], [1104, 70, 90, 80, 'b', 1143],
-  [76, 214, 100, 86, 'b', 120], [190, 236, 140, 64, 'c', 254], [344, 250, 70, 50, 'a'],
-  [470, 200, 110, 100, 'c', 519], [594, 230, 120, 70, 'a', 648], [728, 246, 76, 54, 'b'],
-  [860, 226, 96, 74, 'a', 902], [970, 196, 124, 104, 'b', 1026], [1108, 240, 88, 60, 'c'],
-  [90, 350, 130, 80, 'c', 149], [236, 374, 96, 56, 'b'], [490, 360, 100, 70, 'a', 534],
-  [606, 340, 150, 90, 'c', 675], [880, 370, 110, 60, 'b'], [1006, 346, 96, 84, 'a', 1048],
+  [50, 430, 130, 66, 'a', true, true], [62, 364, 100, 46, 'c'],
+  [200, 430, 96, 80, 'b', true],
+  [312, 430, 150, 60, 'c', true, true], [330, 370, 70, 48, 'a'], [408, 370, 48, 40, 'b'],
+  [480, 430, 110, 90, 'a', true],
+  [610, 430, 130, 56, 'b', true, true], [630, 374, 90, 52, 'c', true],
+  [760, 430, 90, 70, 'c', true],
+  [70, 300, 110, 84, 'c', true, true], [86, 216, 80, 50, 'a'],
+  [200, 300, 130, 64, 'a', true],
+  [345, 300, 90, 100, 'b', true],
+  [450, 300, 140, 70, 'c', true, true], [470, 230, 100, 60, 'b', true],
+  [610, 300, 100, 88, 'a', true],
+  [725, 300, 120, 60, 'b'],
+  [60, 150, 120, 80, 'a', true],
+  [195, 150, 90, 56, 'b', true, true], [205, 94, 70, 44, 'c'],
+  [300, 150, 110, 100, 'c', true],
+  [430, 150, 150, 66, 'a', true, true], [450, 84, 110, 54, 'b', true],
+  [600, 150, 96, 90, 'b', true],
+  [715, 150, 130, 74, 'c'],
 ];
+
+// Give each moving parcel its own cycle length (8.5 to 13.9 s) and a negative start
+// delay, so the page opens with everything already in motion and never in sync.
+let moving = 0;
+const LAYOUT = PARCELS.map(([x, bottom, w, h, tone, tape, stays]) => {
+  if (stays) return { x, y: bottom - h, w, h, tone, tape };
+  const i = moving++;
+  const duration = 8.5 + ((i * 37) % 7) * 0.9;
+  const delay = -((i * 2.9) % duration);
+  return { x, y: bottom - h, w, h, tone, tape, style: { animationDuration: `${duration.toFixed(1)}s`, animationDelay: `${delay.toFixed(1)}s` } };
+});
 
 function WarehouseIllustration() {
   return (
@@ -27,7 +55,7 @@ function WarehouseIllustration() {
       focusable="false"
     >
       <g fill="rgba(255, 255, 255, 0.05)">
-        {[430, 820, 1210].map((x) => <rect key={x} x={x} y="0" width="14" height="440" />)}
+        {[430, 820].map((x) => <rect key={x} x={x} y="0" width="14" height="440" />)}
       </g>
       {/* Only the shelves fade in on the left; the parcels stay solid over the gradient. */}
       <defs>
@@ -38,18 +66,14 @@ function WarehouseIllustration() {
         </linearGradient>
       </defs>
       <g fill="url(#hero-band-shelf-fade)">
-        <rect x="0" y="150" width="1312" height="12" />
-        <rect x="0" y="300" width="1312" height="12" />
-        <rect x="0" y="430" width="1312" height="10" />
+        {SHELVES.map((y) => <rect key={y} x="0" y={y} width="1312" height={y === 430 ? 10 : 12} />)}
       </g>
-      <g>
-        {PARCELS.map(([x, y, w, h, tone, tapeX]) => (
-          <g key={`${x}-${y}`}>
-            <rect x={x} y={y} width={w} height={h} rx="4" fill={BOX[tone]} />
-            {tapeX !== undefined && <rect x={tapeX} y={y} width="12" height={h} fill={TAPE[tone]} />}
-          </g>
-        ))}
-      </g>
+      {LAYOUT.map(({ x, y, w, h, tone, tape, style }) => (
+        <g key={`${x}-${y}`} className={style ? 'hero-parcel is-moving' : 'hero-parcel'} style={style}>
+          <rect x={x} y={y} width={w} height={h} rx="4" fill={BOX[tone]} />
+          {tape && <rect x={x + Math.floor(w / 2) - 6} y={y} width="12" height={h} fill={TAPE[tone]} />}
+        </g>
+      ))}
     </svg>
   );
 }
@@ -64,15 +88,28 @@ function SelloraStar({ className }) {
   );
 }
 
-// Image band above the hero: warehouse illustration with a short tagline.
+// Image band above the hero: a warehouse that keeps restocking (parcels picked and
+// replaced in a continuous loop, stars twinkling) next to a short tagline.
 export default function HeroBand() {
   const { t } = useLanguage();
+  const bandRef = useRef(null);
+
+  // The parcels and stars only move while the band is on screen.
+  useEffect(() => {
+    const band = bandRef.current;
+    if (!band || !('IntersectionObserver' in window)) return undefined;
+    const observer = new IntersectionObserver(([entry]) => {
+      band.classList.toggle('is-paused', !entry.isIntersecting);
+    });
+    observer.observe(band);
+    return () => observer.disconnect();
+  }, []);
   // The whole page fades when the language changes (LanguageContext.jsx).
   const copy = t.heroBand;
 
   return (
     <div className="hero-band-wrap">
-      <div className="hero-band">
+      <div className="hero-band" ref={bandRef}>
         <WarehouseIllustration />
         <SelloraStar className="hero-band-star-lg" />
         <SelloraStar className="hero-band-star-md" />
